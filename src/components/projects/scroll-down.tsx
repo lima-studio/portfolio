@@ -1,4 +1,4 @@
-"use client"
+
 
 import { SlArrowDown } from "react-icons/sl";
 import { Button } from "../ui/button";
