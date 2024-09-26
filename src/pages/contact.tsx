@@ -65,7 +65,7 @@ export default function ContactPage() {
         }
 
         try {
-            await emailjs.send('service_44m87h2', 'template_cry0rox', {
+            await emailjs.send('service_rchp921', 'template_cry0rox', {
                 name: formattedData.name,
                 email: formattedData.email,
                 cellphone: formattedData.cellphone,
@@ -78,7 +78,7 @@ export default function ContactPage() {
                     id: formattedData.email,
                     throttle: 1000,
                 },
-                publicKey: "qcYixkhZOYpdKxPV8"
+                publicKey: "Wx6jdXsIUxxYWiMwP"
             })
 
             toast({
