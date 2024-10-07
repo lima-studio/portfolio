@@ -1,9 +1,13 @@
 import { IProjects } from "@/projects";
+import { useTranslation } from "react-i18next";
 import BlurFade from "../magicui/blur-fade";
 import ProjectCard from "../projects/project-card";
 
 function ProjectsSection({ projects }: { projects: IProjects[] }) {
     const projectsData = projects.filter(project => project.homepage);
+    const {
+        t
+    } = useTranslation()
 
     return (
         <section id="projects" className="space-y-5 px-5">
@@ -20,18 +24,10 @@ function ProjectsSection({ projects }: { projects: IProjects[] }) {
                 ))}
             </div>
 
-            <BlurFade inView className="flex justify-between">
+            <BlurFade inView className="w-1/2 flex justify-end">
                 <span className="text-xl md:text-3xl font-medium">
-                    E não para por aqui!
+                    {t('and_stop_here')}
                 </span>
-
-                <a
-                    className="text-black max-w-[150px] w-full h-[50px] border-black border rounded text-center flex items-center justify-center hover:bg-black hover:text-white transition-colors"
-                    href="/projects"
-                >
-                    Ver mais
-                </a>
-
             </BlurFade>
         </section >
     )

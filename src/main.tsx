@@ -4,6 +4,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import { Toaster } from './components/ui/toaster';
+import './i18n';
 import './index.css';
 import ContactPage from './pages/contact';
 import Home from './pages/home';

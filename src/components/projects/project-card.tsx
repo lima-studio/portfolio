@@ -23,8 +23,8 @@ export default function ProjectCard({
             <div className="absolute top-0 left-0 right-0 h-full flex justify-between bg-black bg-opacity-50 p-5 text-white font-bold opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                 <div>
                     <h3 >{project.name}</h3>
-                    <p>{project.category}</p>
-                    <p>{project.year}</p>
+                    <p className="font-light">{project.category}</p>
+                    <p className="font-light">{project.year}</p>
                 </div>
             </div>
         </a>
