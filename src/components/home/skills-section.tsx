@@ -1,6 +1,5 @@
-import { motion, useInView } from "framer-motion"
-import { useRef } from "react"
-import BlurFade from "../magicui/blur-fade"
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 
 
@@ -35,16 +34,17 @@ function SkillsSection() {
         }
     ]
     return (
-        <section className="px-5  flex items-center py-10 my-32" id="sklls">
+        <section className="px-5 py-10 my-32" id="sklls">
             <div className="grid grid-cols-1 md:grid-cols-2  ">
-                <div className="flex gap-20">
-                    <BlurFade inView>
-                        <h1 className="uppercase font-thin mt-5">Skills</h1>
-                    </BlurFade>
+                <div className="sticky top-20 h-fit flex gap-20">
+                    <h1 className="uppercase font-thin mt-5">Skills</h1>
 
-                    <BlurFade inView delay={0.2}>
-                        <p className="md:text-3xl">Potencializo o processo de inovação de meu parceiros. Construímos estratégias, marcas e multimídia que criam valor significativo para as pessoas e evolução para os negócios.</p>
-                    </BlurFade>
+                    <div>
+                        <p className="md:text-3xl md:mb-32 mb-10">
+                            Potencializo o processo de inovação de meu parceiros. Construímos estratégias, marcas e multimídia que criam valor significativo para as pessoas e evolução para os negócios.
+                        </p>
+                        <img src="/logos/Asset 35.png" alt="Logo" className="h-52"></img>
+                    </div>
                 </div>
 
                 <div className="flex items-center justify-center">
@@ -56,27 +56,27 @@ function SkillsSection() {
                             })
                             return (
                                 <motion.div
-                                key={skill.id}
-                                ref={skillRef}
-                                initial={{ height: "auto" }} // Initial state with just the title
-                                animate={inView ? { height: "auto", opacity: 1 } : { height: "5rem", opacity: 0.8 }} // Height transition
-                                transition={{ duration: 0.5, ease: "easeInOut" }} // Smooth transition
-                                className="overflow-hidden flex flex-col gap-5"
-                              >
-                                <div>
-                                  <h1 className="text-secondary font-light mb-5 text-8xl">
-                                    {skill.name}
-                                  </h1>
-                                  <motion.div
-                                    initial={{ opacity: 0 }}
-                                    animate={inView ? { opacity: 1 } : { opacity: 0 }}
-                                    transition={{ duration: 1}}
-                                    className="font-normal text-xl text-black"
-                                  >
-                                    <p>{skill.description}</p>
-                                  </motion.div>
-                                </div>
-                              </motion.div>
+                                    key={skill.id}
+                                    ref={skillRef}
+                                    initial={{ height: "auto" }} // Initial state with just the title
+                                    animate={inView ? { height: "auto", opacity: 1 } : { height: "5rem", opacity: 0.8 }} // Height transition
+                                    transition={{ duration: 0.5, ease: "easeInOut" }} // Smooth transition
+                                    className="overflow-hidden flex flex-col gap-5 px-[110px]"
+                                >
+                                    <div>
+                                        <p className="text-secondary mb-5  text-8xl">
+                                            {skill.name}
+                                        </p>
+                                        <motion.div
+                                            initial={{ opacity: 0 }}
+                                            animate={inView ? { opacity: 1 } : { opacity: 0 }}
+                                            transition={{ duration: 1 }}
+                                            className="font-normal text-xl text-black"
+                                        >
+                                            <p>{skill.description}</p>
+                                        </motion.div>
+                                    </div>
+                                </motion.div>
                             )
                         })}
 

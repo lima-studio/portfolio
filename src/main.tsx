@@ -35,6 +35,5 @@ createRoot(document.getElementById('root')!).render(
   <div>
     <RouterProvider router={router} />
     <Toaster />
-
   </div>
 )

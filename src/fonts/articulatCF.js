@@ -1,105 +1,57 @@
 
 const articulatCF = [
   {
-    path: "./49645.otf",
-    weight: "400",
-    style: "normal",
+    path: './Articulat_CF_Bold.otf',
+    weight: 400,
+    style: 'bold',
   },
   {
-    path: "./49646.otf",
-    weight: "400",
-    style: "italic",
+    path: './Articulat_CF_Demi_Bold.otf',
+    weight: 500,
+    style: 'semibold',
   },
   {
-    path: "./49647.otf",
-    weight: "500",
-    style: "normal",
+    path: './Articulat_CF_Extra_Bold.otf',
+    weight: 600,
+    style: 'extrabold',
   },
   {
-    path: "./49648.otf",
-    weight: "500",
-    style: "italic",
+    path: './Articulat_CF_Extra_Light.otf',
+    weight: 200,
+    style: 'extralight',
   },
   {
-    path: "./49649.otf",
-    weight: "600",
-    style: "normal",
+    path: 'Articulat_CF_Heavy.otf',
+    weight: 700,
+    style: 'bold',
   },
   {
-    path: "./49650.otf",
-    weight: "600",
-    style: "italic",
+    path: 'Articulat_CF_Light.otf',
+    weight: 300,
+    style: 'light',
   },
   {
-    path: "./49651.otf",
-    weight: "700",
-    style: "normal",
+    path: 'Articulat_CF_Medium.otf',
+    weight: 500,
+    style: 'medium',
   },
   {
-    path: "./49652.otf",
-    weight: "700",
-    style: "italic",
+    path: 'Articulat_CF_Normal.otf',
+    weight: 400,
+    style: 'normal',
   },
   {
-    path: "./49653.otf",
-    weight: "800",
-    style: "normal",
+    path: 'Articulat_CF_Regular.otf',
+    weight: 400,
+    style: 'normal',
   },
   {
-    path: "./49654.otf",
-    weight: "800",
-    style: "italic",
-  },
-  {
-    path: "./51646.otf",
-    weight: "400",
-    style: "normal",
-  },
-  {
-    path: "./51647.otf",
-    weight: "400",
-    style: "italic",
-  },
-  {
-    path: "./51648.otf",
-    weight: "500",
-    style: "normal",
-  },
-  {
-    path: "./51649.otf",
-    weight: "500",
-    style: "italic",
-  },
-  {
-    path: "./51650.otf",
-    weight: "600",
-    style: "normal",
-  },
-  {
-    path: "./51651.otf",
-    weight: "600",
-    style: "italic",
-  },
-  {
-    path: "./51652.otf",
-    weight: "700",
-    style: "normal",
-  },
-  {
-    path: "./51653.otf",
-    weight: "700",
-    style: "italic",
-  },
-  {
-    path: "./51654.otf",
-    weight: "800",
-    style: "normal",
-  },
-  {
-    path: "./51655.otf",
-    weight: "800",
-    style: "italic",
-  },
+    path: 'Articulat_CF_Thin.otf',
+    weight: 100,
+    style: 'thin',
+  }
+
+
 ];
 
 const generateFontFace = (font) => `
@@ -114,5 +66,6 @@ const generateFontFace = (font) => `
 const fontFaces = articulatCF.map(generateFontFace).join('\n');
 
 const fs = require('fs');
+const path = require('path');
 fs.writeFileSync('./src/fonts.css', fontFaces);
 

@@ -15,13 +15,14 @@ module.exports = {
       screens: {
         'md': '1100px',
         'xl': '1200px',
-        '2xl': '1600px',
+        '2xl': '1400px',
+        '3xl': '1600px',
       }
     },
-    fontFamily: {
-      articulatcf: ['ArticulatCF', 'sans-serif'], // Adicione esta linha
-    },
     extend: {
+      fontFamily: {
+        articulatcf: ['ArticulatCF', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

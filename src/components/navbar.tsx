@@ -54,9 +54,9 @@ export default function Navbar() {
 
     return (
         <nav
-            className="h-[250px] py-5 mb-10"
+            className="h-[230px] py-5 mb-10"
         >
-            <div className="flex justify-between container h-full">
+            <div className="flex justify-between px-5 xl:px-10 2xl:px-14 h-full">
                 <div className="flex flex-col items-end justify-between">
                     <BlurFade>
                         <a href="/" className="mixBlendMode">

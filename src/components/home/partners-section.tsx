@@ -3,7 +3,7 @@ import BlurFade from "../magicui/blur-fade";
 export function PartnersSection() {
     return (
         <div className="px-5 ">
-            <div className="grid grid-cols-1 md:grid-cols-2 my-40">
+            <div className="grid grid-cols-1 md:grid-cols-2 my-24">
                 <div className="flex  flex-col ">
                     <div className="space-y-5 mb-16">
                         <BlurFade inView>
@@ -37,8 +37,8 @@ export function PartnersSection() {
             </div>
 
 
-            <div className="h-[500px] flex justify-center">
-                <div className="w-[150px] h-[250px]">
+            <div className="h-[500px] flex justify-center mb-24">
+                <div className="w-[250px] h-[450px]">
                     <img
                         className="w-full h-full "
                         src="/logos/Ativo 8.png"

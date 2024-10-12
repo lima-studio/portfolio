@@ -1,9 +1,6 @@
-;
-
+import { cn } from "@/lib/utils";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { FC, ReactNode, useRef } from "react";
-
-import { cn } from "@/lib/utils";
 
 interface TextRevealByWordProps {
   text: string;
@@ -16,35 +13,29 @@ export const TextRevealByWord: FC<TextRevealByWordProps> = ({
 }) => {
   const targetRef = useRef<HTMLDivElement | null>(null);
 
+  // Controla o progresso da rolagem
   const { scrollYProgress } = useScroll({
     target: targetRef,
+    offset: ["start end", "end start"],
   });
+
   const words = text.split(" ");
 
   return (
-    <div ref={targetRef} className={cn("relative z-0 h-[200vh]", className)}>
-      <div
-        className={
-          "sticky top-0 mx-auto flex h-[50%] max-w-4xl items-center bg-transparent px-[1rem] py-[5rem]"
-        }
-      >
-        <p
-          ref={targetRef}
-          className={
-            "flex flex-wrap p-5 text-2xl font-bold text-black/20 dark:text-white/20 md:p-8 md:text-3xl lg:p-10 lg:text-4xl xl:text-5xl"
-          }
-        >
-          {words.map((word, i) => {
-            const start = i / words.length;
-            const end = start + 1 / words.length;
-            return (
-              <Word key={i} progress={scrollYProgress} range={[start, end]}>
-                {word}
-              </Word>
-            );
-          })}
-        </p>
-      </div>
+    <div ref={targetRef} className={cn(className)}>
+      <p className="flex flex-wrap md:text-3xl md:mb-32 mb-10">
+        {words.map((word, i) => {
+          // Ajustar o intervalo de transição para garantir que todas as palavras sejam reveladas no tempo certo
+          const start = i / words.length;
+          const end = start + 0.8 / words.length; // Ajuste aqui para melhor transição
+
+          return (
+            <Word key={i} progress={scrollYProgress} range={[start, end]}>
+              {word}
+            </Word>
+          );
+        })}
+      </p>
     </div>
   );
 };
@@ -56,13 +47,16 @@ interface WordProps {
 }
 
 const Word: FC<WordProps> = ({ children, progress, range }) => {
+  // Transição de opacidade e scale para melhorar o efeito visual
   const opacity = useTransform(progress, range, [0, 1]);
+  const scale = useTransform(progress, range, [0.8, 1]); // Adiciona um leve efeito de zoom
+
   return (
-    <span className="xl:lg-3 relative mx-1 lg:mx-2.5">
-      <span className={"absolute opacity-30"}>{children}</span>
+    <span className="relative mx-1 lg:mx-2.5">
       <motion.span
-        style={{ opacity: opacity }}
-        className={"text-black dark:text-white"}
+        style={{ opacity, scale }} // Aplica os dois efeitos: opacidade e escala
+        className="text-black dark:text-white"
+        transition={{ duration: 0.3 }} // Ajuste de tempo para uma animação mais suave
       >
         {children}
       </motion.span>

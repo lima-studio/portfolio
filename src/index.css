@@ -4,161 +4,79 @@
 
 @font-face {
   font-family: 'ArticulatCF';
-  src: url('./49645.otf') format('opentype');
+  src: url('./Articulat_CF_Bold.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
 }
 
-
 @font-face {
   font-family: 'ArticulatCF';
-  src: url('./49646.otf') format('opentype');
+  src: url('./Articulat_CF_Bold.otf') format('opentype');
   font-weight: 400;
   font-style: italic;
 }
 
-
 @font-face {
   font-family: 'ArticulatCF';
-  src: url('./49647.otf') format('opentype');
+  src: url('./Articulat_CF_Demi_Bold.otf') format('opentype');
   font-weight: 500;
-  font-style: normal;
+  font-style: bold;
 }
-
 
 @font-face {
   font-family: 'ArticulatCF';
-  src: url('./49648.otf') format('opentype');
-  font-weight: 500;
-  font-style: italic;
-}
-
-
-@font-face {
-  font-family: 'ArticulatCF';
-  src: url('./49649.otf') format('opentype');
+  src: url('./Articulat_CF_Extra_Bold.otf') format('opentype');
   font-weight: 600;
-  font-style: normal;
+  font-style: extrabold;
 }
-
 
 @font-face {
   font-family: 'ArticulatCF';
-  src: url('./49650.otf') format('opentype');
-  font-weight: 600;
-  font-style: italic;
-}
-
-
-@font-face {
-  font-family: 'ArticulatCF';
-  src: url('./49651.otf') format('opentype');
+  src: url('./Articulat_CF_Heavy.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'ArticulatCF';
+  src: url('./Articulat_CF_Extra_Light.otf') format('opentype');
+  font-weight: 200;
+  font-style: extralight;
+}
 
 @font-face {
   font-family: 'ArticulatCF';
-  src: url('./49652.otf') format('opentype');
-  font-weight: 700;
+  src: url('./Articulat_CF_Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: light;
+}
+
+@font-face {
+  font-family: 'ArticulatCF';
+  src: url('./Articulat_CF_Medium.otf') format('opentype');
+  font-weight: 500;
   font-style: italic;
 }
 
-
 @font-face {
   font-family: 'ArticulatCF';
-  src: url('./49653.otf') format('opentype');
-  font-weight: 800;
-  font-style: normal;
-}
-
-
-@font-face {
-  font-family: 'ArticulatCF';
-  src: url('./49654.otf') format('opentype');
-  font-weight: 800;
-  font-style: italic;
-}
-
-
-@font-face {
-  font-family: 'ArticulatCF';
-  src: url('./51646.otf') format('opentype');
+  src: url('./Articulat_CF_Normal.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
 }
 
-
 @font-face {
   font-family: 'ArticulatCF';
-  src: url('./51647.otf') format('opentype');
+  src: url('./Articulat_CF_Regular.otf') format('opentype');
   font-weight: 400;
-  font-style: italic;
-}
-
-
-@font-face {
-  font-family: 'ArticulatCF';
-  src: url('./51648.otf') format('opentype');
-  font-weight: 500;
   font-style: normal;
 }
 
-
 @font-face {
   font-family: 'ArticulatCF';
-  src: url('./51649.otf') format('opentype');
-  font-weight: 500;
-  font-style: italic;
-}
-
-
-@font-face {
-  font-family: 'ArticulatCF';
-  src: url('./51650.otf') format('opentype');
-  font-weight: 600;
+  src: url('./Articulat_CF_Thin.otf') format('opentype');
+  font-weight: 100;
   font-style: normal;
-}
-
-
-@font-face {
-  font-family: 'ArticulatCF';
-  src: url('./51651.otf') format('opentype');
-  font-weight: 600;
-  font-style: italic;
-}
-
-
-@font-face {
-  font-family: 'ArticulatCF';
-  src: url('./51652.otf') format('opentype');
-  font-weight: 700;
-  font-style: normal;
-}
-
-
-@font-face {
-  font-family: 'ArticulatCF';
-  src: url('./51653.otf') format('opentype');
-  font-weight: 700;
-  font-style: italic;
-}
-
-
-@font-face {
-  font-family: 'ArticulatCF';
-  src: url('./51654.otf') format('opentype');
-  font-weight: 800;
-  font-style: normal;
-}
-
-
-@font-face {
-  font-family: 'ArticulatCF';
-  src: url('./51655.otf') format('opentype');
-  font-weight: 800;
-  font-style: italic;
 }
 
 html {
