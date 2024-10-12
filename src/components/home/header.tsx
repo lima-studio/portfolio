@@ -6,7 +6,7 @@ import BlurFade from "../magicui/blur-fade";
 export default function Header() {
     const { t } = useTranslation()
     return (
-        <header className="min-h-[600px] flex flex-col justify-center container px-5 mx-auto mb-10">
+        <header className=" flex flex-col justify-center container px-5 mx-auto mb-32">
             <div className=" mb-16">
                 <BlurFade blur="10px" delay={0.2}>
                     <p
@@ -17,7 +17,7 @@ export default function Header() {
                 </BlurFade>
 
                 <div className="flex flex-col  space-y-4 ">
-                    <h1 className="text-4xl md:text-5xl lg:text-7xl xl:text-8xl font-semibold">
+                    <h1 className="text-4xl md:text-5xl lg:text-7xl xl:text-9xl font-semibold">
                         {t('home.header.title')}
                     </h1>
 

@@ -8,20 +8,25 @@ export default function Footer() {
         window.scrollTo({ top: 0, behavior: "smooth" });
     }
     return (
-        <footer className="bg-gray-300 min-h-[500px] pt-32 grid grid-cols-1 pb-5">
-            <div className="max-w-5xl mx-auto text-center">
-
-                <p className="uppercase mb-5 font-semibold text-sm">Contato</p>
-                <BlurFade inView className="text-4xl md:text-5xl mb-10 px-5 md:px-0" >
-                    <p>Vamos juntos potencializar suas ideias e trazer ao mundo mais uma marca com propósito?</p>
+        <footer className="bg-gray-300 min-h-[600px]  grid grid-cols-1 pb-5 pt-12 px-5 rounded-t-3xl">
+            <div className="flex">
+                <BlurFade inView>
+                    <img src="/logos/Ativo 24.png" alt="Logo" className="h-20"></img>
                 </BlurFade>
+                <BlurFade className="max-w-5xl mx-auto space-y-5" inView>
 
-                <a
-                    href="/contact"
-                    className="text-2xl hover:bg-transparent cursor-pointer" >Entre em contato +</a>
+                    <p className="uppercase font-semibold text-sm">Contato</p>
+                    <BlurFade inView className="text-4xl md:text-6xl  px-5 md:px-0" >
+                        <p>Vamos juntos potencializar suas ideias e trazer ao mundo mais uma marca com propósito?</p>
+                    </BlurFade>
+
+                    <a
+                        href="/contact"
+                        className="text-2xl hover:bg-transparent cursor-pointer" >Entre em contato +</a>
+                </BlurFade>
             </div>
 
-            <div className="grid grid-cols-3 w-full justify-items-center items-end uppercase  text-sm font-semibold">
+            <div className="flex justify-between items-end w-full uppercase  text-sm font-semibold">
                 <div>
                     <span className="hidden md:block">
                         Todos os direitos reservados &copy; {new Date().getFullYear()}

@@ -5,37 +5,16 @@ import { useLocation, useNavigate } from "react-router-dom";
 import BlurFade from "./magicui/blur-fade";
 import { FadeText } from "./magicui/fade-text";
 
-export default function Navbar({ scrollNav = true, stickyNav = true }) {
+export default function Navbar() {
     const {
         t,
         i18n: { language, changeLanguage },
     } = useTranslation();
     const [menuOpen, setMenuOpen] = useState(false);
-    const [scrolled, setScrolled] = useState(false);
     const navigate = useNavigate();
     const location = useLocation();
 
 
-    const toggleMenu = () => {
-        setMenuOpen(!menuOpen);
-    };
-
-    useEffect(() => {
-        if (!scrollNav) return;
-
-        const handleScroll = () => {
-            if (window.scrollY > 50) {
-                setScrolled(true);
-            } else {
-                setScrolled(false);
-            }
-        };
-
-        window.addEventListener("scroll", handleScroll);
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
-    }, [scrollNav]);
 
     useEffect(() => {
         if (menuOpen) {
@@ -75,7 +54,7 @@ export default function Navbar({ scrollNav = true, stickyNav = true }) {
 
     return (
         <nav
-            className="h-[250px] py-5"
+            className="h-[250px] py-5 mb-10"
         >
             <div className="flex justify-between container h-full">
                 <div className="flex flex-col items-end justify-between">
