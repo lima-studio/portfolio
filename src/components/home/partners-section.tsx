@@ -1,10 +1,38 @@
+import Autoplay from "embla-carousel-autoplay";
+import React from "react";
 import BlurFade from "../magicui/blur-fade";
+import { Carousel, CarouselContent, CarouselItem } from "../ui/carousel";
+
 
 export function PartnersSection() {
+    const plugin = React.useRef(
+        Autoplay({ delay: 2000 }),
+    )
+
+
+    const partners = [
+        {
+            role: "Software Developer",
+            img: "/partners/1722702573556.jpg",
+        },
+        {
+            role: "MKT Digital",
+            img: "/partners/02.png",
+        },
+        {
+            role: "Motion Designer",
+            img: "/partners/marco.jpg",
+        },
+        {
+            role: "UI/UX Designer",
+
+            img: "/partners/daddasx.jpg",
+        }
+    ]
     return (
-        <div className="px-5 ">
+        <div>
             <div className="grid grid-cols-1 md:grid-cols-2 my-24">
-                <div className="flex  flex-col ">
+                <div className="flex  flex-col px-5 ">
                     <div className="space-y-5 mb-16">
                         <BlurFade inView>
                             <h1 className="uppercase font-thin">Partners</h1>
@@ -34,6 +62,29 @@ export function PartnersSection() {
                         </a>
                     </BlurFade>
                 </div>
+
+                <BlurFade inView>
+                    <Carousel
+                        plugins={[plugin.current]}
+                        className="w-full pl-[110px] h-full"
+                    >
+                        <CarouselContent >
+                            {partners.map((partner, index) => (
+                                <CarouselItem key={index} className=" xl:basis-1/2 2xl:basis-1/3 " >
+                                    <div className="rounded-lg flex justify-center items-end h-full py-5" style={{
+                                        backgroundImage: `url(${partner.img})`,
+                                        backgroundSize: "cover",
+                                        backgroundPosition: "center",
+                                        filter: "grayscale(100%)",
+                                    }}>
+                                        <span className="text-md xl:text-xl 2xl:text-xl text-white font-bold">{partner.role}</span>
+                                    </div>
+                                </CarouselItem>
+                            ))}
+                        </CarouselContent>
+                    </Carousel>
+
+                </BlurFade>
             </div>
 
 

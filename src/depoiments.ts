@@ -2,37 +2,45 @@
 export interface IDepoiments {
     name: string
     depoiment: string;
+    owner: {
+        name: string
+        role: string
+    }
 }
 
 const depoiments: IDepoiments[] = [
     {
         name: "Fusoê",
-        depoiment: "Fusoê - Wow, guys, it turned out so beautiful! I'm completely in love! The symbol is just like mom. You were spot on. Congratulations!"
+        depoiment: "Man, I loved it! Great idea with the photographic angles you used. It looks super clean and beautiful with the new visual identity. I loved everything!",
+        owner: {
+            name: "Júlia Gusmão",
+            role: "Founder and Partner"
+        }
     },
     {
         name: "Nanni Percussão",
-        depoiment: "Nanni Percussão - Wow, guys, it turned out so beautiful! I'm completely in love! The symbol is just like mom. You were spot on. Congratulations!"
+        depoiment: "You guys are f@#!ing awesome! You're going to crush it in the market! You're amazing, seriously! Total professional!",
+        owner: {
+            name: "Arildo Nani",
+            role: "Multi-instrumentalist and Musician"
+        }
     },
     {
         name: "Skilo Produtora de Som",
-        depoiment: "Skilo Produtora de Som - Wow, guys, it turned out so beautiful! I'm completely in love! The symbol is just like mom. You were spot on. Congratulations!"
+        depoiment: "Lima, the king of presentations! The project is awesome! Total Rock n' Roll! It turned out f@#!ing amazing!",
+        owner: {
+            name: "Danilo Debien ",
+            role: "Music Producer and Musician"
+        }
     },
     {
         name: "Beth Countinho",
-        depoiment: "Beth Countinho - Wow, guys, it turned out so beautiful! I'm completely in love! The symbol is just like mom. You were spot on. Congratulations!"
+        depoiment: "Wow, guys, it turned out so beautiful! I’m completely in love! The symbol is just like mom. You were spot on. Congratulations!",
+        owner: {
+            name: "Raquel Coutinho",
+            role: "Producer and Coordinator"
+        }
     },
-    {
-        name: "No Clima",
-        depoiment: "No Clima - Wow, guys, it turned out so beautiful! I'm completely in love! The symbol is just like mom. You were spot on. Congratulations!"
-    },
-    {
-        name: "Maria Divina Gota",
-        depoiment: "Maria Divina Gota - Wow, guys, it turned out so beautiful! I'm completely in love! The symbol is just like mom. You were spot on. Congratulations!"
-    },
-    {
-        name: "CMS",
-        depoiment: "CMS - Wow, guys, it turned out so beautiful! I'm completely in love! The symbol is just like mom. You were spot on. Congratulations!"
-    }
 ]
 
 export { depoiments };
