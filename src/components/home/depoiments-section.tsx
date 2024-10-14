@@ -1,10 +1,13 @@
 import { depoiments } from "@/depoiments";
 import { motion, useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export const DepoimentsSection = () => {
     const [activeDepoiment, setActiveDepoiment] = useState(1);
-    console.log(activeDepoiment)
+    const { t, i18n } = useTranslation();
+
+    const english = i18n.language === 'en-US'
 
     return (
         <section className="px-6 py-10">
@@ -48,7 +51,7 @@ export const DepoimentsSection = () => {
                 <div className=" h-full">
 
                     <div className="sticky top-1/3">
-                        <p className="pl-20 font-bold mb-5">WHAT THEY SAY ABOUT US</p>
+                        <p className="pl-20 font-bold mb-5">{t("home.what_they_say_about_us")}</p>
                         <div className="flex text-black text-5xl ">
                             <div>
                                 <img src={'/images/icons8-quote-left-96.png'} alt={depoiments[activeDepoiment].name} className="mr-20 " />
@@ -60,14 +63,18 @@ export const DepoimentsSection = () => {
                                 transition={{ duration: 0.5 }}
                                 className="mr-20"
                             >
-                                {depoiments[activeDepoiment].depoiment}
+                                {
+                                    english ? depoiments[activeDepoiment].depoiment.en : depoiments[activeDepoiment].depoiment.pt
+                                }
                             </motion.p>
                         </div>
 
                         <div className="text-[#555555] pl-20 mt-10">
                             <p className="font-bold text-lg uppercase">{depoiments[activeDepoiment].owner.name}</p>
                             <p className="font-bold">
-                                {depoiments[activeDepoiment].name} - <span className="font-normal">{depoiments[activeDepoiment].owner.role}</span>
+                                {depoiments[activeDepoiment].name} - <span className="font-normal">{
+                                    english ? depoiments[activeDepoiment].owner.role.en : depoiments[activeDepoiment].owner.role.pt
+                                }</span>
                             </p>
                         </div>
                     </div>

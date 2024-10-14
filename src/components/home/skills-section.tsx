@@ -1,44 +1,69 @@
 import { motion, useInView } from "framer-motion";
-import { useRef, useState } from "react";
+import { useRef, useState, } from "react";
+import { useTranslation } from "react-i18next";
 
 function SkillsSection() {
+    const { t, i18n } = useTranslation();
+
+
+    const english = i18n.language === 'en-US';
     const skills = [
         {
             id: "01",
-            name: "Estratégia",
-            description: "Construo estratégias de marcas personalizadas, alinhadas com os valores e metas de cada cliente, resultando em identidades visuais autênticas e memoráveis.",
+            name: {
+                en: "Strategy",
+                pt: "Estratégia",
+            },
+            description: {
+                en: "Personalized brand building strategies, certified with the values and goals of each client, resulting in historic and memorable visions.",
+                pt: "Estratégias personalizadas de construção de marca, alinhadas com os valores e metas de cada cliente, resultando em visões históricas e memoráveis."
+            },
         },
         {
             id: "02",
-            name: "Marca",
-            description: "Desenvolvemos identidades visuais que transcendem o visual, transmitindo a essência e os valores da marca, garantindo reconhecimento e diferenciação no mercado."
+            name: {
+                en: "Brand",
+                pt: "Marca",
+            },
+            description: {
+                en: "We develop visual identities that transcend the visual, transmitting the essence and values of the brand, ensuring recognition and differentiation in the market.",
+                pt: "Desenvolvemos identidades visuais que transcendem o visual, transmitindo a essência e os valores da marca, garantindo reconhecimento e diferenciação no mercado."
+            },
         },
         {
             id: "03",
-            name: "Multimídia",
-            description: "Criamos conteúdo multimídia que vai além do comum, proporcionando experiências visuais e interativas para conectar emocionalmente as marcas aos seus clientes."
+            name: {
+                en: "Multimedia",
+                pt: "Multimédia",
+            },
+            description: {
+                en: "Create multimedia content that goes beyond the ordinary, providing visual and interactive experiences to emotionally connect brands with their customers.",
+                pt: "Criamos conteúdos multimídia que vão além do comum, proporcionando experiências visuais e interativas que conectam emocionalmente marcas e seus clientes."
+            },
         },
         {
             id: "04",
-            name: "DA",
-            description: "Criamos conteúdo multimídia que vai além do comum, proporcionando experiências visuais e interativas para conectar emocionalmente as marcas aos seus clientes."
+            name: {
+                en: "DA",
+                pt: "DA",
+            },
+            description: {
+                en: "Every brand has its unique characteristics, just like the services it offers. Get in touch, and we will create a tailored design package specifically designed to meet your unique needs.",
+                pt: "Cada marca tem suas características únicas, assim como os serviços que oferece. Entre em contato e criaremos um pacote de design sob medida, projetado especificamente para atender às suas necessidades únicas."
+            },
         },
-        {
-            id: "05",
-            name: "SP",
-            description: "Cada marca é única, e seus serviços também podem ser. Entre em contato, e criaremos um pacote de design personalizado sob medida para atender às suas necessidades específicas."
-        }
-    ];
+    ]
+
 
     return (
         <section className="px-5 py-10 my-32" id="skills">
             <div className="grid grid-cols-1 md:grid-cols-2">
                 <div className="sticky top-20 h-fit flex gap-20">
-                    <h1 className="uppercase font-thin mt-5">Skills</h1>
+                    <h1 className="uppercase font-thin mt-5">{t('home.skills.title')}</h1>
 
                     <div>
                         <p className="md:text-3xl md:mb-32 mb-10">
-                            Potencializo o processo de inovação de meus parceiros. Construímos estratégias, marcas e multimídia que criam valor significativo para as pessoas e evolução para os negócios.
+                            {t('home.skills.description')}
                         </p>
                         <img src="/logos/Asset 35.png" alt="Logo" className="h-52"></img>
                     </div>
@@ -69,7 +94,7 @@ function SkillsSection() {
                                 >
                                     <div>
                                         <p className="text-secondary mb-5 text-8xl">
-                                            {skill.name}
+                                            {english ? skill.name.en : skill.name.pt}
                                         </p>
                                         <motion.div
                                             initial={{ opacity: 0 }}
@@ -77,7 +102,7 @@ function SkillsSection() {
                                             transition={{ duration: 1 }}
                                             className="font-normal text-xl text-black"
                                         >
-                                            <p>{skill.description}</p>
+                                            <p>{english ? skill.description.en : skill.description.pt}</p>
                                         </motion.div>
                                     </div>
                                 </motion.div>

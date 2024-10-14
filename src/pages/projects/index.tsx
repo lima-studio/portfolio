@@ -4,23 +4,25 @@ import Navbar from "@/components/navbar";
 import ProjectCard from "@/components/projects/project-card";
 import { Separator } from "@/components/ui/separator";
 import { projects } from "@/projects";
+import { useTranslation } from "react-i18next";
 
 
 export default function ProjectsPage() {
+    const { t } = useTranslation();
     return (
         <div>
             <Navbar />
-            <div className="container px-5 mx-auto mb-20">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 py-32 ">
+            <div className="container px-5 mx-auto mb-20 mt-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 pb-32 ">
                     <BlurFade inView>
                         <h1 className="text-3xl font-semibold" >
-                            Meus projetos
+                            {t('projects.title')}
                         </h1>
                     </BlurFade>
                     <BlurFade inView className="space-y-10">
                         <div>
                             <p className="text-lg md:text-3xl" >
-                                Descubra meus projetos mais impactantes, onde a criatividade e a qualidade se destacam. Veja como cada detalhe transforma ideias em visuais marcantes, trazendo inovação e excelência a cada trabalho.
+                                {t('projects.description')}
                             </p>
                         </div>
 
@@ -29,7 +31,7 @@ export default function ProjectsPage() {
                                 className="bg-secondary px-6 py-3 text-white rounded-lg mt-5"
                                 href="/contact"
                             >
-                                Orçamento +
+                                {t('projects.button')} +
                             </a>
                         </div>
                     </BlurFade>
@@ -41,7 +43,7 @@ export default function ProjectsPage() {
 
                 <div className="space-y-5 py-16">
                     <BlurFade inView >
-                        <h2 className="font-mono">Identidade visual de marcas</h2>
+                        <h2 className="font-mono">{t('projects.visual_identity')}</h2>
                     </BlurFade>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-5">

@@ -1,10 +1,12 @@
 import Autoplay from "embla-carousel-autoplay";
 import React from "react";
+import { useTranslation } from "react-i18next";
 import BlurFade from "../magicui/blur-fade";
 import { Carousel, CarouselContent, CarouselItem } from "../ui/carousel";
 
 
 export function PartnersSection() {
+    const { t, i18n } = useTranslation();
     const plugin = React.useRef(
         Autoplay({ delay: 2000 }),
     )
@@ -12,43 +14,57 @@ export function PartnersSection() {
 
     const partners = [
         {
-            role: "Software Developer",
+            role: {
+                en: "Software Developer",
+                pt: "Programador",
+            },
             img: "/partners/1722702573556.jpg",
         },
         {
-            role: "MKT Digital",
+            role: {
+                en: "Digital Marketing",
+                pt: "MKT Digital",
+            },
             img: "/partners/02.png",
         },
         {
-            role: "Motion Designer",
+            role: {
+                en: "Motion Designer",
+                pt: "Designer de Motion",
+            },
             img: "/partners/marco.jpg",
         },
         {
-            role: "UI/UX Designer",
-
+            role: {
+                en: "UI/UX Designer",
+                pt: "Designer UI/UX",
+            },
             img: "/partners/daddasx.jpg",
         }
-    ]
+    ];
+
+    const english = i18n.language === 'en-US'
+
     return (
         <div>
             <div className="grid grid-cols-1 md:grid-cols-2 my-24">
                 <div className="flex  flex-col px-5 ">
                     <div className="space-y-5 mb-16">
                         <BlurFade inView>
-                            <h1 className="uppercase font-thin">Partners</h1>
+                            <h1 className="uppercase font-thin">{t('home.partners.title')}</h1>
                         </BlurFade>
 
                         <BlurFade inView delay={0.2}>
                             <p className="md:text-6xl font-medium">
-                                <span className="opacity-30">And I'm not alone!</span>
+                                <span className="opacity-30">{t('home.partners.span_title')}</span>
                                 <br />
-                                I rely on support professionals for specific deliverables.
+                                {t('home.partners.rely')}
                             </p>
                         </BlurFade>
 
                         <BlurFade inView delay={0.2} className="max-w-xl ">
                             <p className="md:text-md font-bold opacity-80">
-                                Modular teams are formed to meet specific demands in projects and adjacent solutions.
+                                {t('home.partners.description')}
                             </p>
                         </BlurFade>
                     </div>
@@ -58,7 +74,7 @@ export function PartnersSection() {
                             className="bg-black px-10 py-4 text-white rounded-lg font-bold"
                             href="/contact"
                         >
-                            Request a Quote
+                            {t('home.partners.quote_button')}
                         </a>
                     </BlurFade>
                 </div>
@@ -77,7 +93,7 @@ export function PartnersSection() {
                                         backgroundPosition: "center",
                                         filter: "grayscale(100%)",
                                     }}>
-                                        <span className="text-md xl:text-xl 2xl:text-xl text-white font-bold">{partner.role}</span>
+                                        <span className="text-md xl:text-xl 2xl:text-xl text-white font-bold">{english ? partner.role.en : partner.role.pt}</span>
                                     </div>
                                 </CarouselItem>
                             ))}

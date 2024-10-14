@@ -4,12 +4,17 @@ import Navbar from "@/components/navbar";
 import ScrollDown from "@/components/projects/scroll-down";
 import { Separator } from "@/components/ui/separator";
 import { projects } from "@/projects";
+import { useTranslation } from "react-i18next";
 import { useParams } from "react-router-dom";
 
 export default function WorkPage() {
     const params = useParams();
     const { slug } = params;
     const project = projects.find(project => project.slug === slug);
+    const {
+        t,
+        i18n
+    } = useTranslation();
 
     if (!project) {
         return (
@@ -19,13 +24,12 @@ export default function WorkPage() {
         )
     }
 
+    const english = i18n.language === 'en-US';
+
 
     return (
         <div >
-            <Navbar
-                scrollNav={false}
-                stickyNav={false}
-            />
+            <Navbar />
             <header className="min-h-screen relative"
                 style={{
                     backgroundImage: `url("${project.primary_image_url}")`, // Adicione aspas ao redor da URL
@@ -48,7 +52,7 @@ export default function WorkPage() {
                         <h1 className="text-5xl md:text-8xl" >{project.name}</h1>
                     </BlurFade>
                     <BlurFade className="max-w-7xl" inView delay={0.2} >
-                        <p className="text-lg md:text-3xl ">{project.about}</p>
+                        <p className="text-lg md:text-3xl ">{english ? project.about.en : project.about.pt}</p>
                     </BlurFade>
 
                     <Separator className="bg-black" />
@@ -60,7 +64,7 @@ export default function WorkPage() {
                             className="bg-primary px-6 py-3 text-white rounded-lg mt-5"
                             href={"#about"}
                         >
-                            Ler mais
+                            {t('projects_details.buttons.read_more')}
                         </a>
                     </BlurFade>
 
@@ -69,7 +73,7 @@ export default function WorkPage() {
                             href={'/contact'}
                             className="bg-secondary px-6 py-3 text-white rounded-lg"
                         >
-                            Iniciar Projeto
+                            {t('projects_details.buttons.start_project')}
                         </a>
 
                     </BlurFade>
@@ -83,7 +87,7 @@ export default function WorkPage() {
                             <div className="space-y-5">
                                 <div className="flex justify-between">
                                     <span>
-                                        MARCA
+                                        {t('projects_details.brand')}
                                     </span>
 
                                     <span>
@@ -98,26 +102,13 @@ export default function WorkPage() {
                             <div className="space-y-5">
                                 <div className="flex justify-between">
                                     <span>
-                                        CATEGORIA
+                                        {t('projects_details.category')}
                                     </span>
 
                                     <span>
-                                        {project.category}
-                                    </span>
-                                </div>
-
-                                <Separator className="bg-black" />
-                            </div>
-
-
-                            <div className="space-y-5">
-                                <div className="flex justify-between">
-                                    <span>
-                                        PAIS
-                                    </span>
-
-                                    <span>
-                                        {project.country}
+                                        {
+                                            english ? project.category.en : project.category.pt
+                                        }
                                     </span>
                                 </div>
 
@@ -128,7 +119,24 @@ export default function WorkPage() {
                             <div className="space-y-5">
                                 <div className="flex justify-between">
                                     <span>
-                                        ANO
+                                        {t('projects_details.country')}
+                                    </span>
+
+                                    <span>
+                                        {
+                                            english ? project.country.en : project.country.pt
+                                        }
+                                    </span>
+                                </div>
+
+                                <Separator className="bg-black" />
+                            </div>
+
+
+                            <div className="space-y-5">
+                                <div className="flex justify-between">
+                                    <span>
+                                        {t('projects_details.year')}
                                     </span>
 
                                     <span>
@@ -147,8 +155,8 @@ export default function WorkPage() {
                             <BlurFade inView>
                                 <img src={project.primary_image_url} alt={project.name} className="w-full rounded-lg" />
                                 <div className="py-24 px-10" id="about">
-                                    <h2 className="text-3xl mb-5">Sobre</h2>
-                                    <p className="text-lg">{project.about}</p>
+                                    <h2 className="text-3xl mb-5">{t('projects_details.about')}</h2>
+                                    <p className="text-lg">{english ? project.about.en : project.about.pt}</p>
                                 </div>
                             </BlurFade>
 
@@ -182,7 +190,7 @@ export default function WorkPage() {
             </section>
             <section className="container px-5 mx-auto mt-52 mb-52">
                 <BlurFade inView className="mb-10">
-                    <h2 className="text-3xl mb-5">Últimos projetos</h2>
+                    <h2 className="text-3xl mb-5">{t('projects_details.latest_project')}</h2>
                 </BlurFade>
 
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-5">

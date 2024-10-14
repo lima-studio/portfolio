@@ -14,27 +14,33 @@ import { Textarea } from "@/components/ui/textarea"
 import { toast } from "@/hooks/use-toast"
 import emailjs from '@emailjs/browser'
 import { zodResolver } from "@hookform/resolvers/zod"
+import { t } from "i18next"
 import { useState } from "react"
 import { useForm } from "react-hook-form"
+import { useTranslation } from "react-i18next"
 import { FaArrowUp, FaBehance, FaInstagram, FaLinkedin } from "react-icons/fa"
 import { z } from "zod"
 
 
 const contactFormSchema = z.object({
     name: z.string()
-        .min(3, { message: "Seu nome deve ter pelo menos 3 letras." })
-        .max(50, { message: "Seu nome deve ter no máximo 50 letras." }),
-    email: z.string().email({ message: "Por favor, insira um email válido." }),
-    cellphone: z.string().min(10, { message: "Por favor, insira um telefone válido." }),
+        .min(3, { message: t("contact.formMessages.nameTooShort") })
+        .max(50, { message: t("contact.formMessages.nameTooLong") }),
+    email: z.string().email({ message: t("contact.formMessages.invalidEmail") }),
+    cellphone: z.string().min(10, { message: t("contact.formMessages.cellphoneTooShort") }),
     brand: z.object({
-        name: z.string().min(3, { message: "Nome da marca deve ter pelo menos 3 letras." }).max(50, { message: "Nome da marca deve ter no máximo 50 letras." }),
-        segment: z.string().min(3, { message: "Segmento da marca deve ter pelo menos 3 letras." }).max(50, { message: "Segmento da marca deve ter no máximo 50 letras." }),
-        description: z.string().min(3, { message: "Descricão da marca deve ter pelo menos 3 letras." }).max(500, { message: "Descricão da marca deve ter no máximo 500 letras." }),
+        name: z.string().min(3, { message: t("contact.formMessages.brandNameTooShort") }).max(50, { message: t("contact.formMessages.brandNameTooLong") }),
+        segment: z.string().min(3, { message: t("contact.formMessages.brandSegmentTooShort") }).max(50, { message: t("contact.formMessages.brandSegmentTooLong") }),
+        description: z.string().min(3, { message: t("contact.formMessages.brandDescriptionTooShort") }).max(500, { message: t("contact.formMessages.brandDescriptionTooLong") }),
     }),
-    estimatedBudget: z.string().refine((val) => val !== "", { message: "Por favor, insira um orcamento estimado." }).refine((val) => Number(val) > 0, { message: "Orcamento estimado deve ser maior que zero." }),
+    estimatedBudget: z.string().refine((val) => val !== "", { message: t("contact.formMessages.budgetRequired") }).refine((val) => Number(val) > 0, { message: t("contact.formMessages.budgetGreaterThanZero") }),
 })
 
 export default function ContactPage() {
+    const { t, i18n } = useTranslation();
+
+    const english = i18n.language === "en-US"
+
 
     const form = useForm<z.infer<typeof contactFormSchema>>({
         resolver: zodResolver(contactFormSchema),
@@ -61,7 +67,7 @@ export default function ContactPage() {
         const convertedEstimatedBudget = parseFloat(data.estimatedBudget) / 100
         const formattedData: z.infer<typeof contactFormSchema> = {
             ...data,
-            estimatedBudget: new Number(convertedEstimatedBudget).toLocaleString("pt-BR", { style: "currency", currency: "BRL" }),
+            estimatedBudget: new Number(convertedEstimatedBudget).toLocaleString(english ? "en-US" : "pt-BR", { style: "currency", currency: english ? "USD" : "BRL" }),
         }
 
         try {
@@ -100,16 +106,15 @@ export default function ContactPage() {
 
     return (
         <div>
-            <Navbar stickyNav={false} scrollNav={false} />
-            <div className="container px-5 mx-auto my-32 grid grid-cols-1 space-y-16">
+            <Navbar />
+            <div className="container px-5 mx-auto mb-32 grid grid-cols-1 space-y-16 mt-10">
                 <div className="flex flex-col space-y-2 text-center">
                     <BlurFade inView>
-                        <h1 className="text-5xl md:text-8xl font-semibold">Vamos dar vida à suas ideias</h1>
+                        <h1 className="text-5xl md:text-8xl font-semibold">{t('contact.header.mainTitle')}</h1>
                     </BlurFade>
 
                     <BlurFade inView delay={0.2}>
-                        <p className="md:text-3xl">Entre em contato para discutir como podemos transformar suas ideias em realidades visuais únicas, aproveitando nosso compromisso com a excelência e a inovação para dar vida à sua ideia.</p>
-
+                        <p className="md:text-3xl">{t('contact.header.subTitle')}</p>
                     </BlurFade>
                 </div>
 
@@ -120,18 +125,18 @@ export default function ContactPage() {
                             className="space-y-10"
                         >
                             <BlurFade className="space-y-3" inView>
-                                <h1 className="text-lg">Informações de contato</h1>
+                                <h1 className="text-lg">{t('contact.formLabels.contactInfo')}</h1>
                                 <FormField
                                     control={form.control}
                                     name="name"
                                     render={({ field }) => (
                                         <FormItem>
-                                            <FormLabel>Nome</FormLabel>
+                                            <FormLabel>{t('contact.formLabels.name')}</FormLabel>
                                             <FormControl>
                                                 <Input
                                                     className="h-12"
                                                     maxLength={50}
-                                                    placeholder="Seu nome" {...field}
+                                                    placeholder={t('contact.placeholders.name')} {...field}
                                                 />
                                             </FormControl>
                                             <FormMessage />
@@ -143,12 +148,12 @@ export default function ContactPage() {
                                     name="email"
                                     render={({ field }) => (
                                         <FormItem>
-                                            <FormLabel>Email</FormLabel>
+                                            <FormLabel>{t('contact.formLabels.email')}</FormLabel>
                                             <FormControl>
                                                 <Input
                                                     className="h-12"
                                                     maxLength={50}
-                                                    placeholder="Seu email" {...field}
+                                                    placeholder={t('contact.placeholders.email')} {...field}
                                                 />
                                             </FormControl>
                                             <FormMessage />
@@ -160,12 +165,12 @@ export default function ContactPage() {
                                     name="cellphone"
                                     render={({ field }) => (
                                         <FormItem>
-                                            <FormLabel>Telefone</FormLabel>
+                                            <FormLabel>{t('contact.formLabels.cellphone')}</FormLabel>
                                             <FormControl>
                                                 <Input
                                                     className="h-12"
                                                     maxLength={50}
-                                                    placeholder="Seu telefone"
+                                                    placeholder={t('contact.placeholders.cellphone')}
                                                     {...field}
                                                 />
                                             </FormControl>
@@ -175,18 +180,18 @@ export default function ContactPage() {
                                 />
                             </BlurFade>
                             <BlurFade className="space-y-3" inView delay={0.2}>
-                                <h1 className="text-lg">Informações da marca</h1>
+                                <h1 className="text-lg">{t('contact.formLabels.brandInfo')}</h1>
                                 <FormField
                                     control={form.control}
                                     name="brand.name"
                                     render={({ field }) => (
                                         <FormItem>
-                                            <FormLabel>Nome</FormLabel>
+                                            <FormLabel>{t('contact.formLabels.brandName')}</FormLabel>
                                             <FormControl>
                                                 <Input
                                                     className="h-12"
                                                     maxLength={50}
-                                                    placeholder="Nome da marca"
+                                                    placeholder={t('contact.placeholders.brandName')}
                                                     {...field}
                                                 />
                                             </FormControl>
@@ -199,12 +204,12 @@ export default function ContactPage() {
                                     name="brand.segment"
                                     render={({ field }) => (
                                         <FormItem>
-                                            <FormLabel>Segmento</FormLabel>
+                                            <FormLabel>{t('contact.formLabels.brandSegment')}</FormLabel>
                                             <FormControl>
                                                 <Input
                                                     className="h-12"
                                                     maxLength={50}
-                                                    placeholder="Segmento da marca"
+                                                    placeholder={t('contact.placeholders.brandSegment')}
                                                     {...field}
                                                 />
                                             </FormControl>
@@ -217,12 +222,12 @@ export default function ContactPage() {
                                     name="brand.description"
                                     render={({ field }) => (
                                         <FormItem>
-                                            <FormLabel>Descrição</FormLabel>
+                                            <FormLabel>{t('contact.formLabels.brandDescription')}</FormLabel>
                                             <FormControl>
                                                 <Textarea
                                                     className="h-12"
                                                     maxLength={500}
-                                                    placeholder="Descrição da marca"
+                                                    placeholder={t('contact.placeholders.brandDescription')}
                                                     {...field}
                                                 />
                                             </FormControl>
@@ -236,19 +241,18 @@ export default function ContactPage() {
                                     name="estimatedBudget"
                                     render={({ field }) => (
                                         <FormItem>
-                                            <FormLabel>Orçamento estimado</FormLabel>
+                                            <FormLabel>{t('contact.formLabels.estimatedBudget')}</FormLabel>
                                             <FormControl>
                                                 <Input
                                                     className="h-12"
-                                                    placeholder="Orçamento estimado"
+                                                    placeholder={t('contact.placeholders.estimatedBudget')}
                                                     {...field}
-                                                    value={new Intl.NumberFormat('pt-BR', {
+                                                    value={new Intl.NumberFormat(english ? 'en-US' : 'pt-BR', {
                                                         style: 'currency',
-                                                        currency: 'BRL'
+                                                        currency: english ? 'USD' : 'BRL',
                                                     }).format(Number(field.value) / 100)}
                                                     onChange={(e) => {
                                                         const rawValue = e.target.value.replace(/[^0-9]/g, '');
-
                                                         field.onChange(rawValue);
                                                     }}
                                                 />
@@ -259,10 +263,12 @@ export default function ContactPage() {
                                 />
                             </BlurFade>
                             <Button
-                                className="bg-secondary hover:bg-secondary/90 w-full py-8 md:text-base"
+                                className="bg-secondary hover:bg-secondary/90"
                                 type="submit"
                                 disabled={sendingEmail}
-                            >{sendingEmail ? 'Enviando...' : 'Enviar'}</Button>
+                            >
+                                {sendingEmail ? t('contact.button.sending') : t('contact.button.send')}
+                            </Button>
                         </form>
                     </Form>
                 </div>
@@ -275,7 +281,7 @@ export default function ContactPage() {
                 <div className="grid grid-cols-3 w-full justify-items-center ">
                     <div>
                         <span className="hidden md:block">
-                            Todos os direitos reservados &copy; {new Date().getFullYear()}
+                            {t('footer.copyright')}  &copy; {new Date().getFullYear()}
                         </span>
 
                         <span className="md:hidden">
@@ -285,7 +291,7 @@ export default function ContactPage() {
 
                     <div>
                         <span className="hidden gap-2 items-center cursor-pointer md:flex" onClick={onScrollToTop}>
-                            Voltar ao topo <FaArrowUp />
+                            {t('footer.back_to_top')} <FaArrowUp />
                         </span>
 
                         <span className="flex gap-2 items-center cursor-pointer md:hidden" onClick={onScrollToTop}>

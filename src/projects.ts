@@ -2,11 +2,23 @@ import slug from "slug";
 
 export interface IProjects {
     name: string;
-    description: string;
-    about: string;
+    description: {
+        en: string;
+        pt: string;
+    };
+    about: {
+        en: string;
+        pt: string;
+    };
     brand: string;
-    category: string;
-    country: string;
+    category: {
+        en: string;
+        pt: string;
+    };
+    country: {
+        en: string;
+        pt: string;
+    };
     year: string;
     primary_image_url: string;
     images: string[];
@@ -17,11 +29,23 @@ export interface IProjects {
 const projectsWithoutSlug: IProjects[] = [
     {
         name: "Lima Stdio",
-        description: "Lima Stdio é um projeto de interatividade e intercâmbios de arte que visa promover a arte como meio de expressão e arte.",
-        about: "O projeto foi criado para promover a arte como meio de expressão e arte, permitindo aos usuários interagir com arte e arte e promover a arte como arte.",
+        description: {
+            en: "Lima Stdio is a project of interactivity and art exchanges that aims to promote art as a means of expression and art.",
+            pt: "Lima Stdio é um projeto de interatividade e intercâmbios de arte que visa promover a arte como meio de expressão e arte."
+        },
+        about: {
+            en: "The project was created to promote art as a means of expression and art, allowing users to interact with art and promote art as art.",
+            pt: "O projeto foi criado para promover a arte como meio de expressão e arte, permitindo aos usuários interagir com arte e promover a arte como arte."
+        },
         brand: "Lima Stdio",
-        category: "Tecnologia",
-        country: "Brasil",
+        category: {
+            en: "Technology",
+            pt: "Tecnologia"
+        },
+        country: {
+            en: "Brazil",
+            pt: "Brasil"
+        },
         year: "2023",
         primary_image_url: "/projects/Lima Stdio/thumbnails_poster.jpg",
         slug: "",
@@ -49,11 +73,23 @@ const projectsWithoutSlug: IProjects[] = [
     },
     {
         name: "Skilo Produtora de Som",
-        description: "Skilo Produtora de Som é uma marca de som que apresenta uma arte de arte.",
-        about: "Skilo Produtora de Som é uma marca de som que apresenta uma arte de arte.",
+        description: {
+            en: "Skilo Sound Producer is a sound brand that presents a work of art.",
+            pt: "Skilo Produtora de Som é uma marca de som que apresenta uma arte de arte."
+        },
+        about: {
+            en: "Skilo Sound Producer is a sound brand that presents a work of art.",
+            pt: "Skilo Produtora de Som é uma marca de som que apresenta uma arte de arte."
+        },
         brand: "Skilo Produtora de Som",
-        category: "Tecnologia",
-        country: "Brasil",
+        category: {
+            en: "Technology",
+            pt: "Tecnologia"
+        },
+        country: {
+            en: "Brazil",
+            pt: "Brasil"
+        },
         year: "2023",
         primary_image_url: "/projects/Skilo Produtora de Som/thumbnails_conceitual_3.jpg",
         slug: "",
@@ -83,11 +119,23 @@ const projectsWithoutSlug: IProjects[] = [
     },
     {
         name: "Nanni Percussão",
-        description: "Nanni Percussão é um projeto de interatividade e intercâmbios de arte que visa promover a arte como meio de expressão e arte.",
-        about: "O projeto foi criado para promover a arte como meio de expressão e arte, permitindo aos usuários interagir com arte e arte e promover a arte como arte.",
+        description: {
+            en: "Nanni Percussion is a project of interactivity and art exchanges that aims to promote art as a means of expression and art.",
+            pt: "Nanni Percussão é um projeto de interatividade e intercâmbios de arte que visa promover a arte como meio de expressão e arte."
+        },
+        about: {
+            en: "The project was created to promote art as a means of expression and art, allowing users to interact with art and promote art as art.",
+            pt: "O projeto foi criado para promover a arte como meio de expressão e arte, permitindo aos usuários interagir com arte e promover a arte como arte."
+        },
         brand: "Nanni Percussão",
-        category: "Tecnologia",
-        country: "Brasil",
+        category: {
+            en: "Technology",
+            pt: "Tecnologia"
+        },
+        country: {
+            en: "Brazil",
+            pt: "Brasil"
+        },
         year: "2023",
         primary_image_url: "/projects/Nanni Percussão/Thumbnails_Capa.jpg",
         slug: "",
@@ -114,11 +162,23 @@ const projectsWithoutSlug: IProjects[] = [
     },
     {
         name: "Festival Novos Encontros",
-        description: "O Festival Novos Encontros é um evento anual que celebra a diversidade cultural e artística, reunindo pessoas de diferentes origens e culturas para compartilhar experiências únicas. Este projeto é focado no desenvolvimento de um site interativo e envolvente para promover o festival, oferecendo informações detalhadas sobre programação, artistas participantes e locais de realização.",
-        about: "O projeto do site do Festival Novos Encontros foi pensado para refletir a essência do evento, combinando elementos visuais modernos com uma navegação intuitiva. Com um design responsivo, o site oferece uma experiência imersiva, destacando as diferentes atividades do festival e facilitando a interação dos usuários com o conteúdo. O objetivo é fortalecer o festival como um ponto de encontro cultural e fomentar a troca de experiências entre os participantes.",
+        description: {
+            en: "The Festival Novos Encontros is an annual event that celebrates cultural and artistic diversity, bringing together people from different backgrounds and cultures to share unique experiences. This project focuses on developing an interactive and engaging website to promote the festival, providing detailed information about the program, participating artists, and venues.",
+            pt: "O Festival Novos Encontros é um evento anual que celebra a diversidade cultural e artística, reunindo pessoas de diferentes origens e culturas para compartilhar experiências únicas. Este projeto é focado no desenvolvimento de um site interativo e envolvente para promover o festival, oferecendo informações detalhadas sobre programação, artistas participantes e locais de realização."
+        },
+        about: {
+            en: "The website project for Festival Novos Encontros was designed to reflect the essence of the event, combining modern visual elements with intuitive navigation. With a responsive design, the site offers an immersive experience, highlighting the different activities of the festival and facilitating user interaction with the content. The goal is to strengthen the festival as a cultural meeting point and foster the exchange of experiences among participants.",
+            pt: "O projeto do site do Festival Novos Encontros foi pensado para refletir a essência do evento, combinando elementos visuais modernos com uma navegação intuitiva. Com um design responsivo, o site oferece uma experiência imersiva, destacando as diferentes atividades do festival e facilitando a interação dos usuários com o conteúdo. O objetivo é fortalecer o festival como um ponto de encontro cultural e fomentar a troca de experiências entre os participantes."
+        },
         brand: "Festival Novos Encontros",
-        category: "Tecnologia",
-        country: "Brasil",
+        category: {
+            en: "Technology",
+            pt: "Tecnologia"
+        },
+        country: {
+            en: "Brazil",
+            pt: "Brasil"
+        },
         year: "2023",
         primary_image_url: "/projects/Festival Novos Encontros/Bandeiras.jpg",
         slug: "",
@@ -142,11 +202,23 @@ const projectsWithoutSlug: IProjects[] = [
     },
     {
         name: "Beth Coutinho",
-        description: "O projeto Beth Coutinho tem como objetivo criar uma plataforma digital para fortalecer a presença online desta importante figura da comunidade local. O site oferece um espaço para compartilhar ideias, projetos e iniciativas voltadas ao desenvolvimento social e comunitário.",
-        about: "A criação do site da Beth Coutinho foi baseada em um design acessível e inclusivo, permitindo que diferentes públicos possam se engajar facilmente com as suas causas e projetos. O layout foi pensado para promover a interação e a participação dos usuários, com seções que destacam eventos, campanhas e novidades da comunidade. A plataforma serve como um ponto de conexão, unindo pessoas interessadas em construir uma sociedade mais justa e colaborativa.",
+        description: {
+            en: "The Beth Coutinho project aims to create a digital platform to strengthen the online presence of this important figure in the local community. The website provides a space to share ideas, projects, and initiatives focused on social and community development.",
+            pt: "O projeto Beth Coutinho tem como objetivo criar uma plataforma digital para fortalecer a presença online desta importante figura da comunidade local. O site oferece um espaço para compartilhar ideias, projetos e iniciativas voltadas ao desenvolvimento social e comunitário."
+        },
+        about: {
+            en: "The creation of the Beth Coutinho website was based on an accessible and inclusive design, allowing different audiences to engage easily with her causes and projects. The layout was designed to promote user interaction and participation, with sections highlighting events, campaigns, and community news. The platform serves as a connection point, uniting people interested in building a fairer and more collaborative society.",
+            pt: "A criação do site da Beth Coutinho foi baseada em um design acessível e inclusivo, permitindo que diferentes públicos possam se engajar facilmente com as suas causas e projetos. O layout foi pensado para promover a interação e a participação dos usuários, com seções que destacam eventos, campanhas e novidades da comunidade. A plataforma serve como um ponto de conexão, unindo pessoas interessadas em construir uma sociedade mais justa e colaborativa."
+        },
         brand: "Beth Coutinho",
-        category: "Comunidade",
-        country: "Brasil",
+        category: {
+            en: "Community",
+            pt: "Comunidade"
+        },
+        country: {
+            en: "Brazil",
+            pt: "Brasil"
+        },
         year: "2022",
         primary_image_url: "/projects/Beth Coutinho/Thumbnails_BethCoutinho2.jpg",
         slug: "",
@@ -191,11 +263,23 @@ const projectsWithoutSlug: IProjects[] = [
     },
     {
         name: "Sensatta MKT",
-        description: "Sensatta MKT é um projeto digital desenvolvido para uma agência de marketing inovadora, especializada em soluções criativas para empresas que buscam fortalecer sua presença no mercado. O site foi projetado para apresentar os serviços oferecidos e as estratégias inovadoras da agência de maneira dinâmica e atrativa.",
-        about: "O desenvolvimento do site da Sensatta MKT foi focado em criar uma plataforma moderna e visualmente impactante, que comunicasse a expertise da agência em marketing digital. O layout foi projetado para ser claro e objetivo, facilitando a navegação dos usuários e destacando os cases de sucesso da agência. Além disso, o site integra funcionalidades interativas que visam aumentar o engajamento dos visitantes, tornando a experiência de navegação mais atrativa.",
+        description: {
+            en: "Sensatta MKT is a digital project developed for an innovative marketing agency, specializing in creative solutions for companies looking to strengthen their market presence. The website was designed to showcase the agency's services and innovative strategies in a dynamic and attractive way.",
+            pt: "Sensatta MKT é um projeto digital desenvolvido para uma agência de marketing inovadora, especializada em soluções criativas para empresas que buscam fortalecer sua presença no mercado. O site foi projetado para apresentar os serviços oferecidos e as estratégias inovadoras da agência de maneira dinâmica e atrativa."
+        },
+        about: {
+            en: "The development of the Sensatta MKT website focused on creating a modern and visually impactful platform that communicates the agency's expertise in digital marketing. The layout was designed to be clear and objective, facilitating user navigation and highlighting the agency's success cases. Additionally, the site integrates interactive features aimed at increasing visitor engagement, making the browsing experience more attractive.",
+            pt: "O desenvolvimento do site da Sensatta MKT foi focado em criar uma plataforma moderna e visualmente impactante, que comunicasse a expertise da agência em marketing digital. O layout foi projetado para ser claro e objetivo, facilitando a navegação dos usuários e destacando os cases de sucesso da agência. Além disso, o site integra funcionalidades interativas que visam aumentar o engajamento dos visitantes, tornando a experiência de navegação mais atrativa."
+        },
         brand: "Sensatta MKT",
-        category: "Tecnologia",
-        country: "Brasil",
+        category: {
+            en: "Technology",
+            pt: "Tecnologia"
+        },
+        country: {
+            en: "Brazil",
+            pt: "Brasil"
+        },
         year: "2022",
         primary_image_url: "/projects/Sensatta MKT/logo preferêncial.png",
         slug: "",
@@ -229,11 +313,23 @@ const projectsWithoutSlug: IProjects[] = [
     },
     {
         name: "Marco Souza",
-        description: "O projeto Marco Souza consiste no desenvolvimento de um site personalizado para destacar os serviços e a trajetória profissional deste renomado especialista em tecnologia. O site visa aumentar sua presença online e facilitar o acesso de potenciais clientes aos seus serviços e portfólio.",
-        about: "A plataforma criada para o Marco Souza foi planejada para oferecer uma experiência de navegação fluida, com um design moderno que reflete seu conhecimento técnico e suas inovações no setor. A estrutura do site permite fácil acesso às informações sobre os serviços oferecidos, bem como um portfólio de projetos que mostram a qualidade e a eficiência de suas soluções tecnológicas. Com uma interface intuitiva e responsiva, o site garante que os usuários encontrem facilmente as informações que procuram.",
+        description: {
+            en: "The Marco Souza project consists of developing a personalized website to highlight the services and professional journey of this renowned technology specialist. The website aims to increase his online presence and facilitate potential clients' access to his services and portfolio.",
+            pt: "O projeto Marco Souza consiste no desenvolvimento de um site personalizado para destacar os serviços e a trajetória profissional deste renomado especialista em tecnologia. O site visa aumentar sua presença online e facilitar o acesso de potenciais clientes aos seus serviços e portfólio."
+        },
+        about: {
+            en: "The design of the Marco Souza website was based on a clean and modern aesthetic, allowing easy navigation between different sections such as services offered, testimonials from clients, and contact information. Additionally, the site incorporates an engaging blog section where Marco can share insights and news about the technology sector, positioning himself as an authority in his area of expertise.",
+            pt: "O design do site de Marco Souza foi baseado em uma estética limpa e moderna, permitindo fácil navegação entre as diferentes seções, como serviços oferecidos, depoimentos de clientes e informações de contato. Além disso, o site incorpora uma seção de blog envolvente onde Marco pode compartilhar insights e novidades sobre o setor de tecnologia, se posicionando como uma autoridade em sua área de atuação."
+        },
         brand: "Marco Souza",
-        category: "Tecnologia",
-        country: "Brasil",
+        category: {
+            en: "Technology",
+            pt: "Tecnologia"
+        },
+        country: {
+            en: "Brazil",
+            pt: "Brasil"
+        },
         year: "2022",
         primary_image_url: "/projects/Marco Souza/Capa_thmbnalis.png",
         slug: "",
@@ -272,11 +368,23 @@ const projectsWithoutSlug: IProjects[] = [
     },
     {
         name: "Maria Divina Gota",
-        description: "O site Maria Divina Gota foi desenvolvido para promover e divulgar os produtos de uma marca de cosméticos naturais e orgânicos. O objetivo é oferecer uma plataforma onde os clientes possam conhecer melhor a marca, seus valores e adquirir os produtos de maneira fácil e rápida.",
-        about: "Com um design focado na simplicidade e na natureza, o site Maria Divina Gota reflete os princípios da marca, que prioriza a sustentabilidade e o uso de ingredientes naturais. O layout é limpo e funcional, permitindo que os usuários encontrem rapidamente os produtos que procuram e obtenham informações detalhadas sobre cada um deles. A integração com ferramentas de e-commerce garante uma experiência de compra fácil e segura, reforçando o compromisso da marca com a qualidade e a satisfação do cliente.",
+        description: {
+            en: "The Maria Divina Gota website was developed to promote and showcase the products of a brand of natural and organic cosmetics. The goal is to provide a platform where customers can learn more about the brand, its values, and easily and quickly purchase products.",
+            pt: "O site Maria Divina Gota foi desenvolvido para promover e divulgar os produtos de uma marca de cosméticos naturais e orgânicos. O objetivo é oferecer uma plataforma onde os clientes possam conhecer melhor a marca, seus valores e adquirir os produtos de maneira fácil e rápida."
+        },
+        about: {
+            en: "With a design focused on simplicity and nature, the Maria Divina Gota website reflects the principles of the brand, which prioritizes sustainability and the use of natural ingredients. The layout is clean and functional, allowing users to quickly find the products they are looking for and obtain detailed information about each one. Integration with e-commerce tools ensures an easy and secure shopping experience, reinforcing the brand's commitment to quality and customer satisfaction.",
+            pt: "Com um design focado na simplicidade e na natureza, o site Maria Divina Gota reflete os princípios da marca, que prioriza a sustentabilidade e o uso de ingredientes naturais. O layout é limpo e funcional, permitindo que os usuários encontrem rapidamente os produtos que procuram e obtenham informações detalhadas sobre cada um deles. A integração com ferramentas de e-commerce garante uma experiência de compra fácil e segura, reforçando o compromisso da marca com a qualidade e a satisfação do cliente."
+        },
         brand: "Maria Divina Gota",
-        category: "Tecnologia",
-        country: "Brasil",
+        category: {
+            en: "Technology",
+            pt: "Tecnologia"
+        },
+        country: {
+            en: "Brazil",
+            pt: "Brasil"
+        },
         year: "2022",
         primary_image_url: "/projects/Maria Divina Gota/01.png",
         slug: "",

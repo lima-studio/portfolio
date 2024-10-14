@@ -1,9 +1,11 @@
+import { useTranslation } from "react-i18next";
 import { FaArrowUp, FaBehance, FaInstagram, FaLinkedin } from "react-icons/fa";
 import BlurFade from "./magicui/blur-fade";
 
 
 
 export default function Footer() {
+    const { t } = useTranslation();
     const onScrollToTop = () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
     }
@@ -15,21 +17,23 @@ export default function Footer() {
                 </BlurFade>
                 <BlurFade className="max-w-5xl mx-auto space-y-5" inView>
 
-                    <p className="uppercase font-semibold text-sm">Contato</p>
+                    <p className="uppercase font-semibold text-sm">{t('footer.contact')}</p>
                     <BlurFade inView className="text-4xl md:text-6xl  px-5 md:px-0" >
-                        <p>Vamos juntos potencializar suas ideias e trazer ao mundo mais uma marca com propósito?</p>
+                        <p>
+                            {t('footer.description')}
+                        </p>
                     </BlurFade>
 
                     <a
                         href="/contact"
-                        className="text-2xl hover:bg-transparent cursor-pointer" >Entre em contato +</a>
+                        className="text-2xl hover:bg-transparent cursor-pointer" >{t('footer.button')} +</a>
                 </BlurFade>
             </div>
 
             <div className="flex justify-between items-end w-full uppercase  text-sm font-semibold">
                 <div>
                     <span className="hidden md:block">
-                        Todos os direitos reservados &copy; {new Date().getFullYear()}
+                        {t('footer.copyright')}  &copy; {new Date().getFullYear()}
                     </span>
 
                     <span className="md:hidden">
@@ -39,7 +43,7 @@ export default function Footer() {
 
                 <div>
                     <span className="hidden gap-2 items-center cursor-pointer md:flex" onClick={onScrollToTop}>
-                        Voltar ao topo <FaArrowUp />
+                        {t('footer.back_to_top')} <FaArrowUp />
                     </span>
 
                     <span className="flex gap-2 items-center cursor-pointer md:hidden" onClick={onScrollToTop}>
