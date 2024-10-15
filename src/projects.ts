@@ -69,7 +69,7 @@ const projectsWithoutSlug: IProjects[] = [
             "/projects/Padaria Cravo e Canela/Thumbnails_sacocumprido.jpg",
             "/projects/Padaria Cravo e Canela/thumbnails_stories.jpg"
         ]
-    },    
+    },
     {
         name: "Ar Terapias",
         description: {
@@ -109,7 +109,7 @@ const projectsWithoutSlug: IProjects[] = [
             "/projects/Projeto - Ar Terapias/tipografia.png",
             "/projects/Projeto - Ar Terapias/toalha_sabonete.png"
         ]
-        
+
     },
     {
         name: "Lima Stdio",
@@ -358,10 +358,11 @@ const projectsWithoutSlug: IProjects[] = [
             en: "Brazil",
             pt: "Brasil"
         },
-        primary_image_url: "/projects/Sensatta MKT/62feffcc-f199-4a5a-b5ae-5ddae1de3e48.gif",
+        primary_image_url: "/projects/Sensatta MKT/logo preferêncial.png",
         slug: "",
         homepage: true,
         images: [
+            "/projects/Sensatta MKT/62feffcc-f199-4a5a-b5ae-5ddae1de3e48.gif",
             "/projects/Sensatta MKT/logo preferêncial.png",
             "/projects/Sensatta MKT/canecas.png",
             "/projects/Sensatta MKT/Capa.png",

@@ -25,7 +25,7 @@ function ProjectsSection({ projects }: { projects: IProjects[] }) {
             </div>
 
             <BlurFade inView className="w-1/2 flex justify-end">
-                <span className="text-xl md:text-3xl font-medium">
+                <span className="text-xl md:text-3xl ">
                     {t('home.and_stop_here')}
                 </span>
             </BlurFade>

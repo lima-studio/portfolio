@@ -51,11 +51,11 @@ export function PartnersSection() {
                 <div className="flex  flex-col px-5 ">
                     <div className="space-y-5 mb-16">
                         <BlurFade inView>
-                            <h1 className="uppercase font-thin">{t('home.partners.title')}</h1>
+                            <h1 className="uppercase font-normal">{t('home.partners.title')}</h1>
                         </BlurFade>
 
                         <BlurFade inView delay={0.2}>
-                            <p className="md:text-6xl font-medium">
+                            <p className="md:text-6xl font-normal">
                                 <span className="opacity-30">{t('home.partners.span_title')}</span>
                                 <br />
                                 {t('home.partners.rely')}
@@ -63,7 +63,7 @@ export function PartnersSection() {
                         </BlurFade>
 
                         <BlurFade inView delay={0.2} className="max-w-xl ">
-                            <p className="md:text-md font-bold opacity-80">
+                            <p className="md:text-md font-medium opacity-80">
                                 {t('home.partners.description')}
                             </p>
                         </BlurFade>
@@ -71,7 +71,7 @@ export function PartnersSection() {
 
                     <BlurFade inView delay={0.2}>
                         <a
-                            className="bg-black px-10 py-4 text-white rounded-lg font-bold"
+                            className="bg-black px-10 py-4 text-white rounded-lg font-medium"
                             href="/contact"
                         >
                             {t('home.partners.quote_button')}

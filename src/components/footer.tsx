@@ -17,7 +17,7 @@ export default function Footer() {
                 </BlurFade>
                 <BlurFade className="max-w-5xl mx-auto space-y-5" inView>
 
-                    <p className="uppercase font-semibold text-sm">{t('footer.contact')}</p>
+                    <p className="uppercase font-medium text-sm">{t('footer.contact')}</p>
                     <BlurFade inView className="text-4xl md:text-6xl  px-5 md:px-0" >
                         <p>
                             {t('footer.description')}
@@ -30,7 +30,7 @@ export default function Footer() {
                 </BlurFade>
             </div>
 
-            <div className="flex justify-between items-end w-full uppercase  text-sm font-semibold">
+            <div className="flex justify-between items-end w-full uppercase  text-sm font-medium">
                 <div>
                     <span className="hidden md:block">
                         {t('footer.copyright')}  &copy; {new Date().getFullYear()}

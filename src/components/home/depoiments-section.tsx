@@ -51,7 +51,7 @@ export const DepoimentsSection = () => {
                 <div className=" h-full">
 
                     <div className="sticky top-1/3">
-                        <p className="pl-20 font-bold mb-5">{t("home.what_they_say_about_us")}</p>
+                        <p className="pl-20 font-medium mb-5">{t("home.what_they_say_about_us")}</p>
                         <div className="flex text-black text-5xl ">
                             <div>
                                 <img src={'/images/icons8-quote-left-96.png'} alt={depoiments[activeDepoiment].name} className="mr-20 " />
@@ -70,9 +70,9 @@ export const DepoimentsSection = () => {
                         </div>
 
                         <div className="text-[#555555] pl-20 mt-10">
-                            <p className="font-bold text-lg uppercase">{depoiments[activeDepoiment].owner.name}</p>
-                            <p className="font-bold">
-                                {depoiments[activeDepoiment].name} - <span className="font-normal">{
+                            <p className="font-semibold text-xl uppercase">{depoiments[activeDepoiment].owner.name}</p>
+                            <p className="font-semibold text-lg">
+                                {depoiments[activeDepoiment].name} - <span className="font-normal ">{
                                     english ? depoiments[activeDepoiment].owner.role.en : depoiments[activeDepoiment].owner.role.pt
                                 }</span>
                             </p>

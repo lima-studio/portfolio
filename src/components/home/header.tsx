@@ -22,7 +22,7 @@ export default function Header() {
                     md:text-7xl
                     mb-2
                     lg:text-8xl
-                    2xl:text-9xl font-semibold">
+                    2xl:text-9xl font-medium">
                         {t('home.header.title')}
                     </h1>
 
@@ -42,12 +42,12 @@ export default function Header() {
             <BlurFade className="flex space-x-4">
                 <a
                     href="/projects"
-                    className="text-black bg-primary px-8 py-3 hover:bg-primary/90 cursor-pointer rounded transition  font-semibold"
+                    className="text-black bg-primary px-8 py-3 hover:bg-primary/90 cursor-pointer rounded transition  font-medium"
                 >
                     {t('home.buttons.project')}
                 </a>
                 <a
-                    className="text-black bg-secondary px-8 py-3 hover:bg-secondary/90 cursor-pointer rounded transition  font-semibold"
+                    className="text-black bg-secondary px-8 py-3 hover:bg-secondary/90 cursor-pointer rounded transition  font-medium"
                     href="/contact"
                 >
                     {t('home.buttons.quote')}

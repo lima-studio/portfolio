@@ -69,7 +69,7 @@ export default function Navbar() {
                     </BlurFade>
 
                     {/* Menu de navegação para telas grandes */}
-                    <ul className=" font-bold text-end ">
+                    <ul className=" font-medium text-end ">
                         <li>
                             <a href="/projects" className="relative hover: transition group">
                                 <FadeText
