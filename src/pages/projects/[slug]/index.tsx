@@ -52,7 +52,7 @@ export default function WorkPage() {
                         <h1 className="text-5xl md:text-8xl" >{project.name}</h1>
                     </BlurFade>
                     <BlurFade className="max-w-7xl" inView delay={0.2} >
-                        <p className="text-lg md:text-3xl ">{english ? project.about.en : project.about.pt}</p>
+                        <p className="text-lg md:text-3xl ">{english ? project.description.en : project.description.pt}</p>
                     </BlurFade>
 
                     <Separator className="bg-black" />
@@ -126,21 +126,6 @@ export default function WorkPage() {
                                         {
                                             english ? project.country.en : project.country.pt
                                         }
-                                    </span>
-                                </div>
-
-                                <Separator className="bg-black" />
-                            </div>
-
-
-                            <div className="space-y-5">
-                                <div className="flex justify-between">
-                                    <span>
-                                        {t('projects_details.year')}
-                                    </span>
-
-                                    <span>
-                                        {project.year}
                                     </span>
                                 </div>
 
