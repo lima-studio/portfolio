@@ -26,7 +26,6 @@ export default function ProjectCard({
                 <div>
                     <h3 >{project.name}</h3>
                     <p className="font-light">{english ? project.category.en : project.category.pt}</p>
-                    <p className="font-light">{project.year}</p>
                 </div>
             </div>
         </a>
