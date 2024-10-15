@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Button } from "./ui/button";
 
 function WhoSection() {
     const { i18n } = useTranslation();
@@ -35,6 +34,7 @@ function WhoSection() {
                 backgroundAttachment: "local",
                 transform: "scaleX(-1)",
             },
+            linkedin: "https://www.linkedin.com/company/limastdio/",
             who_color: "text-[#8b6e00]",
             span_title: {
                 en: "Hello, I'm Lim.",
@@ -65,6 +65,7 @@ function WhoSection() {
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
             },
+            linkedin: "https://www.linkedin.com/in/euluizlima/",
             who_color: "text-black",
             span_title: {
                 en: "Hello, my name is Luiz Lima,",
@@ -147,11 +148,13 @@ function WhoSection() {
                     >
                         {english ? selectedElement.represent.en : selectedElement.represent.pt}
                     </motion.p>
-                    <Button
-                        className="bg-white text-black font-medium w-32 h-12 hover:opacity-90 hover:bg-white text-md"
+                    <a
+                        href={selectedElement.linkedin}
+                        target="_blank"
+                        className="bg-white text-black font-medium w-32 h-12 hover:opacity-90 hover:bg-white text-md rounded justify-center flex items-center"
                     >
                         {english ? selectedElement.button.en : selectedElement.button.pt}
-                    </Button>
+                    </a>
                 </div>
             </motion.div>
         </section>

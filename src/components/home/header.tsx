@@ -4,7 +4,8 @@ import BlurFade from "../magicui/blur-fade";
 
 
 export default function Header() {
-    const { t } = useTranslation()
+    const { t, i18n } = useTranslation()
+    const english = i18n.language === 'en-US';
     return (
         <header className=" flex flex-col justify-center container px-5 mx-auto mb-20 md:mb-32 mt-10">
             <div className=" mb-10">
@@ -17,21 +18,22 @@ export default function Header() {
                 </BlurFade>
 
                 <div className="flex flex-col  space-y-5 relative ">
-                    <h1 className="
+                    <h1 className={`
+                   
                     text-5xl
                     md:text-7xl
                     mb-2
                     lg:text-8xl
-                    2xl:text-9xl font-medium">
+                    2xl:text-9xl font-medium`}>
                         {t('home.header.title')}
                     </h1>
 
-                    <p className="
-                    relative bottom-3 
+                    <p className={`
+                    relative bottom-[1.5rem]
                     text-lg
-                    2xl:absolute xl:right-0 xl:text-xl
-                    2xl:right-0 2xl:max-w-full 2xl:left-[600px] 2xl:text-3xl
-                    ">
+                    2xl:absolute xl:text-xl
+                     ${english ? "2xl:max-w-full 2xl:left-[600px] 2xl:text-3xl xl:right-0" : " 2xl:text-2xl 2xl:max-w-xl 2xl:left-[850px] "}
+                    `}>
                         {t('home.header.sub_title')}
                     </p>
                 </div>
