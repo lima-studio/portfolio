@@ -7,11 +7,27 @@ function WhoSection() {
     const { i18n } = useTranslation();
     const english = i18n.language === 'en-US';
 
+    const [isMobile, setIsMobile] = useState(false);
+
+    // Hook para detectar tamanho da tela
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 768); // Considera mobile quando a largura for menor ou igual a 768px
+        };
+
+        // Adiciona listener no evento de resize
+        window.addEventListener('resize', handleResize);
+        handleResize(); // Chama inicialmente para verificar o estado ao montar o componente
+
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+
     const elements = [
         {
             id: 0,
             backgroundStyle: {
-                backgroundImage: `url("/images/who-background-lim.png")`,
+                backgroundImage: isMobile ? "none" : `url("/images/who-background-lim.png")`,
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
                 backgroundColor: "#ffd622",
@@ -90,7 +106,7 @@ function WhoSection() {
     return (
         <section id="who">
             <motion.div
-                className="mx-5 rounded-3xl mb-32 min-h-[450px]"
+                className="mx-5 rounded-3xl mb-20 md:mb-32 min-h-[450px]"
                 style={selectedElement.backgroundStyle}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -112,7 +128,7 @@ function WhoSection() {
                         {english ? "WHO" : "QUEM"}
                     </motion.span>
                     <motion.h1
-                        className={`${selectedElement.title.color} text-6xl font-medium ${selectedElement.title.max_width}`}
+                        className={`${selectedElement.title.color} text-5xl md:text-6xl font-medium ${selectedElement.title.max_width}`}
                         initial={{ y: -20, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ duration: 0.5, delay: 0.2 }}

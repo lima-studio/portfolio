@@ -57,13 +57,13 @@ function SkillsSection() {
 
 
     return (
-        <section className="px-5 py-10 my-32" id="skills">
-            <div className="grid grid-cols-1 md:grid-cols-2">
-                <div className="sticky top-20 h-fit flex gap-20">
-                    <h1 className="uppercase font-medium mt-5">{t('home.skills.title')}</h1>
+        <section className="px-5 py-10 my-20 md:my-32" id="skills">
+            <div className="grid grid-cols-1 lg:grid-cols-2">
+                <div className="lg:sticky top-20 h-fit lg:flex gap-20 mb-14 lg:mb-0">
+                    <h1 className="uppercase font-medium mt-5 mb-5 lg:mb-0">{t('home.skills.title')}</h1>
 
                     <div>
-                        <p className="md:text-3xl md:mb-32 mb-10 ">
+                        <p className="lg:text-3xl lg:mb-32 mb-10 ">
                             {t('home.skills.description')}
                         </p>
                         <img src="/logos/Asset 35.png" alt="Logo" className="h-52"></img>
@@ -94,14 +94,14 @@ function SkillsSection() {
                                     className="overflow-hidden flex flex-col gap-5"
                                 >
                                     <div>
-                                        <h1 className="text-secondary mb-5 text-9xl font-extralight  pl-[90px] ">
+                                        <h1 className="text-secondary mb-5 text-7xl 2xl:text-9xl font-extralight  lg:pl-[90px] ">
                                             {english ? skill.name.en : skill.name.pt}
                                         </h1>
                                         <motion.div
                                             initial={{ opacity: 0 }}
                                             animate={hasBeenInView ? { opacity: 1 } : { opacity: 0 }}
                                             transition={{ duration: 1 }}
-                                            className="font-normal text-xl text-black max-w-3xl flex gap-5  pl-[55px]"
+                                            className="font-normal text-xl text-black max-w-3xl flex gap-5  lg:pl-[55px]"
                                         >
                                             <div>
                                                 <p className="text-secondary font-bold">{skill.id}</p>

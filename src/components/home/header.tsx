@@ -6,7 +6,7 @@ import BlurFade from "../magicui/blur-fade";
 export default function Header() {
     const { t } = useTranslation()
     return (
-        <header className=" flex flex-col justify-center container px-5 mx-auto mb-32 mt-10">
+        <header className=" flex flex-col justify-center container px-5 mx-auto mb-20 md:mb-32 mt-10">
             <div className=" mb-10">
                 <BlurFade blur="10px" delay={0.2}>
                     <p

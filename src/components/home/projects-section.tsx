@@ -17,7 +17,7 @@ function ProjectsSection({ projects }: { projects: IProjects[] }) {
                         key={index}
                         delay={index * 0.2}
                         inView
-                        className="h-[650px]"
+                        className="h-[400px] md:h-[650px]"
                     >
                         <ProjectCard project={project} />
                     </BlurFade>

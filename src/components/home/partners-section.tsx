@@ -48,14 +48,14 @@ export function PartnersSection() {
     return (
         <div>
             <div className="grid grid-cols-1 md:grid-cols-2 my-24">
-                <div className="flex  flex-col px-5 ">
+                <div className="flex  flex-col px-5 mb-16 md:mb-0">
                     <div className="space-y-5 mb-16">
                         <BlurFade inView>
-                            <h1 className="uppercase font-normal">{t('home.partners.title')}</h1>
+                            <h1 className="uppercase font-medium">{t('home.partners.title')}</h1>
                         </BlurFade>
 
                         <BlurFade inView delay={0.2}>
-                            <p className="md:text-6xl font-normal">
+                            <p className="text-5xl md:text-6xl font-normal">
                                 <span className="opacity-30">{t('home.partners.span_title')}</span>
                                 <br />
                                 {t('home.partners.rely')}
@@ -82,7 +82,7 @@ export function PartnersSection() {
                 <BlurFade inView>
                     <Carousel
                         plugins={[plugin.current]}
-                        className="w-full pl-[110px] h-full"
+                        className="w-full md:pl-[100px] md:h-full h-[500px] px-5 md:px-0"
                     >
                         <CarouselContent >
                             {partners.map((partner, index) => (
