@@ -15,6 +15,7 @@ export default {
                 title: "Refreshing design for exciting people and brands.",
                 sub_title: "We build value for people and brands through that refreshes excitign businesses and drives innovation."
             },
+            see_more: "See more",
             buttons: {
                 project: "Projects",
                 quote: "Quote +",

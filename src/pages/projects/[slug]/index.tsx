@@ -46,7 +46,7 @@ export default function WorkPage() {
                 <div className="absolute bottom-0 left-0 right-0 h-full w-full bg-black bg-opacity-25"></div>
             </header>
 
-            <section className="container px-5 mx-auto py-16 flex flex-col  gap-12">
+            <section className="px-5 mx-auto py-16 flex flex-col  gap-12">
                 <div className="space-y-5">
                     <BlurFade inView>
                         <h1 className="text-5xl md:text-8xl" >{project.name}</h1>
@@ -80,10 +80,10 @@ export default function WorkPage() {
                 </div>
             </section>
 
-            <section className="container px-5 mx-auto mt-52">
+            <section className="px-5 mx-auto mt-52">
                 <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-16">
                     <BlurFade inView>
-                        <div className="sticky top-20 self-start pb-16 space-y-4 font-mono">
+                        <div className="sticky top-20 self-start pb-16 space-y-4 font-normal">
                             <div className="space-y-5">
                                 <div className="flex justify-between">
                                     <span>
@@ -146,48 +146,50 @@ export default function WorkPage() {
                             </BlurFade>
 
                         </div>
-                        {project.images.map((image, index) => {
-                            const isVideo = image.endsWith('.mp4');
-                            return (
-                                <BlurFade inView key={image} delay={0.2}>
-                                    {isVideo ? (
-                                        <video
-                                            src={image}
-                                            className="w-full rounded"
-                                            controls={false}
-                                            autoPlay
-                                            key={index}
-                                        />
-                                    ) : (
-                                        <img
-                                            src={image}
-                                            className="w-full rounded"
-                                            alt={project.name}
-                                            key={index}
-                                        />
-                                    )}
-                                </BlurFade>
-                            );
-                        })}
+                        <div className="flex flex-col gap-5">
+                            {project.images.map((image, index) => {
+                                const isVideo = image.endsWith('.mp4');
+                                return (
+                                    <BlurFade inView key={image} delay={0.3} className="w-full h-full" >
+                                        {isVideo ? (
+                                            <video
+                                                src={image}
+                                                className="w-full rounded-2xl object-cover h-[600px]"
+                                                controls={false}
+                                                autoPlay
+                                                key={index}
+                                            />
+                                        ) : (
+                                            <img
+                                                src={image}
+                                                className="w-full rounded-2xl object-cover h-[600px]"
+                                                alt={project.name}
+                                                key={index}
+                                            />
+                                        )}
+                                    </BlurFade>
+                                );
+                            })}
+                        </div>
 
                     </div>
                 </div>
             </section>
-            <section className="container px-5 mx-auto mt-52 mb-52">
+            <section className="px-5 mx-auto mt-52 mb-52">
                 <BlurFade inView className="mb-10">
                     <h2 className="text-3xl mb-5">{t('projects_details.latest_project')}</h2>
                 </BlurFade>
 
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-5">
                     {projects.map((project, index) => (
-                        <BlurFade inView key={index} delay={index * 0.2} >
+                        <BlurFade inView key={index} delay={index * 0.1} >
                             <a
                                 href={`/projects/${project.slug}`}
-                                key={index} className="w-full h-64 group relative cursor-pointer">
+                                key={index} className="w-full  group relative cursor-pointer">
                                 <img
                                     src={project.primary_image_url}
                                     alt={project.name}
-                                    className="rounded-lg w-full h-full object-cover"
+                                    className="rounded-lg w-full h-[400px] object-cover"
                                 />
 
                                 <div className="absolute top-0 left-0 right-0  w-full h-full bg-black bg-opacity-50 opacity-0 transition-opacity duration-300 group-hover:opacity-100 rounded-lg" />

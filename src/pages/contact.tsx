@@ -1,6 +1,5 @@
 import BlurFade from "@/components/magicui/blur-fade"
 import Navbar from "@/components/navbar"
-import { Button } from "@/components/ui/button"
 import {
     Form,
     FormControl,
@@ -107,8 +106,8 @@ export default function ContactPage() {
     return (
         <div>
             <Navbar />
-            <div className="container px-5 mx-auto mb-32 grid grid-cols-1 space-y-16 mt-10">
-                <div className="flex flex-col space-y-2 text-center">
+            <div className="container px-5 mx-auto mb-32 grid grid-cols-1 space-y-12 mt-10">
+                <div className="flex flex-col space-y-2">
                     <BlurFade inView>
                         <h1 className="text-5xl md:text-8xl font-semibold">{t('contact.header.mainTitle')}</h1>
                     </BlurFade>
@@ -118,174 +117,171 @@ export default function ContactPage() {
                     </BlurFade>
                 </div>
 
-                <div className="lg:px-52">
-                    <Form {...form}>
-                        <form
-                            onSubmit={form.handleSubmit(onSubmit)}
-                            className="space-y-10"
-                        >
-                            <BlurFade className="space-y-3" inView>
-                                <h1 className="text-lg">{t('contact.formLabels.contactInfo')}</h1>
-                                <FormField
-                                    control={form.control}
-                                    name="name"
-                                    render={({ field }) => (
-                                        <FormItem>
-                                            <FormLabel>{t('contact.formLabels.name')}</FormLabel>
-                                            <FormControl>
-                                                <Input
-                                                    className="h-12"
-                                                    maxLength={50}
-                                                    placeholder={t('contact.placeholders.name')} {...field}
-                                                />
-                                            </FormControl>
-                                            <FormMessage />
-                                        </FormItem>
-                                    )}
-                                />
-                                <FormField
-                                    control={form.control}
-                                    name="email"
-                                    render={({ field }) => (
-                                        <FormItem>
-                                            <FormLabel>{t('contact.formLabels.email')}</FormLabel>
-                                            <FormControl>
-                                                <Input
-                                                    className="h-12"
-                                                    maxLength={50}
-                                                    placeholder={t('contact.placeholders.email')} {...field}
-                                                />
-                                            </FormControl>
-                                            <FormMessage />
-                                        </FormItem>
-                                    )}
-                                />
-                                <FormField
-                                    control={form.control}
-                                    name="cellphone"
-                                    render={({ field }) => (
-                                        <FormItem>
-                                            <FormLabel>{t('contact.formLabels.cellphone')}</FormLabel>
-                                            <FormControl>
-                                                <Input
-                                                    className="h-12"
-                                                    maxLength={50}
-                                                    placeholder={t('contact.placeholders.cellphone')}
-                                                    {...field}
-                                                />
-                                            </FormControl>
-                                            <FormMessage />
-                                        </FormItem>
-                                    )}
-                                />
-                            </BlurFade>
-                            <BlurFade className="space-y-3" inView delay={0.2}>
-                                <h1 className="text-lg">{t('contact.formLabels.brandInfo')}</h1>
-                                <FormField
-                                    control={form.control}
-                                    name="brand.name"
-                                    render={({ field }) => (
-                                        <FormItem>
-                                            <FormLabel>{t('contact.formLabels.brandName')}</FormLabel>
-                                            <FormControl>
-                                                <Input
-                                                    className="h-12"
-                                                    maxLength={50}
-                                                    placeholder={t('contact.placeholders.brandName')}
-                                                    {...field}
-                                                />
-                                            </FormControl>
-                                            <FormMessage />
-                                        </FormItem>
-                                    )}
-                                />
-                                <FormField
-                                    control={form.control}
-                                    name="brand.segment"
-                                    render={({ field }) => (
-                                        <FormItem>
-                                            <FormLabel>{t('contact.formLabels.brandSegment')}</FormLabel>
-                                            <FormControl>
-                                                <Input
-                                                    className="h-12"
-                                                    maxLength={50}
-                                                    placeholder={t('contact.placeholders.brandSegment')}
-                                                    {...field}
-                                                />
-                                            </FormControl>
-                                            <FormMessage />
-                                        </FormItem>
-                                    )}
-                                />
-                                <FormField
-                                    control={form.control}
-                                    name="brand.description"
-                                    render={({ field }) => (
-                                        <FormItem>
-                                            <FormLabel>{t('contact.formLabels.brandDescription')}</FormLabel>
-                                            <FormControl>
-                                                <Textarea
-                                                    className="h-12"
-                                                    maxLength={500}
-                                                    placeholder={t('contact.placeholders.brandDescription')}
-                                                    {...field}
-                                                />
-                                            </FormControl>
-                                            <FormMessage />
-                                        </FormItem>
-                                    )}
-                                />
+                <Form {...form}>
+                    <form
+                        onSubmit={form.handleSubmit(onSubmit)}
+                        className="space-y-10"
+                    >
+                        <BlurFade className="space-y-5" inView>
+                            <FormField
+                                control={form.control}
+                                name="name"
+                                render={({ field }) => (
+                                    <FormItem>
+                                        <FormLabel className="text-lg font-normal">{t('contact.formLabels.name')}</FormLabel>
+                                        <FormControl>
+                                            <Input
+                                                className="h-12"
+                                                maxLength={50}
+                                                placeholder={t('contact.placeholders.name')} {...field}
+                                            />
+                                        </FormControl>
+                                        <FormMessage />
+                                    </FormItem>
+                                )}
+                            />
+                            <FormField
+                                control={form.control}
+                                name="email"
+                                render={({ field }) => (
+                                    <FormItem>
+                                        <FormLabel className="text-lg font-normal">{t('contact.formLabels.email')}</FormLabel>
+                                        <FormControl>
+                                            <Input
+                                                className="h-12"
+                                                maxLength={50}
+                                                placeholder={t('contact.placeholders.email')} {...field}
+                                            />
+                                        </FormControl>
+                                        <FormMessage />
+                                    </FormItem>
+                                )}
+                            />
+                            <FormField
+                                control={form.control}
+                                name="cellphone"
+                                render={({ field }) => (
+                                    <FormItem>
+                                        <FormLabel className="text-lg font-normal">{t('contact.formLabels.cellphone')}</FormLabel>
+                                        <FormControl>
+                                            <Input
+                                                className="h-12"
+                                                maxLength={50}
+                                                placeholder={t('contact.placeholders.cellphone')}
+                                                {...field}
+                                            />
+                                        </FormControl>
+                                        <FormMessage />
+                                    </FormItem>
+                                )}
+                            />
+                        </BlurFade>
+                        <BlurFade className="space-y-5" inView delay={0.2}>
+                            <FormField
+                                control={form.control}
+                                name="brand.name"
+                                render={({ field }) => (
+                                    <FormItem>
+                                        <FormLabel className="text-lg font-normal">{t('contact.formLabels.brandName')}</FormLabel>
+                                        <FormControl>
+                                            <Input
+                                                className="h-12"
+                                                maxLength={50}
+                                                placeholder={t('contact.placeholders.brandName')}
+                                                {...field}
+                                            />
+                                        </FormControl>
+                                        <FormMessage />
+                                    </FormItem>
+                                )}
+                            />
+                            <FormField
+                                control={form.control}
+                                name="brand.segment"
+                                render={({ field }) => (
+                                    <FormItem>
+                                        <FormLabel className="text-lg font-normal">{t('contact.formLabels.brandSegment')}</FormLabel>
+                                        <FormControl>
+                                            <Input
+                                                className="h-12"
+                                                maxLength={50}
+                                                placeholder={t('contact.placeholders.brandSegment')}
+                                                {...field}
+                                            />
+                                        </FormControl>
+                                        <FormMessage />
+                                    </FormItem>
+                                )}
+                            />
+                            <FormField
+                                control={form.control}
+                                name="brand.description"
+                                render={({ field }) => (
+                                    <FormItem>
+                                        <FormLabel className="text-lg font-normal">{t('contact.formLabels.brandDescription')}</FormLabel>
+                                        <FormControl>
+                                            <Textarea
+                                                className="h-12"
+                                                maxLength={500}
+                                                placeholder={t('contact.placeholders.brandDescription')}
+                                                {...field}
+                                            />
+                                        </FormControl>
+                                        <FormMessage />
+                                    </FormItem>
+                                )}
+                            />
 
-                                <FormField
-                                    control={form.control}
-                                    name="estimatedBudget"
-                                    render={({ field }) => (
-                                        <FormItem>
-                                            <FormLabel>{t('contact.formLabels.estimatedBudget')}</FormLabel>
-                                            <FormControl>
-                                                <Input
-                                                    className="h-12"
-                                                    placeholder={t('contact.placeholders.estimatedBudget')}
-                                                    {...field}
-                                                    value={new Intl.NumberFormat(english ? 'en-US' : 'pt-BR', {
-                                                        style: 'currency',
-                                                        currency: english ? 'USD' : 'BRL',
-                                                    }).format(Number(field.value) / 100)}
-                                                    onChange={(e) => {
-                                                        const rawValue = e.target.value.replace(/[^0-9]/g, '');
-                                                        field.onChange(rawValue);
-                                                    }}
-                                                />
-                                            </FormControl>
-                                            <FormMessage />
-                                        </FormItem>
-                                    )}
-                                />
-                            </BlurFade>
-                            <Button
-                                className="bg-secondary hover:bg-secondary/90"
-                                type="submit"
-                                disabled={sendingEmail}
-                            >
-                                {sendingEmail ? t('contact.button.sending') : t('contact.button.send')}
-                            </Button>
-                        </form>
-                    </Form>
-                </div>
+                            <FormField
+                                control={form.control}
+                                name="estimatedBudget"
+                                render={({ field }) => (
+                                    <FormItem>
+                                        <FormLabel className="text-lg font-normal">{t('contact.formLabels.estimatedBudget')}</FormLabel>
+                                        <FormControl>
+                                            <Input
+                                                className="h-12"
+                                                placeholder={t('contact.placeholders.estimatedBudget')}
+                                                {...field}
+                                                value={new Intl.NumberFormat(english ? 'en-US' : 'pt-BR', {
+                                                    style: 'currency',
+                                                    currency: english ? 'USD' : 'BRL',
+                                                }).format(Number(field.value) / 100)}
+                                                onChange={(e) => {
+                                                    const rawValue = e.target.value.replace(/[^0-9]/g, '');
+                                                    field.onChange(rawValue);
+                                                }}
+                                            />
+                                        </FormControl>
+                                        <FormMessage />
+                                    </FormItem>
+                                )}
+                            />
+                        </BlurFade>
+                        <button
+                            className="text-white bg-secondary px-8 py-3 hover:bg-secondary/90 cursor-pointer rounded transition  font-medium w-full h-20"
+                            type="submit"
+                            disabled={sendingEmail}
+                        >
+                            {sendingEmail ? t('contact.button.sending') : t('contact.button.send')}
+                        </button>
+                    </form>
+                </Form>
             </div>
 
-            <footer className="bg-gray-300 min-h-[100px] flex flex-col items-center uppercase  text-sm font-semibold pt-10 pb-5 gap-20">
-                <div>
-                    <img src="/logos/logo_LimaStdio.png" alt="Luiz" />
+            <footer className="bg-gray-300 flex flex-col items-center justify-between uppercase text-sm font-semibold pt-10 pb-5 gap-20 overflow-hidden">
+                <div className="w-full h-full flex items-center justify-center">
+                    <p className="text-[50px] md:text-[200px] leading-none w-full text-center break-words">Lima Stdio®</p>
                 </div>
-                <div className="grid grid-cols-3 w-full justify-items-center ">
+
+                <div className="grid grid-cols-3 w-full justify-items-center">
                     <div>
                         <span className="hidden md:block">
-                            {t('footer.copyright')}  &copy; {new Date().getFullYear()}
+                            {t('footer.copyright')} &copy; {new Date().getFullYear()}
                         </span>
 
                         <span className="md:hidden">
-                            &copy;{new Date().getFullYear()}
+                            &copy; {new Date().getFullYear()}
                         </span>
                     </div>
 
@@ -304,11 +300,9 @@ export default function ContactPage() {
                             <li>
                                 <a href="http://www.behance.net/limastdio" target="_blank">Behance</a>
                             </li>
-
                             <li>
                                 <a href="https://www.linkedin.com/company/limastdio/" target="_blank">Linkedin</a>
                             </li>
-
                             <li>
                                 <a href="http://www.instagram.net/limastdio" target="_blank">Instagram</a>
                             </li>
@@ -320,23 +314,21 @@ export default function ContactPage() {
                                     <FaBehance />
                                 </a>
                             </li>
-
                             <li>
                                 <a href="https://www.linkedin.com/company/limastdio/" target="_blank">
                                     <FaLinkedin />
                                 </a>
                             </li>
-
                             <li>
                                 <a href="http://www.instagram.net/limastdio" target="_blank">
                                     <FaInstagram />
                                 </a>
                             </li>
-
                         </ul>
                     </div>
                 </div>
             </footer>
+
         </div >
     )
 }

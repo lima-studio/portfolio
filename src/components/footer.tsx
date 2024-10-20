@@ -11,11 +11,11 @@ export default function Footer() {
     }
     return (
         <footer className="bg-gray-300 min-h-[600px]  grid grid-cols-1 pb-5 pt-12 px-5 rounded-t-3xl">
-            <div className="2xl:flex space-y-5 ">
-                <BlurFade inView>
+            <div className="space-y-5 flex-col flex lg:flex-row ">
+                <BlurFade inView className="basis-1/4">
                     <img src="/logos/Ativo 24.png" alt="Logo" className="max-h-20"></img>
                 </BlurFade>
-                <BlurFade className="2xl:max-w-5xl mx-auto space-y-5" inView>
+                <BlurFade className="mx-auto space-y-5 basis-10/12" inView>
 
                     <p className="uppercase font-medium text-sm">{t('footer.contact')}</p>
                     <BlurFade inView className="text-4xl md:text-6xl px-0 " >

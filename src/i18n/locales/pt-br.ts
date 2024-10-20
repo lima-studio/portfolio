@@ -10,6 +10,7 @@ export default {
             country: 'Brasil',
         },
         home: {
+            see_more: "Veja mais",
             header: {
                 span: "Criatividade, Estratégia e paixão acrescentam o sabor!",
                 title: "Design refrescante para pessoas e marcas empolgantes.",

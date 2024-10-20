@@ -7,7 +7,7 @@ export default function Header() {
     const { t, i18n } = useTranslation()
     const english = i18n.language === 'en-US';
     return (
-        <header className=" flex flex-col justify-center container px-5 mx-auto mb-20 md:mb-32 mt-10">
+        <header className=" flex flex-col justify-center container px-5 mx-auto mt-10 mb-20 md:mb-32 ">
             <div className=" mb-10">
                 <BlurFade blur="10px" delay={0.2}>
                     <p

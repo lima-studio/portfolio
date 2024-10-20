@@ -10,7 +10,7 @@ function ProjectsSection({ projects }: { projects: IProjects[] }) {
     } = useTranslation()
 
     return (
-        <section id="projects" className="space-y-5 px-5">
+        <section id="projects" className="space-y-5 px-5 mb-20 md:mb-32 ">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 {projectsData.map((project, index) => (
                     <BlurFade
@@ -24,11 +24,22 @@ function ProjectsSection({ projects }: { projects: IProjects[] }) {
                 ))}
             </div>
 
-            <BlurFade inView className="w-1/2 flex justify-end">
-                <span className="text-xl md:text-3xl ">
-                    {t('home.and_stop_here')}
-                </span>
-            </BlurFade>
+            <div className="grid grid-cols-2 gap-5">
+                <BlurFade inView className="flex justify-end">
+                    <span className="text-xl md:text-3xl ">
+                        {t('home.and_stop_here')}
+                    </span>
+                </BlurFade>
+                <a
+                    href="/projects"
+                >
+                    <BlurFade inView className="text-black font-medium text-base bg-gray-300 rounded text-center flex justify-center items-center h-12 ">
+
+                        {t('home.see_more')}
+
+                    </BlurFade>
+                </a>
+            </div>
         </section >
     )
 }

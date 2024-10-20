@@ -12,7 +12,7 @@ export default function ProjectsPage() {
     return (
         <div>
             <Navbar />
-            <div className="container px-5 mx-auto mb-20 mt-10">
+            <div className="px-5 mx-auto mb-20 mt-10">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5 pb-32 ">
                     <BlurFade inView>
                         <h1 className="text-3xl font-semibold" >

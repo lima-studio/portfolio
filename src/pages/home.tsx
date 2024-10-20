@@ -18,6 +18,15 @@ export default function Home() {
       <SkillsSection />
       <DepoimentsSection />
       <PartnersSection />
+      <div className="h-[500px] flex justify-center items-center mb-20 md:mb-32">
+        <div className="w-[150px] h-[250px]">
+          <img
+            className="w-full h-full "
+            src="/logos/Ativo 8.png"
+            alt="logo"
+          />
+        </div>
+      </div>
       <Footer />
     </div>
   );
