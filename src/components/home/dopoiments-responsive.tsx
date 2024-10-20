@@ -16,7 +16,7 @@ export const MobileDepoiments = () => {
     return (
         <section className="mx-5 py-8 mb-20 md:mb-32 bg-black text-white">
             <div className="grid grid-cols-1 gap-6 px-4 py-6">
-                {depoiments.map((depoiment, index) => {
+                {depoiments.map((depoiment, _) => {
                     const ref = useRef(null);
                     const inView = useInView(ref, { once: false, margin: "0% 0px 0% 0px" });
 

@@ -81,7 +81,7 @@ export function PartnersSection() {
                     >
                         {partners.map((partner, index) => (
 
-                            <SwiperSlide className="rounded-lg flex justify-center h-full items-end  py-5" style={{
+                            <SwiperSlide key={index} className="rounded-lg flex justify-center h-full items-end  py-5" style={{
                                 backgroundImage: `url(${partner.img})`,
                                 backgroundSize: "cover",
                                 backgroundPosition: "center",
