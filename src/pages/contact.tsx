@@ -320,7 +320,7 @@ export default function ContactPage() {
 
       <footer className="bg-gray-300 flex flex-col items-center justify-between uppercase text-sm font-semibold pt-10 pb-5 gap-20 overflow-hidden">
         <div className="w-full h-full flex items-center justify-center">
-          <p className="text-[50px] md:text-[200px] leading-none w-full text-center break-words">
+          <p className="md:text-[280px] leading-none w-full text-center break-words">
             Lima Stdio®
           </p>
         </div>
