@@ -41,26 +41,28 @@ export function PartnersSection() {
   return (
     <div className="mb-20 md:mb-32 h-full mx-5">
       <div className="grid grid-cols-1 lg:grid-cols-2 h-full">
-        <div className="flex justify-between flex-col mb-10 lg:mb-0">
+        <div className="flex justify-evenly flex-col mb-10 lg:mb-0">
           <div className="flex gap-10 flex-col">
-            <h1 className="uppercase font-medium">
-              {t("home.partners.title")}
-            </h1>
-            <p className="text-5xl md:text-6xl font-normal">
-              <span className="opacity-30">
-                {t("home.partners.span_title")}
-              </span>
-              <br />
-              {t("home.partners.rely")}
-            </p>
-            <p className="md:text-md font-medium opacity-80 max-w-xl mb-5">
-              {t("home.partners.description")}
-            </p>
-          </div>
-          <div>
-            <button className="bg-black px-10 py-4 text-white rounded-lg font-medium ">
-              {t("home.partners.quote_button")}
-            </button>
+            <div className="flex items-baseline gap-4">
+              <h1 className="uppercase font-medium">
+                {t("home.partners.title")}
+              </h1>
+              <div className="flex flex-col gap-3">
+                <p className="text-5xl md:text-6xl font-normal">
+                  <span className="opacity-30">
+                    {t("home.partners.span_title")}
+                  </span>
+                  <br />
+                  {t("home.partners.rely")}
+                </p>
+                <p className="mt-5 md:text-md font-medium opacity-80 max-w-xl mb-5">
+                  {t("home.partners.description")}
+                </p>
+                <button className="w-28 bg-black px-10 py-4 text-white rounded-lg font-medium ">
+                  {t("home.partners.quote_button")}
+                </button>
+              </div>
+            </div>
           </div>
         </div>
 
