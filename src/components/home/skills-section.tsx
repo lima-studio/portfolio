@@ -77,15 +77,18 @@ function SkillsSection() {
     <section className="px-5 py-10 mb-20 md:mb-32" id="skills">
       <div className="grid grid-cols-1 lg:grid-cols-2">
         <div className="lg:sticky top-20 h-fit lg:flex gap-20 mb-14 lg:mb-0">
-          <h1 className="uppercase font-medium mt-5 mb-5 lg:mb-0">
-            {t("home.skills.title")}
-          </h1>
-
-          <div>
-            <p className="lg:text-3xl lg:mb-32 mb-10">
-              {t("home.skills.description")}
-            </p>
-            <img src="/logos/Asset 35.png" alt="Logo" className="h-52"></img>
+          <div className="flex items-baseline gap-20">
+            <h1 className="uppercase font-medium mt-5 mb-5 lg:mb-0">
+              {t("home.skills.title")}
+            </h1>
+            <div>
+              <p className="lg:text-3xl mb-10 lg:mb-32">
+                {t("home.skills.description")}
+              </p>
+              <div>
+                <img src="/logos/Asset 35.png" alt="Logo" className="h-52" />
+              </div>
+            </div>
           </div>
         </div>
 
