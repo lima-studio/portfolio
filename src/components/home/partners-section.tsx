@@ -67,12 +67,13 @@ export function PartnersSection() {
         <div className="lg:pl-[90px] h-[300px] lg:h-full">
           <Swiper
             modules={[Autoplay]}
+            autoplay
             loop={true}
             spaceBetween={10}
             slidesPerView={2.5}
             onSlideChange={() => console.log("slide change")}
             onSwiper={(swiper) => console.log(swiper)}
-            className="h-full 2xl:h-[45vh]"
+            className="h-[50vh]"
           >
             {partners.map((partner, index) => (
               <SwiperSlide
