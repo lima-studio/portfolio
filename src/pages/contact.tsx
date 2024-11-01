@@ -1,3 +1,4 @@
+import Footer from "@/components/footer";
 import BlurFade from "@/components/magicui/blur-fade";
 import Navbar from "@/components/navbar";
 import {
@@ -317,84 +318,7 @@ export default function ContactPage() {
           </form>
         </Form>
       </div>
-
-      <footer className="bg-gray-300 flex flex-col items-center justify-between uppercase text-sm font-semibold pt-10 pb-5 gap-20 overflow-hidden">
-        <div className="w-full h-full flex items-center justify-center">
-          <p className="md:text-[280px] leading-none w-full text-center break-words">
-            Lima Stdio®
-          </p>
-        </div>
-
-        <div className="grid grid-cols-3 w-full justify-items-center">
-          <div>
-            <span className="hidden md:block">
-              {t("footer.copyright")} &copy; {new Date().getFullYear()}
-            </span>
-
-            <span className="md:hidden">&copy; {new Date().getFullYear()}</span>
-          </div>
-
-          <div>
-            <span
-              className="hidden gap-2 items-center cursor-pointer md:flex"
-              onClick={onScrollToTop}
-            >
-              {t("footer.back_to_top")} <FaArrowUp />
-            </span>
-
-            <span
-              className="flex gap-2 items-center cursor-pointer md:hidden"
-              onClick={onScrollToTop}
-            >
-              <FaArrowUp />
-            </span>
-          </div>
-
-          <div>
-            <ul className="hidden gap-5 md:flex">
-              <li>
-                <a href="http://www.behance.net/limastdio" target="_blank">
-                  Behance
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/company/limastdio/"
-                  target="_blank"
-                >
-                  Linkedin
-                </a>
-              </li>
-              <li>
-                <a href="http://www.instagram.net/limastdio" target="_blank">
-                  Instagram
-                </a>
-              </li>
-            </ul>
-
-            <ul className="flex gap-5 md:hidden">
-              <li>
-                <a href="http://www.behance.net/limastdio" target="_blank">
-                  <FaBehance />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/company/limastdio/"
-                  target="_blank"
-                >
-                  <FaLinkedin />
-                </a>
-              </li>
-              <li>
-                <a href="http://www.instagram.net/limastdio" target="_blank">
-                  <FaInstagram />
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
