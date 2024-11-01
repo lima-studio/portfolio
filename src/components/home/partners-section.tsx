@@ -39,7 +39,7 @@ export function PartnersSection() {
   const english = i18n.language === "en-US";
 
   return (
-    <div className="mb-20 md:mb-32 lg:h-[500px] mx-5">
+    <div className="mb-20 md:mb-32 h-full mx-5">
       <div className="grid grid-cols-1 lg:grid-cols-2 h-full">
         <div className="flex justify-between flex-col mb-10 lg:mb-0">
           <div className="flex gap-10 flex-col">
