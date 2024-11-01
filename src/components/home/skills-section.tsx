@@ -50,7 +50,14 @@ function SkillsSection() {
         en: "Every brand has its unique characteristics, just like the services it offers. Get in touch, and we will create a tailored design package specifically designed to meet your unique needs.",
         pt: "Cada marca tem suas características únicas, assim como os serviços que oferece. Entre em contato e criaremos um pacote de design sob medida, projetado especificamente para atender às suas necessidades únicas.",
       },
-      link: true,
+    },
+    {
+      id: "05",
+      description: {
+        en: "Every brand has its unique characteristics, just like the services it offers. Get in touch, and we will create a tailored design package specifically designed to meet your unique needs.",
+        pt: "Toda marca tem suas características únicas, assim como os serviços que oferece. Entre em contato, e criaremos um pacote de design personalizado especificamente pensado para atender às suas necessidades únicas.",
+      },
+      link: "/contact",
     },
   ];
 
@@ -83,45 +90,51 @@ function SkillsSection() {
         </div>
 
         <div>
-          <div className="space-y-5">
+          <div>
             {skills.map((skill) => {
               const isActive = activeSkill === skill.id;
 
               return (
                 <div
                   key={skill.id}
-                  className="relative flex flex-col items-start overflow-hidden"
+                  className="relative flex flex-col items-start overflow-hidden min-h-[11em] sm:min-h-[11em] md:min-h-[10em] lg:min-h-[13em]"
                   onMouseEnter={() => handleMouseEnter(skill.id)}
                   onMouseLeave={handleMouseLeave}
-                  style={{ minHeight: "140px" }}
                 >
-                  <motion.div
-                    className="absolute"
-                    animate={isActive ? { opacity: 0 } : { opacity: 1 }}
-                    transition={{ duration: 0.5, ease: "easeInOut" }}
-                  >
-                    <h1 className="text-secondary text-7xl 2xl:text-9xl font-semibold lg:pl-[90px] cursor-pointer">
-                      {english ? skill.name.en : skill.name.pt}
-                    </h1>
-                  </motion.div>
+                  {skill.name ? (
+                    // Exibe o título com animação quando skill.name existe
+                    <motion.div
+                      className="absolute"
+                      animate={isActive ? { opacity: 0 } : { opacity: 1 }}
+                      transition={{ duration: 0.5, ease: "easeInOut" }}
+                    >
+                      <h1 className="text-secondary text-7xl xl:text-8xl 2xl:text-9xl font-semibold lg:pl-[90px] cursor-pointer">
+                        {english ? skill.name.en : skill.name.pt}
+                      </h1>
+                    </motion.div>
+                  ) : null}
 
                   <motion.div
                     className="absolute font-normal text-xl text-black max-w-3xl lg:pl-[90px]"
-                    initial={{ opacity: 0 }}
-                    animate={isActive ? { opacity: 1 } : { opacity: 0 }}
+                    initial={{ opacity: skill.name ? 0 : 1 }}
+                    animate={
+                      isActive || !skill.name ? { opacity: 1 } : { opacity: 0 }
+                    }
                     transition={{ duration: 0.5, ease: "easeInOut" }}
                   >
-                    <p className="text-secondary font-bold">{skill.id}</p>
-                    <p className="mb-10">
+                    <p className="mr-3 text-secondary font-bold">{skill.id}</p>
+                    <p>
                       {english ? skill.description.en : skill.description.pt}
                     </p>
                     {skill.link && (
-                      <a
-                        href="/contact"
-                        className="text-secondary underline underline-offset-4 font-medium"
-                      >
-                        REQUEST A QUOTE
-                      </a>
+                      <div className="mt-3">
+                        <a
+                          href={skill.link}
+                          className="text-secondary underline underline-offset-4 font-medium"
+                        >
+                          REQUEST A QUOTE
+                        </a>
+                      </div>
                     )}
                   </motion.div>
                 </div>
