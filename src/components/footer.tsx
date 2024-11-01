@@ -9,16 +9,14 @@ export default function Footer() {
   };
   return (
     <footer className="bg-gray-300 min-h-[600px]  grid grid-cols-1 pb-5 pt-12 px-5 rounded-t-3xl">
-      <div className="space-y-5 flex-col flex lg:flex-row ">
-        <BlurFade inView className="basis-1/4">
-          <img src="/logos/Ativo 24.png" alt="Logo" className="max-h-20"></img>
+      <div className="flex flex-col lg:flex-row items-start space-y-5 lg:space-y-0 lg:items-center">
+        <BlurFade inView className="basis-1/4 self-start lg:mt-[120px]">
+          <p className="uppercase font-medium text-sm">{t("footer.contact")}</p>
         </BlurFade>
         <BlurFade className="mx-auto space-y-5 basis-10/12" inView>
-          <p className="uppercase font-medium text-sm">{t("footer.contact")}</p>
-          <BlurFade inView className="text-4xl md:text-6xl px-0 max-w-[70%]">
+          <BlurFade inView className="text-4xl md:text-6xl px-0 max-w-[80%]">
             <p>{t("footer.description")}</p>
           </BlurFade>
-
           <a
             href="/contact"
             className="text-2xl hover:bg-transparent cursor-pointer"
