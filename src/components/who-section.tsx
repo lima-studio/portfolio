@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 
 function WhoSection() {
   const { i18n } = useTranslation();
-  const english = i18n.language === 'en-US';
+  const english = i18n.language === "en-US";
 
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const [currentIndex, setCurrentIndex] = useState(1);
@@ -13,7 +13,9 @@ function WhoSection() {
     {
       id: 0,
       backgroundStyle: {
-        backgroundImage: isMobile ? "none" : `url("/images/who-background-lim.png")`,
+        backgroundImage: isMobile
+          ? "none"
+          : `url("/images/who-background-lim.png")`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
         backgroundColor: "#ffd622",
@@ -88,20 +90,18 @@ function WhoSection() {
 
   const selectedElement = elements[currentIndex];
 
+  // Hook para detectar tamanho da tela
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768); // Considera mobile quando a largura for menor ou igual a 768px
+    };
 
-    // Hook para detectar tamanho da tela
-    useEffect(() => {
-        const handleResize = () => {
-            setIsMobile(window.innerWidth <= 768); // Considera mobile quando a largura for menor ou igual a 768px
-        };
+    // Adiciona listener no evento de resize
+    window.addEventListener("resize", handleResize);
+    handleResize(); // Chama inicialmente para verificar o estado ao montar o componente
 
-        // Adiciona listener no evento de resize
-        window.addEventListener('resize', handleResize);
-        handleResize(); // Chama inicialmente para verificar o estado ao montar o componente
-
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
-
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <section id="who" className="mb-20 md:mb-32 ">
@@ -147,16 +147,18 @@ function WhoSection() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            {english ? selectedElement.represent.en : selectedElement.represent.pt}
+            {english
+              ? selectedElement.represent.en
+              : selectedElement.represent.pt}
           </motion.p>
           <div className="h-full items-end flex">
-          <a
-            href={selectedElement.linkedin}
-            target="_blank"
-            className="bg-white text-black font-medium w-32 h-12 hover:opacity-90 hover:bg-white text-md rounded justify-center flex items-center"
-          >
-            {english ? selectedElement.button.en : selectedElement.button.pt}
-          </a>
+            <a
+              href={selectedElement.linkedin}
+              target="_blank"
+              className="min-w-16 w-[250px] text-center py-4 bg-white text-black font-medium h-12 hover:opacity-90 hover:bg-white text-md rounded justify-center flex items-center"
+            >
+              {english ? selectedElement.button.en : selectedElement.button.pt}
+            </a>
           </div>
         </div>
       </motion.div>

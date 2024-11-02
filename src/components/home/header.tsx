@@ -45,12 +45,12 @@ export default function Header() {
       <BlurFade className="flex space-x-4">
         <a
           href="/projects"
-          className="text-black bg-primary px-8 py-3 hover:bg-primary/90 cursor-pointer rounded transition  font-medium"
+          className="min-w-16 w-[250px] text-center py-4 text-black bg-primary px-8 hover:bg-primary/90 cursor-pointer rounded transition  font-medium"
         >
           {t("home.buttons.project")}
         </a>
         <a
-          className="text-black bg-secondary px-8 py-3 hover:bg-secondary/90 cursor-pointer rounded transition  font-medium"
+          className="min-w-16 w-[250px] text-center py-4 text-black bg-secondary px-8 hover:bg-secondary/90 cursor-pointer rounded transition  font-medium"
           href="/contact"
         >
           {t("home.buttons.quote")}

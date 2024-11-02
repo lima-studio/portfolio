@@ -23,7 +23,7 @@ export default function ProjectsPage() {
 
             <div>
               <a
-                className="bg-secondary px-6 py-3 text-white rounded-lg mt-5"
+                className="bg-secondary px-6 text-white rounded-lg mt-5 min-w-16 w-[250px] text-center py-4"
                 href="/contact"
               >
                 {t("projects.button")} +
