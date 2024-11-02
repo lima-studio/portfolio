@@ -58,7 +58,7 @@ export default function WorkPage() {
         <div className="flex gap-5">
           <BlurFade inView delay={0.4}>
             <a
-              className="bg-primary px-6 py-3 text-white rounded-lg mt-5"
+              className="bg-primary px-6 text-white rounded-lg mt-5 min-w-16 w-[250px] text-center py-4"
               href={"#about"}
             >
               {t("projects_details.buttons.read_more")}
@@ -68,7 +68,7 @@ export default function WorkPage() {
           <BlurFade inView delay={0.8}>
             <a
               href={"/contact"}
-              className="bg-secondary px-6 py-3 text-white rounded-lg"
+              className="bg-secondary px-6 text-white rounded-lg min-w-16 w-[250px] text-center py-4"
             >
               {t("projects_details.buttons.start_project")}
             </a>

@@ -120,7 +120,7 @@ function WhoSection() {
           }}
         >
           <motion.span
-            className={`text-sm ${selectedElement.who_color} font-semibold`}
+            className={`text-base ${selectedElement.who_color} font-medium`}
             initial={{ y: -20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
