@@ -123,7 +123,7 @@ export default function WorkPage() {
                   <h2 className="text-4xl mb-5">
                     {t("projects_details.about")}
                   </h2>
-                  <p className="text-3xl">
+                  <p className="text-3xl opacity-50">
                     {english ? project.about.en : project.about.pt}
                   </p>
                 </div>
