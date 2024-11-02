@@ -18,7 +18,6 @@ import { t } from "i18next";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-import { FaArrowUp, FaBehance, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { z } from "zod";
 
 const contactFormSchema = z.object({
@@ -74,10 +73,6 @@ export default function ContactPage() {
     },
   });
   const [sendingEmail, setSendingEmail] = useState(false);
-
-  const onScrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
 
   const onSubmit = async (data: z.infer<typeof contactFormSchema>) => {
     setSendingEmail(true);
@@ -154,7 +149,7 @@ export default function ContactPage() {
                 name="name"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-lg font-normal">
+                    <FormLabel className="text-2xl font-normal">
                       {t("contact.formLabels.name")}
                     </FormLabel>
                     <FormControl>
@@ -174,7 +169,7 @@ export default function ContactPage() {
                 name="email"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-lg font-normal">
+                    <FormLabel className="text-2xl font-normal">
                       {t("contact.formLabels.email")}
                     </FormLabel>
                     <FormControl>
@@ -194,7 +189,7 @@ export default function ContactPage() {
                 name="cellphone"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-lg font-normal">
+                    <FormLabel className="text-2xl font-normal">
                       {t("contact.formLabels.cellphone")}
                     </FormLabel>
                     <FormControl>
@@ -216,7 +211,7 @@ export default function ContactPage() {
                 name="brand.name"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-lg font-normal">
+                    <FormLabel className="text-2xl font-normal">
                       {t("contact.formLabels.brandName")}
                     </FormLabel>
                     <FormControl>
@@ -236,7 +231,7 @@ export default function ContactPage() {
                 name="brand.segment"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-lg font-normal">
+                    <FormLabel className="text-2xl font-normal">
                       {t("contact.formLabels.brandSegment")}
                     </FormLabel>
                     <FormControl>
@@ -256,7 +251,7 @@ export default function ContactPage() {
                 name="brand.description"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-lg font-normal">
+                    <FormLabel className="text-2xl font-normal">
                       {t("contact.formLabels.brandDescription")}
                     </FormLabel>
                     <FormControl>
@@ -277,7 +272,7 @@ export default function ContactPage() {
                 name="estimatedBudget"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-lg font-normal">
+                    <FormLabel className="text-2xl font-normal">
                       {t("contact.formLabels.estimatedBudget")}
                     </FormLabel>
                     <FormControl>

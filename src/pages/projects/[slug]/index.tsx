@@ -58,7 +58,7 @@ export default function WorkPage() {
         <div className="flex gap-5">
           <BlurFade inView delay={0.4}>
             <a
-              className="bg-primary px-6 py-3 text-white rounded-lg mt-5"
+              className="bg-primary px-6 text-white rounded-lg mt-5 min-w-16 w-[250px] text-center py-4"
               href={"#about"}
             >
               {t("projects_details.buttons.read_more")}
@@ -68,7 +68,7 @@ export default function WorkPage() {
           <BlurFade inView delay={0.8}>
             <a
               href={"/contact"}
-              className="bg-secondary px-6 py-3 text-white rounded-lg"
+              className="bg-secondary px-6 text-white rounded-lg min-w-16 w-[250px] text-center py-4"
             >
               {t("projects_details.buttons.start_project")}
             </a>
@@ -83,29 +83,24 @@ export default function WorkPage() {
               <div className="space-y-5 max-w-[95%]">
                 <div className="flex justify-between">
                   <span>{t("projects_details.brand")}</span>
-
                   <span>{project.brand}</span>
                 </div>
-
                 <Separator className="bg-black" />
               </div>
 
               <div className="space-y-5 max-w-[95%]">
                 <div className="flex justify-between">
                   <span>{t("projects_details.category")}</span>
-
                   <span>
                     {english ? project.category.en : project.category.pt}
                   </span>
                 </div>
-
                 <Separator className="bg-black" />
               </div>
 
               <div className="space-y-5 max-w-[95%]">
                 <div className="flex justify-between">
                   <span>{t("projects_details.country")}</span>
-
                   <span>
                     {english ? project.country.en : project.country.pt}
                   </span>
@@ -125,10 +120,10 @@ export default function WorkPage() {
                   className="w-full rounded-lg"
                 />
                 <div className="py-24 px-10" id="about">
-                  <h2 className="text-3xl mb-5">
+                  <h2 className="text-4xl mb-5">
                     {t("projects_details.about")}
                   </h2>
-                  <p className="text-lg">
+                  <p className="text-3xl">
                     {english ? project.about.en : project.about.pt}
                   </p>
                 </div>
@@ -167,9 +162,10 @@ export default function WorkPage() {
           </div>
         </div>
       </section>
+
       <section className="px-5 mx-[5%] mt-52 mb-52">
         <BlurFade inView className="mb-10">
-          <h2 className="text-3xl mb-5">
+          <h2 className="text-4xl mb-5">
             {t("projects_details.latest_project")}
           </h2>
         </BlurFade>

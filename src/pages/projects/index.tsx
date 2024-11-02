@@ -23,7 +23,7 @@ export default function ProjectsPage() {
 
             <div>
               <a
-                className="bg-secondary px-6 py-3 text-white rounded-lg mt-5"
+                className="bg-secondary px-6 text-white rounded-lg mt-5 min-w-16 w-[250px] text-center py-4"
                 href="/contact"
               >
                 {t("projects.button")} +
@@ -38,7 +38,9 @@ export default function ProjectsPage() {
 
         <div className="space-y-5 py-16">
           <BlurFade inView>
-            <h2 className="font-mono">{t("projects.visual_identity")}</h2>
+            <h2 className="font-normal text-lg">
+              {t("projects.visual_identity")}
+            </h2>
           </BlurFade>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">

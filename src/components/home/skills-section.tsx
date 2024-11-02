@@ -100,7 +100,7 @@ function SkillsSection() {
               return (
                 <div
                   key={skill.id}
-                  className="relative flex flex-col items-start overflow-hidden min-h-[11em] sm:min-h-[11em] md:min-h-[10em] lg:min-h-[13em]"
+                  className="relative flex flex-col items-start overflow-hidden min-h-[11em] last:min-h-[13em] sm:min-h-[12em] sm:last:min-h-[11em] md:min-h-[8em] md:last:min-h-[13em] lg:min-h-[10em]"
                   onMouseEnter={() => handleMouseEnter(skill.id)}
                   onMouseLeave={handleMouseLeave}
                 >
