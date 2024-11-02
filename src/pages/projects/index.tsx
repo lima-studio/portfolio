@@ -38,7 +38,9 @@ export default function ProjectsPage() {
 
         <div className="space-y-5 py-16">
           <BlurFade inView>
-            <h2 className="font-mono">{t("projects.visual_identity")}</h2>
+            <h2 className="font-normal text-lg">
+              {t("projects.visual_identity")}
+            </h2>
           </BlurFade>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
