@@ -43,7 +43,7 @@ export function PartnersSection() {
       <div className="grid grid-cols-1 lg:grid-cols-2 h-full">
         <div className="flex justify-evenly flex-col mb-10 lg:mb-0">
           <div className="flex gap-10 flex-col">
-            <div className="flex items-baseline gap-4">
+            <div className="flex items-baseline gap-20">
               <h1 className="uppercase font-medium">
                 {t("home.partners.title")}
               </h1>
