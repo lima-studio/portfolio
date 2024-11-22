@@ -37,14 +37,16 @@ function WhoSection() {
         max_width: "max-w-xl",
       },
       represent: {
-        en: "I represent the personality and carry the last name of my creator.",
-        pt: "Eu represento a personalidade e carrego o sobrenome do meu criador.",
+        en: (<>I represent the personality and carry the last name <br />
+          of my creator.</>),
+        pt: (<>Eu represento a personalidade e carrego o sobrenome <br />
+          do meu criador.</>),
         color: "text-[#8b6e00]",
         max_width: "max-w-sm",
       },
       button: {
-        en: "Threads",
-        pt: "Tópicos",
+        en: "Linkedin",
+        pt: "Linkedin",
       },
     },
     {
@@ -70,7 +72,7 @@ function WhoSection() {
       represent: {
         en: "I enhance the innovation process of my partners. We build strategies, brands, and multimedia that create meaningful value for people and drive business growth.",
         pt: "Aprimoro o processo de inovação dos meus parceiros. Construímos estratégias, marcas e multimídia que criam valor significativo para as pessoas e impulsionam o crescimento dos negócios.",
-        color: "text-[#555555]",
+        color: "text-[white]",
         max_width: "max-w-2xl",
       },
       button: {
