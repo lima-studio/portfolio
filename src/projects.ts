@@ -149,7 +149,7 @@ Conecte-se com Ellaria e descubra o prazer da intimidade elevada ao mais alto n√
             en: "Brazil",
             pt: "Brasil"
         },
-        primary_image_url: "/projects/Padaria Cravo e Canela/thuimbnails_conceito.gif",
+        primary_image_url: "/projects/Projeto - Ar Terapias/01_image.gif",
         slug: "",
         images: [
             "/projects/Projeto - Ar Terapias/01_image.gif",
