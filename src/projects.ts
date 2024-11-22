@@ -27,6 +27,66 @@ export interface IProjects {
 
 const projectsWithoutSlug: IProjects[] = [
     {
+        name: "Ellaria - São Paulo",
+        description: {
+            en: "Ellaria is more than a brand; is a movement that celebrates elegance and transformation in the universe of sexuality.",
+            pt: "Ellaria é mais que uma marca; é um movimento que celebra a elegância e a transformação no universo da sexualidade."
+        },
+        about: {
+            en: `Ellaria is more than a brand; is a movement that celebrates elegance and transformation in the universe of sexuality. Inspired by the Protea flower, a symbol of courage, hope and change, Ellaria brings a new perspective to the erotic market: sophisticated products and authentic, sensual and “sexy without being vulgar” communication.
+
+Our curation includes vibrators, lubricants, massage candles and accessories, carefully selected to enrich couples' sexual lives, offering well-being and strengthening the connection between two. Combining luxury, boldness and transparency, Ellaria breaks taboos and promotes open dialogue, valuing pleasure and well-being as pillars for healthy and lasting relationships.
+
+Connect with Ellaria and discover the pleasure of intimacy elevated to the highest level of sophistication and self-confidence.
+
+`,
+            pt: `Ellaria é mais que uma marca; é um movimento que celebra a elegância e a transformação no universo da sexualidade. Inspirada na flor Protea, símbolo de coragem, esperança e mudança, Ellaria traz uma nova perspectiva ao mercado erótico: produtos sofisticados e uma comunicação autêntica, sensual e “sexy sem ser vulgar”.
+
+Nossa curadoria inclui vibradores, lubrificantes, velas para massagem e acessórios, cuidadosamente selecionados para enriquecer a vida sexual de casais, oferecendo bem-estar e fortalecendo a conexão a dois. Combinando luxo, ousadia e transparência, Ellaria quebra tabus e promove o diálogo aberto, valorizando o prazer e o bem-estar como pilares para relacionamentos saudáveis e duradouros.
+
+Conecte-se com Ellaria e descubra o prazer da intimidade elevada ao mais alto nível de sofisticação e autoconfiança.`
+        },
+        brand: "Ellaria - São Paulo",
+        category: {
+            en: "Self-knowledge & Pleasure",
+            pt: "Autoconhecimento & Prazer"
+        },
+        country: {
+            en: "Brazil",
+            pt: "Brasil"
+        },
+        primary_image_url: "/projects/Ellaria/01.png",
+        slug: "",
+        images: [
+            "/projects/Ellaria/01.png",
+            "/projects/Ellaria/02.png",
+            "/projects/Ellaria/03.gif",
+            "/projects/Ellaria/04.png",
+            "/projects/Ellaria/05.png",
+            "/projects/Ellaria/06.gif",
+            "/projects/Ellaria/08.png",
+            "/projects/Ellaria/09.png",
+            "/projects/Ellaria/10.png",
+            "/projects/Ellaria/11.png",
+            "/projects/Ellaria/12.png",
+            "/projects/Ellaria/13.png",
+            "/projects/Ellaria/14.png",
+            "/projects/Ellaria/15.png",
+            "/projects/Ellaria/16.png",
+            "/projects/Ellaria/17.png",
+            "/projects/Ellaria/18.png",
+            "/projects/Ellaria/19.png",
+            "/projects/Ellaria/20.png",
+            "/projects/Ellaria/21.png",
+            "/projects/Ellaria/22.png",
+            "/projects/Ellaria/23.png",
+            "/projects/Ellaria/25.gif",
+            "/projects/Ellaria/26.png",
+            "/projects/Ellaria/27.gif"
+            
+        ]
+    },
+    {
         name: "Padaria Cravo e Canela",
         description: {
             en: "Padaria Cravo e Canela is a traditional family bakery and confectionery. Located in the region of Mateus Leme, a Brazilian municipality in the state of Minas Gerais, Southeast of the country. It belongs to the Metropolitan Region of Belo Horizonte, located about 60 km west of the state capital.",
@@ -71,43 +131,45 @@ const projectsWithoutSlug: IProjects[] = [
         ]
     },
     {
-        name: "Ar Terapias",
+        name: "AR TERAPIA",
         description: {
             en: "Ar Terapias Complementares is a company dedicated to transforming the lives of its clients through therapies that balance body, mind and spirit.",
             pt: "Ar Terapias Complementares é uma empresa dedicada a transformar a vida de seus clientes através de terapias que equilibram corpo, mente e espírito."
         },
         about: {
-            en: `Our approach works with health awareness, promoting integral health through techniques such as needle-free acupuncture (Acutonics), sacred massage, rebirth (Bioflow), shiatsu, systemic constellation and microphysiotherapy. With a focus on alleviating trauma, promoting self-knowledge and providing a lighter life, our difference lies in the combination of experience, innovation and care, offering a safe space for personal and emotional evolution. We breathe how we live and we live how we breathe. Our work proposes a transformation in the way of living! To this end, the AIR we breathe is fundamental. We help change the energy around each person who comes to us, so that the air becomes lighter and a happier life. AR (element) + A (initial) + circular movement with hands.`,
-            pt: `Nossa abordagem trabalha com a consciência da respiração, promovendo saúde integral por meio de técnicas como acupuntura sem agulhas (Acutonics), massagem sagrada, renascimento (Bioflow), shiatsu, constelação sistêmica e microfisioterapia. Com foco em aliviar traumas, promover o autoconhecimento e proporcionar uma vida mais leve, nosso diferencial está na combinação de experiência, inovação e cuidado, oferecendo um espaço seguro para a evolução pessoal e emocional. Respiramos como vivemos e vivemos como respiramos. Nosso trabalho propõe uma transformação no modo de viver! Para tanto, o AR que respiramos é fundamental. Ajudamos a mudar a energia em torno de cada um que nos procura, para que o AR fique mais leve e a vida mais feliz. AR (elemento)  +  A (inicial)  +  movimento circulares com mãos.`
+            en: `Ar Terapias Complementares is a company dedicated to transforming the lives of its clients through therapies that balance body, mind and spirit. Our approach works with awareness of breathing, promoting integral health through techniques such as needle-free acupuncture (Acutonics), sacred massage, rebirth (Bioflow), shiatsu, systemic constellation and microphysiotherapy. With a focus on alleviating trauma, promoting self-knowledge and providing a lighter life, our difference lies in the combination of experience, innovation and care, offering a safe space for personal and emotional evolution.`,
+            pt: `Ar Terapias Complementares é uma empresa dedicada a transformar a vida de seus clientes através de terapias que equilibram corpo, mente e espírito. Nossa abordagem trabalha com a consciência da respiração, promovendo saúde integral por meio de técnicas como acupuntura sem agulhas (Acutonics), massagem sagrada, renascimento (Bioflow), shiatsu, constelação sistêmica e microfisioterapia. Com foco em aliviar traumas, promover o autoconhecimento e proporcionar uma vida mais leve, nosso diferencial está na combinação de experiência, inovação e cuidado, oferecendo um espaço seguro para a evolução pessoal e emocional.`
         },
-        brand: "Ar Terapias",
+        brand: "Ar Terapia",
         category: {
-            en: "Therapy",
-            pt: "Terapia"
+            en: "Health and Wellbeing",
+            pt: "Saúde e Bem-Estar"
         },
         country: {
             en: "Brazil",
             pt: "Brasil"
         },
-        primary_image_url: "/projects/Projeto - Ar Terapias/logo_preferêncial.gif",
+        primary_image_url: "/projects/Padaria Cravo e Canela/thuimbnails_conceito.gif",
         slug: "",
         images: [
-            "/projects/Projeto - Ar Terapias/conceito.png",
-            "/projects/Projeto - Ar Terapias/conceito_ecobag.png",
-            "/projects/Projeto - Ar Terapias/consultório.png",
-            "/projects/Projeto - Ar Terapias/frases conceito.png",
-            "/projects/Projeto - Ar Terapias/grid.png",
-            "/projects/Projeto - Ar Terapias/logo.png",
-            "/projects/Projeto - Ar Terapias/logo-1.png",
-            "/projects/Projeto - Ar Terapias/logo-2.png",
-            "/projects/Projeto - Ar Terapias/massagem.png",
-            "/projects/Projeto - Ar Terapias/papelaria.png",
-            "/projects/Projeto - Ar Terapias/papelaria 02.png",
-            "/projects/Projeto - Ar Terapias/quadros.png",
-            "/projects/Projeto - Ar Terapias/selo_grafismo.png",
-            "/projects/Projeto - Ar Terapias/slogan.png",
-            "/projects/Projeto - Ar Terapias/tipografia.png",
-            "/projects/Projeto - Ar Terapias/toalha_sabonete.png"
+            "/projects/Projeto - Ar Terapias/01_image.gif",
+            "/projects/Projeto - Ar Terapias/02_image.png",
+            "/projects/Projeto - Ar Terapias/03_image.png",
+            "/projects/Projeto - Ar Terapias/04_image.png",
+            "/projects/Projeto - Ar Terapias/05_image.png",
+            "/projects/Projeto - Ar Terapias/06_image.png",
+            "/projects/Projeto - Ar Terapias/07_image.png",
+            "/projects/Projeto - Ar Terapias/08_image.png",
+            "/projects/Projeto - Ar Terapias/09_image.png",
+            "/projects/Projeto - Ar Terapias/10_image.png",
+            "/projects/Projeto - Ar Terapias/11_image.png",
+            "/projects/Projeto - Ar Terapias/12_image.png",
+            "/projects/Projeto - Ar Terapias/13_image.png",
+            "/projects/Projeto - Ar Terapias/14_image.gif",
+            "/projects/Projeto - Ar Terapias/15_image.gif",
+            "/projects/Projeto - Ar Terapias/16_image.png", 
+            "/projects/Projeto - Ar Terapias/17_image.gif", 
+            "/projects/Projeto - Ar Terapias/logo preferencial verde.png", 
         ]
 
     },
@@ -340,14 +402,24 @@ const projectsWithoutSlug: IProjects[] = [
         ]
     },
     {
-        name: "Sensatta MKT",
+        name: "Sensatta Marketing®",
         description: {
-            en: "Sensatta MKT is a marketing agency focused on delivering innovative and strategic solutions to elevate brands in the digital landscape.",
-            pt: "Sensatta MKT é uma agência de marketing focada em oferecer soluções inovadoras e estratégicas para elevar marcas no cenário digital."
+            en: "Sensatta Marketing is a marketing and communications agency that stands out for its constant search for excellence in service and the results it provides.",
+            pt: "A Sensatta Marketing é uma agência de marketing e comunicação que se diferencia pela busca constante da excelência no atendimento e pelos resultados que proporciona."
         },
         about: {
-            en: "We specialize in creating customized marketing strategies that align with the unique goals of each client, helping businesses grow their online presence, engage with their audience, and drive measurable results. From social media management and content creation to SEO and digital campaigns, Sensatta MKT blends creativity with data-driven insights to ensure impactful communication and long-term success. We turn ideas into actions, empowering brands to stand out and thrive in an ever-evolving market.",
-            pt: "Especializamos na criação de estratégias de marketing personalizadas que se alinham com os objetivos únicos de cada cliente, ajudando empresas a crescerem sua presença online, engajar com seu público e gerar resultados mensuráveis. Desde gerenciamento de redes sociais e criação de conteúdo até SEO e campanhas digitais, a Sensatta MKT combina criatividade com insights baseados em dados para garantir uma comunicação impactante e um sucesso a longo prazo. Transformamos ideias em ações, capacitando marcas a se destacarem e prosperarem em um mercado em constante evolução."
+            en: `Sensatta Marketing is a marketing and communications agency that stands out for its constant search for excellence in service and the results it provides. The name "Sensatta" comes from the term “sensatez”, which reflects the brand's proposal: acting with balance, common sense and wisdom in all its actions, always focused on creating authentic connections and generating results for its clients.
+
+The Sensatta® symbol was designed based on a modular grid, bringing flexibility and precision to the design. It is a representation of the letter "S", the initial of the word Sensatta®, combined with the image of an owl. The owl, known for being a symbol of wisdom and reflection, was chosen for its look that is sometimes serious and serious, sometimes cute and charismatic, conveying authority, intelligence and empathy, which is the essence of the brand.
+
+The owl has a raised eyebrow, a detail that further reinforces the aspect of wisdom, making the symbol unique and expressive.
+
+`,
+            pt: `A Sensatta Marketing é uma agência de marketing e comunicação que se diferencia pela busca constante da excelência no atendimento e pelos resultados que proporciona. O nome "Sensatta" vem do termo “sensatez”, que reflete a proposta da marca: agir com equilíbrio, bom senso e sabedoria em todas as suas ações, sempre focada em criar conexões autênticas e gerar resultados para os seus clientes.
+
+O símbolo da Sensatta® foi projetado com base em um grid modular, trazendo flexibilidade e precisão ao design. Ele é uma representação da letra "S", inicial da palavra Sensatta®, combinada com a imagem de uma coruja. A coruja, conhecida por ser um símbolo de sabedoria e reflexão, foi escolhida por seu olhar ora compenetrado e sério, ora fofa e carismática, transmitindo autoridade, inteligência, empatia que é a essência da marca.
+
+A coruja possui uma sobrancelha levantada, um detalhe que reforça ainda mais o aspecto de sabedoria, tornando o símbolo único e expressivo.`
         },
         brand: "Sensatta MKT",
         category: {
@@ -386,7 +458,8 @@ const projectsWithoutSlug: IProjects[] = [
             "/projects/Sensatta MKT/Tipografia.png",
             "/projects/Sensatta MKT/Totem.png",
             "/projects/Sensatta MKT/T-Shirt.png",
-            "/projects/Sensatta MKT/Wallpaper.png"
+            "/projects/Sensatta MKT/Wallpaper.png",
+            "/projects/Sensatta MKT/Behance_SensattaMKT.png"
         ]
     },
     {

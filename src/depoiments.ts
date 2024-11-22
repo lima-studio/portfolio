@@ -15,7 +15,7 @@ export interface IDepoiments {
 
 const depoiments: IDepoiments[] = [
   {
-    name: "Lorem Ipsum",
+    name: "Ar Terapia",
     depoiment: {
       en: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut arcu eget lacus tincidunt fringilla",
       pt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut arcu eget lacus tincidunt fringilla",
@@ -85,7 +85,7 @@ const depoiments: IDepoiments[] = [
     },
   },
   {
-    name: "Lorem Ipsum",
+    name: "Ellaria",
     depoiment: {
       en: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut arcu eget lacus tincidunt fringilla",
       pt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut arcu eget lacus tincidunt fringilla",
@@ -99,7 +99,7 @@ const depoiments: IDepoiments[] = [
     },
   },
   {
-    name: "Lorem Ipsum",
+    name: "Vitor Ramos",
     depoiment: {
       en: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut arcu eget lacus tincidunt fringilla",
       pt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut arcu eget lacus tincidunt fringilla",
