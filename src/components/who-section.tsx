@@ -15,13 +15,13 @@ function WhoSection() {
       backgroundStyle: {
         backgroundImage: isMobile
           ? "none"
-          : `url("/images/who-background-lim.png")`,
+          : `url("/images/Lim.png")`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
         backgroundColor: "#ffd622",
-        backgroundPosition: "center left",
+        backgroundPosition: "right",
         backgroundAttachment: "local",
-        transform: "scaleX(-1)",
+
       },
       linkedin: "https://www.linkedin.com/company/limastdio/",
       who_color: "text-[#8b6e00]",
@@ -50,7 +50,7 @@ function WhoSection() {
     {
       id: 1,
       backgroundStyle: {
-        backgroundImage: `url("/images/LuizLima_02.png")`,
+        backgroundImage: `url("/images/LuizLima.png")`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       },
@@ -116,7 +116,7 @@ function WhoSection() {
         <div
           className="px-5 py-10 flex flex-col justify-center h-full gap-5"
           style={{
-            transform: selectedElement.backgroundStyle.transform,
+
           }}
         >
           <motion.span
