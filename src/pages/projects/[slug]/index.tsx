@@ -150,7 +150,7 @@ export default function WorkPage() {
                     ) : (
                       <img
                         src={image}
-                        className="w-full rounded-2xl object-cover h-[600px]"
+                        className="w-full rounded-2xl object-cover"
                         alt={project.name}
                         key={index}
                       />
