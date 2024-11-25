@@ -148,7 +148,9 @@ Conecte-se com Ellaria e descubra o prazer da intimidade elevada ao mais alto n√
       en: "Brazil",
       pt: "Brasil",
     },
-    primary_image_url: "/projects/Projeto - Ar Terapias/01_image.gif",
+    primary_image_url:
+      "/projects/Projeto - Ar Terapias/logo preferencial verde.png",
+
     slug: "",
     images: [
       "/projects/Projeto - Ar Terapias/01_image.gif",
@@ -168,7 +170,6 @@ Conecte-se com Ellaria e descubra o prazer da intimidade elevada ao mais alto n√
       "/projects/Projeto - Ar Terapias/15_image.gif",
       "/projects/Projeto - Ar Terapias/16_image.png",
       "/projects/Projeto - Ar Terapias/17_image.gif",
-      "/projects/Projeto - Ar Terapias/logo preferencial verde.png",
     ],
   },
   {
