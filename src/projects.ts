@@ -435,7 +435,6 @@ A coruja possui uma sobrancelha levantada, um detalhe que reforça ainda mais o 
     slug: "",
     homepage: true,
     images: [
-      "/projects/Sensatta MKT/01.png",
       "/projects/Sensatta MKT/02.png",
       "/projects/Sensatta MKT/03.png",
       "/projects/Sensatta MKT/04.gif",
@@ -458,9 +457,6 @@ A coruja possui uma sobrancelha levantada, um detalhe que reforça ainda mais o 
       "/projects/Sensatta MKT/21.png",
       "/projects/Sensatta MKT/22.png",
       "/projects/Sensatta MKT/23.png",
-      "/projects/Sensatta MKT/T-Shirt.png",
-      "/projects/Sensatta MKT/Wallpaper.png",
-      "/projects/Sensatta MKT/Behance_SensattaMKT.png",
     ],
   },
   {
