@@ -10,8 +10,8 @@ function SkillsSection() {
     {
       id: "01",
       name: {
-        en: "Strategy",
-        pt: "Estratégia",
+        en: "positioning",
+        pt: "posicionamento",
       },
       description: {
         en: "Personalized brand building strategies, certified with the values and goals of each client, resulting in historic and memorable visions.",
@@ -21,8 +21,8 @@ function SkillsSection() {
     {
       id: "02",
       name: {
-        en: "Brand",
-        pt: "Marca",
+        en: "brand",
+        pt: "marca",
       },
       description: {
         en: "We develop visual identities that transcend the visual, transmitting the essence and values of the brand, ensuring recognition and differentiation in the market.",
@@ -32,8 +32,8 @@ function SkillsSection() {
     {
       id: "03",
       name: {
-        en: "Multimedia",
-        pt: "Multimédia",
+        en: "multimedia",
+        pt: "multimídia",
       },
       description: {
         en: "Create multimedia content that goes beyond the ordinary, providing visual and interactive experiences to emotionally connect brands with their customers.",
@@ -43,8 +43,8 @@ function SkillsSection() {
     {
       id: "04",
       name: {
-        en: "DA",
-        pt: "DA",
+        en: "art direction",
+        pt: "direção de arte",
       },
       description: {
         en: "Every brand has its unique characteristics, just like the services it offers. Get in touch, and we will create a tailored design package specifically designed to meet your unique needs.",
@@ -54,8 +54,8 @@ function SkillsSection() {
     {
       id: "05",
       description: {
-        en: "Every brand has its unique characteristics, just like the services it offers. Get in touch, and we will create a tailored design package specifically designed to meet your unique needs.",
-        pt: "Toda marca tem suas características únicas, assim como os serviços que oferece. Entre em contato, e criaremos um pacote de design personalizado especificamente pensado para atender às suas necessidades únicas.",
+        en: "Every brand has its own needs, and your services deserve to reflect that. Let’s work together to create a personalized design package, tailored to meet your exact demands.",
+        pt: "Cada marca tem sua necessidade, e seus serviços merecem refletir isso. Vamos criar junto um pacote de design personalizado, feito sob medida para atender exatamente às suas demandas.",
       },
       link: "/contact",
     },
@@ -111,7 +111,7 @@ function SkillsSection() {
                       animate={isActive ? { opacity: 0 } : { opacity: 1 }}
                       transition={{ duration: 0.5, ease: "easeInOut" }}
                     >
-                      <h1 className="text-secondary text-7xl xl:text-8xl 2xl:text-9xl font-semibold lg:pl-[90px] cursor-pointer">
+                      <h1 className="text-secondary text-5xl xl:text-6xl 2xl:text-9xl font-light lg:pl-[90px] cursor-pointer">
                         {english ? skill.name.en : skill.name.pt}
                       </h1>
                     </motion.div>
@@ -125,7 +125,6 @@ function SkillsSection() {
                     }
                     transition={{ duration: 0.5, ease: "easeInOut" }}
                   >
-                    <p className="mr-3 text-secondary font-bold">{skill.id}</p>
                     <p>
                       {english ? skill.description.en : skill.description.pt}
                     </p>
@@ -133,7 +132,7 @@ function SkillsSection() {
                       <div className="mt-3">
                         <a
                           href={skill.link}
-                          className="text-secondary underline underline-offset-4 font-medium"
+                          className="text-secondary underline underline-offset-4 font-medium text-sm"
                         >
                           REQUEST A QUOTE
                         </a>
