@@ -26,8 +26,6 @@ export function PartnersSection() {
     },
   ];
 
-  const english = i18n.language === "en-US";
-
   return (
     <div className="mb-20 md:mb-32 h-full mx-5">
       <div className="grid grid-cols-1 lg:grid-cols-2 h-full">
