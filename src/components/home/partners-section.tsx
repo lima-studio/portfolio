@@ -49,9 +49,6 @@ export function PartnersSection() {
               </h1>
               <div className="flex flex-col gap-5">
                 <p className="text-5xl md:text-6xl font-normal">
-                  <span className="opacity-30">
-                    {t("home.partners.span_title")}
-                  </span>
                   <br />
                   {t("home.partners.rely")}
                 </p>

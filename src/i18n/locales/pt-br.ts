@@ -36,11 +36,11 @@ export default {
       },
       what_they_say_about_us: "O QUE DIZEM SOBRE NÓS",
       partners: {
-        title: "Parceiros",
+        title: "Abordagem",
         span_title: "E eu não estou sozinho!",
-        rely: "Conto com profissionais de apoio para entregas específicas.",
+        rely: "Criatividade, Estratégia e Paixão dão sabor!",
         description:
-          "Equipes modulares são formadas para atender demandas específicas em projetos e soluções adjacentes.",
+          "Transformamos sua marca em uma referência de mercado, utilizando soluções criativas e estratégicas de design, com foco em inovação, sustentabilidadee diferenciação.",
         quote_button: "Solicitar Orçamento",
       },
     },

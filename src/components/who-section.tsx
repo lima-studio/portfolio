@@ -31,7 +31,7 @@ function WhoSection() {
         en: "Mascot and symbol. I represent the personality of the brand",
         pt: "Mascote e símbolo. Eu represento a personalidade da marca.",
         color: "text-secondary",
-        max_width: "max-w-xl",
+        max_width: "max-w-3xl",
       },
       represent: {
         color: "text-[#8b6e00]",

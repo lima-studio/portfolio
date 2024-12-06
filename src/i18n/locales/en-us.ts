@@ -38,9 +38,9 @@ export default {
       partners: {
         title: "Partners",
         span_title: "And I'm not alone!",
-        rely: "I rely on support professionals for specific deliverables.",
+        rely: "Creativity, Strategy, and Passion make all the difference!",
         description:
-          "Modular teams are formed to meet specific demands in projects and adjacent solutions.",
+          "We transform your brand into a market reference by leveraging creative and strategic design solutions, focusing on innovation, sustainability, and differentiation.",
         quote_button: "Request a Quote",
       },
     },
