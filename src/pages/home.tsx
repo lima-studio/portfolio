@@ -19,8 +19,12 @@ export default function Home() {
       <DepoimentsSection />
       <PartnersSection />
       <div className="h-[70em] md:h-[60em] lg:h-[40em] flex justify-center items-center">
-        <div className="w-[200px] h-[350px]">
-          <img className="w-full h-full " src="/logos/Ativo 8.png" alt="logo" />
+        <div>
+          <img
+            className="w-full h-full "
+            src="/logos/logo_ida_volta.gif"
+            alt="logo"
+          />
         </div>
       </div>
       <Footer />

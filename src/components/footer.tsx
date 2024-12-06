@@ -26,7 +26,7 @@ export default function Footer() {
         </BlurFade>
       </div>
 
-      <div className="flex justify-between items-end w-full uppercase  text-sm font-medium">
+      <div className="flex justify-between items-end w-full uppercase text-sm font-medium">
         <div>
           <span className="hidden md:block">
             {t("footer.copyright")} &copy; {new Date().getFullYear()}

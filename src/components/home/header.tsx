@@ -11,7 +11,7 @@ export default function Header() {
 
   return (
     <header className=" flex flex-col justify-center container px-5 mx-auto mt-10 mb-20 md:mb-32 ">
-      <div className=" mb-10">
+      <div className="mb-10 lg:px-[10rem]">
         <BlurFade blur="10px" delay={0.2}>
           <p className="uppercase text-sm font-normal text-start">
             {t("home.header.span")}
@@ -40,22 +40,21 @@ export default function Header() {
             {t("home.header.sub_title")}
           </p>
         </div>
+        <BlurFade className="flex space-x-4">
+          <a
+            href="/projects"
+            className="min-w-16 w-[250px] text-center py-4 text-black bg-primary px-8 hover:bg-primary/90 cursor-pointer rounded transition  font-medium"
+          >
+            {t("home.buttons.project")}
+          </a>
+          <a
+            className="min-w-16 w-[250px] text-center py-4 text-black bg-secondary px-8 hover:bg-secondary/90 cursor-pointer rounded transition  font-medium"
+            href="/contact"
+          >
+            {t("home.buttons.quote")}
+          </a>
+        </BlurFade>
       </div>
-
-      <BlurFade className="flex space-x-4">
-        <a
-          href="/projects"
-          className="min-w-16 w-[250px] text-center py-4 text-black bg-primary px-8 hover:bg-primary/90 cursor-pointer rounded transition  font-medium"
-        >
-          {t("home.buttons.project")}
-        </a>
-        <a
-          className="min-w-16 w-[250px] text-center py-4 text-black bg-secondary px-8 hover:bg-secondary/90 cursor-pointer rounded transition  font-medium"
-          href="/contact"
-        >
-          {t("home.buttons.quote")}
-        </a>
-      </BlurFade>
     </header>
   );
 }

@@ -13,34 +13,27 @@ function WhoSection() {
     {
       id: 0,
       backgroundStyle: {
-        backgroundImage: isMobile
-          ? "none"
-          : `url("/images/Lim.png")`,
+        backgroundImage: isMobile ? "none" : `url("/images/Lim.png")`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
         backgroundColor: "#ffd622",
         backgroundPosition: "right",
         backgroundAttachment: "local",
-
       },
       linkedin: "https://www.linkedin.com/company/limastdio/",
       who_color: "text-[#8b6e00]",
       span_title: {
-        en: "Hello, I'm Lim.",
-        pt: "Olá, eu sou o Lim.",
+        en: "Hello, I'm Limado.",
+        pt: "Olá, eu sou Limado.",
         color: "text-[#8b6e00]",
       },
       title: {
-        en: "Mascot and symbol of Lima Stdio.",
-        pt: "Mascote e símbolo do Lima Studio.",
+        en: "Mascot and symbol. I represent the personality of the brand",
+        pt: "Mascote e símbolo. Eu represento a personalidade da marca.",
         color: "text-secondary",
-        max_width: "max-w-xl",
+        max_width: "max-w-3xl",
       },
       represent: {
-        en: (<>I represent the personality and carry the last name <br />
-          of my creator.</>),
-        pt: (<>Eu represento a personalidade e carrego o sobrenome <br />
-          do meu criador.</>),
         color: "text-[#8b6e00]",
         max_width: "max-w-sm",
       },
@@ -117,9 +110,7 @@ function WhoSection() {
       >
         <div
           className="px-5 py-10 flex flex-col justify-center h-full gap-5"
-          style={{
-
-          }}
+          style={{}}
         >
           <motion.span
             className={`text-base ${selectedElement.who_color} font-medium`}
