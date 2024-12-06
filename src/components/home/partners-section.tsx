@@ -3,7 +3,7 @@ import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 export function PartnersSection() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   const partners = [
     {
