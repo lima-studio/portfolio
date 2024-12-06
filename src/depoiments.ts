@@ -15,20 +15,6 @@ export interface IDepoiments {
 
 const depoiments: IDepoiments[] = [
   {
-    name: "Ar Terapia",
-    depoiment: {
-      en: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut arcu eget lacus tincidunt fringilla",
-      pt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut arcu eget lacus tincidunt fringilla",
-    },
-    owner: {
-      name: "Dolor Sit",
-      role: {
-        en: "Manager and Designer",
-        pt: "Gerente e Designer",
-      },
-    },
-  },
-  {
     name: "Fusoê",
     depoiment: {
       en: "Man, I loved it! Great idea with the photographic angles you used. It looks super clean and beautiful with the new visual identity. I loved everything!",
@@ -51,8 +37,8 @@ const depoiments: IDepoiments[] = [
     owner: {
       name: "Arildo Nani",
       role: {
-        en: "Multi-instrumentalist and Musician",
-        pt: "Multi-instrumentista e Músico",
+        en: "Musician and Producer",
+        pt: "Músico e Produtor",
       },
     },
   },
@@ -71,10 +57,10 @@ const depoiments: IDepoiments[] = [
     },
   },
   {
-    name: "Beth Countinho",
+    name: "Beth Coutinho",
     depoiment: {
-      en: "Wow, guys, it turned out so beautiful! I’m completely in love! The symbol is just like mom. You were spot on. Congratulations!",
-      pt: "Uau, gente, ficou tão lindo! Estou completamente apaixonada! O símbolo é exatamente como a mamãe. Vocês acertaram em cheio. Parabéns!",
+      en: "Wow, everyone, it turned out so beautiful! I’m completely in love! The symbol perfectly represents my mom. You nailed it. Congratulations!",
+      pt: "Uau, pessoal, ficou tão lindo! Estou completamente apaixonada! O símbolo é a cara da minha mãe.Vocês acertaram em cheio. Parabéns!",
     },
     owner: {
       name: "Raquel Coutinho",
@@ -85,10 +71,10 @@ const depoiments: IDepoiments[] = [
     },
   },
   {
-    name: "Ellaria",
+    name: "Maria Divina",
     depoiment: {
-      en: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut arcu eget lacus tincidunt fringilla",
-      pt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut arcu eget lacus tincidunt fringilla",
+      en: "Truly divine! I loved everything! The colors, typography, approach, and presentation. You truly captured the essence of my brand.",
+      pt: "Realmente divina! Eu amei tudo! As cores, tipografia, a abordagem, apresentação. Conseguiu capitar verdadeiramente a essência da minha marca.",
     },
     owner: {
       name: "Dolor Sit",
@@ -99,16 +85,16 @@ const depoiments: IDepoiments[] = [
     },
   },
   {
-    name: "Vitor Ramos",
+    name: "Vittor Ramos",
     depoiment: {
-      en: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut arcu eget lacus tincidunt fringilla",
-      pt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut arcu eget lacus tincidunt fringilla",
+      en: "Incredible! How a visual identity can say so much about someone’s personality. I see myself in this brand. Awesome! Strong and raw!",
+      pt: "Incrível! Como uma identidade visual pode dizer tanto sobre a personalidade de alguém. Me vejo nessa marca. Foda! Forte e bruta!",
     },
     owner: {
-      name: "Dolor Sit",
+      name: "Vittor Ramos",
       role: {
-        en: "Manager and Designer",
-        pt: "Gerente e Designer",
+        en: "Personal Trainer",
+        pt: "Personal Trainer",
       },
     },
   },
