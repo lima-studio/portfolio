@@ -7,32 +7,22 @@ export function PartnersSection() {
 
   const partners = [
     {
-      role: {
-        en: "Developer",
-        pt: "Desenvolvedor",
-      },
-      img: "/partners/1722702573556.jpg",
+      img: "/partners/Sintetizar.jpg",
     },
     {
-      role: {
-        en: "Digital Marketing",
-        pt: "MKT Digital",
-      },
-      img: "/partners/02.png",
+      img: "/partners/Imergir.jpg",
     },
     {
-      role: {
-        en: "Motion Designer",
-        pt: "Designer de Motion",
-      },
-      img: "/partners/marco.jpg",
+      img: "/partners/Idealizar.jpg",
     },
     {
-      role: {
-        en: "Digital Marketing",
-        pt: "MKT Digital",
-      },
-      img: "/partners/daddasx.jpg",
+      img: "/partners/Experimentar.jpg",
+    },
+    {
+      img: "/partners/Entregar.jpg",
+    },
+    {
+      img: "/partners/Descobrir.jpg",
     },
   ];
 
@@ -43,16 +33,18 @@ export function PartnersSection() {
       <div className="grid grid-cols-1 lg:grid-cols-2 h-full">
         <div className="flex justify-evenly flex-col mb-10 lg:mb-0">
           <div className="flex gap-10 flex-col">
-            <div className="flex items-baseline gap-20">
-              <h1 className="uppercase font-medium">
-                {t("home.partners.title")}
-              </h1>
-              <div className="flex flex-col gap-5">
-                <p className="text-5xl md:text-6xl font-normal">
-                  <br />
+            <div className="flex items-baseline">
+              <div
+                className="flex flex-col gap-5"
+                style={{ marginLeft: "4rem" }}
+              >
+                <h1 className="uppercase font-medium">
+                  {t("home.partners.title")}
+                </h1>
+                <p className="text-5xl md:text-6xl font-medium">
                   {t("home.partners.rely")}
                 </p>
-                <p className="mt-5 md:text-md font-medium opacity-80 max-w-xl mb-5">
+                <p className="mt-5 md:text-md font-normal text-xl opacity-80 max-w-xl mb-5">
                   {t("home.partners.description")}
                 </p>
                 <button className="min-w-16 w-[250px] bg-black px-10 py-4 text-white rounded-lg font-medium">
@@ -82,13 +74,8 @@ export function PartnersSection() {
                   backgroundImage: `url(${partner.img})`,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
-                  filter: "grayscale(100%)",
                 }}
-              >
-                <span className="text-sm md:text-xl 2xl:text-3xl text-white font-semibold">
-                  {english ? partner.role.en : partner.role.pt}
-                </span>
-              </SwiperSlide>
+              ></SwiperSlide>
             ))}
           </Swiper>
         </div>
