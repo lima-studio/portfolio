@@ -45,7 +45,7 @@ export function PartnersSection() {
                 <p className="mt-5 md:text-md font-normal text-xl opacity-80 max-w-xl mb-5">
                   {t("home.partners.description")}
                 </p>
-                <button className="min-w-16 w-[250px] bg-black px-10 py-4 text-white rounded-lg font-medium">
+                <button className="min-w-16 w-[250px] bg-black px-10 py-4 text-white rounded-lg font-medium transition-transform duration-500 ease-in-out transform hover:scale-105 hover:shadow-lg">
                   {t("home.partners.quote_button")}
                 </button>
               </div>
