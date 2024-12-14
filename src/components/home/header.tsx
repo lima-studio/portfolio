@@ -18,37 +18,41 @@ export default function Header() {
           </p>
         </BlurFade>
 
-        <div className="flex flex-col  space-y-5 relative ">
+        <div className="flex flex-col  space-y-5 relative">
           <motion.h1
             style={{ opacity }}
-            className="text-5xl md:text-7xl mb-2 lg:text-8xl 2xl:text-9xl font-medium"
+            className="text-5xl md:text-7xl mb-2 lg:text-8xl font-medium"
           >
             {t("home.header.title")}
           </motion.h1>
           <p
+            style={{ width: "32rem" }}
             className={`
-                    relative bottom-[1.5rem]
+                    relative
                     text-lg
-                    2xl:absolute xl:text-xl
+                    2xl:absolute 
+                    2xl:bottom-[1rem]
+                    2xl:left-[42rem]
+                    xl:text-xl
                      ${
                        english
                          ? "2xl:max-w-full 2xl:left-[600px] 2xl:text-3xl xl:right-0"
-                         : " 2xl:text-2xl 2xl:max-w-xl 2xl:left-[850px] "
+                         : "2xl:left-[850px] "
                      }
                     `}
           >
             {t("home.header.sub_title")}
           </p>
         </div>
-        <BlurFade className="flex space-x-4">
+        <BlurFade className="flex space-x-4 mt-6">
           <a
             href="/projects"
-            className="min-w-16 w-[250px] text-center py-4 text-black bg-primary px-8 hover:bg-primary/90 cursor-pointer rounded transition  font-medium"
+            className="min-w-16 w-[250px] text-center py-4 text-black bg-primary px-8 hover:bg-primary/90 cursor-pointer rounded transition-transform duration-500 ease-in-out transform hover:scale-105 hover:shadow-lg font-medium"
           >
             {t("home.buttons.project")}
           </a>
           <a
-            className="min-w-16 w-[250px] text-center py-4 text-black bg-secondary px-8 hover:bg-secondary/90 cursor-pointer rounded transition  font-medium"
+            className="min-w-16 w-[250px] text-center py-4 text-black bg-secondary px-8 hover:bg-secondary/90 cursor-pointer rounded transition-transform duration-500 ease-in-out transform hover:scale-105 hover:shadow-lg font-medium"
             href="/contact"
           >
             {t("home.buttons.quote")}

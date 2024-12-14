@@ -8,25 +8,42 @@ export default function Footer() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
   return (
-    <footer className="bg-gray-300 min-h-[600px]  grid grid-cols-1 pb-5 pt-12 px-5 rounded-t-3xl">
+    <footer
+      className="bg-gray-300 min-h-[600px] grid grid-cols-1 pt-12 rounded-t-3xl"
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
+      }}
+    >
       <div className="flex flex-col lg:flex-row items-start space-y-5 lg:space-y-0 lg:items-center">
-        <BlurFade inView className="basis-1/4 self-start lg:mt-[120px]">
-          <p className="uppercase font-medium text-sm">{t("footer.contact")}</p>
-        </BlurFade>
-        <BlurFade className="mx-auto space-y-5 basis-10/12" inView>
-          <BlurFade inView className="text-4xl md:text-6xl px-0 max-w-[80%]">
+        <BlurFade
+          className="mt-28 mx-auto space-y-5 basis-10/12 flex flex-col items-center"
+          inView
+        >
+          <BlurFade
+            inView
+            className="text-4xl md:text-6xl px-0 max-w-[80%] text-center w-[60rem]"
+          >
+            <p className="uppercase font-medium text-sm mb-5">
+              {t("footer.contact")}
+            </p>
             <p>{t("footer.description")}</p>
           </BlurFade>
           <a
             href="/contact"
             className="text-2xl hover:bg-transparent cursor-pointer"
+            style={{ color: "#65ae00", fontWeight: "400" }}
           >
             {t("footer.button")} +
           </a>
         </BlurFade>
       </div>
 
-      <div className="flex justify-between items-end w-full uppercase text-sm font-medium">
+      <div
+        className="flex justify-between items-end w-full uppercase text-sm font-medium bg-primary"
+        style={{ padding: "15px" }}
+      >
         <div>
           <span className="hidden md:block">
             {t("footer.copyright")} &copy; {new Date().getFullYear()}

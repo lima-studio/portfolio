@@ -18,7 +18,7 @@ export default function Home() {
       <SkillsSection />
       <DepoimentsSection />
       <PartnersSection />
-      <div className="h-[70em] md:h-[60em] lg:h-[40em] flex justify-center items-center">
+      <div className="h-[70em] md:h-[60em] lg:h-[45rem] flex justify-center items-center">
         <div>
           <img
             className="w-full h-full "
