@@ -37,7 +37,7 @@ export default function Header() {
                      ${
                        english
                          ? "2xl:max-w-full 2xl:left-[600px] 2xl:text-3xl xl:right-0"
-                         : "2xl:left-[850px] "
+                         : "2xl:left-[42rem] "
                      }
                     `}
           >
