@@ -31,7 +31,7 @@ function ProjectsSection({ projects }: { projects: IProjects[] }) {
         <a href="/projects">
           <BlurFade
             inView
-            className="text-black font-medium text-base bg-gray-300 rounded text-center flex justify-center items-center h-12 "
+            className="text-black font-medium text-base bg-gray-300 rounded text-center flex justify-center items-center h-12"
           >
             {t("home.see_more")}
           </BlurFade>
