@@ -31,15 +31,15 @@ function WhoSection() {
         en: "Mascot and symbol. I represent the personality of the brand",
         pt: "Mascote e símbolo. Eu represento a personalidade da marca.",
         color: "text-secondary",
-        max_width: "max-w-3xl",
+        max_width: "max-w-5xl",
       },
       represent: {
         color: "text-[#8b6e00]",
         max_width: "max-w-sm",
       },
       button: {
-        en: "Linkedin",
-        pt: "Linkedin",
+        en: "LinkedIn",
+        pt: "LinkedIn",
       },
     },
     {
@@ -52,25 +52,19 @@ function WhoSection() {
       linkedin: "https://www.linkedin.com/in/euluizlima/",
       who_color: "text-black",
       span_title: {
-        en: "Hello, my name is Luiz Lima,",
-        pt: "Olá, meu nome é Luiz Lima,",
+        en: "Hello, I’m Lima.",
+        pt: "Olá, sou Lima.",
         color: "text-white",
       },
       title: {
-        en: "Graphic Designer and Art Director.",
-        pt: "Designer gráfico e Diretor de arte",
-        color: "text-black",
-        max_width: "max-w-3xl",
-      },
-      represent: {
-        en: "I enhance the innovation process of my partners. We build strategies, brands, and multimedia that create meaningful value for people and drive business growth.",
-        pt: "Aprimoro o processo de inovação dos meus parceiros. Construímos estratégias, marcas e multimídia que criam valor significativo para as pessoas e impulsionam o crescimento dos negócios.",
-        color: "text-[white]",
-        max_width: "max-w-2xl",
+        en: "Multidisciplinary Graphic Designer focused on strategy, branding, multimedia, and direction.",
+        pt: "Designer Gráfico multidisciplinar com foco em estratégia, marca, multimídia e direção.",
+        color: "text-[#b8b8b8]",
+        max_width: "max-w-4xl",
       },
       button: {
-        en: "Linkedin",
-        pt: "Tópicos",
+        en: "LinkedIn",
+        pt: "LinkedIn",
       },
     },
   ];
@@ -134,16 +128,6 @@ function WhoSection() {
             <br />
             {english ? selectedElement.title.en : selectedElement.title.pt}
           </motion.h1>
-          <motion.p
-            className={`max-w-xl text-lg font-semibold ${selectedElement.represent.color} ${selectedElement.represent.max_width}`}
-            initial={{ y: -20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-          >
-            {english
-              ? selectedElement.represent.en
-              : selectedElement.represent.pt}
-          </motion.p>
           <div className="h-full items-end flex">
             <a
               href={selectedElement.linkedin}
