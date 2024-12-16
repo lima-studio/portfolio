@@ -121,7 +121,7 @@ export const DesktopDepoiments = ({
         </div>
 
         <div className="h-full">
-          <div className="sticky top-1/3">
+          <div className="top-1/3">
             <p className="pl-20 font-medium mb-5">
               {t("home.what_they_say_about_us")}
             </p>
