@@ -98,6 +98,20 @@ const depoiments: IDepoiments[] = [
       },
     },
   },
+  {
+    name: "Estética Automotiva",
+    depoiment: {
+      en: "We hired Limado Design with the goal of creating just a logo, but we gained a new business perspective with much more value!",
+      pt: "Contratamos a Limado Design com o objetivo de criarmos apenas um logo e ganhamos uma nova perspectiva de de negócio com muito mais valor!",
+    },
+    owner: {
+      name: "Wesley Sena",
+      role: {
+        en: "Partner and owner",
+        pt: "Sócio e proprietário",
+      },
+    },
+  },
 ];
 
 export { depoiments };
