@@ -9,26 +9,52 @@ function SkillsSection() {
   const skills = [
     {
       id: "01",
-      name: { en: "positioning", pt: "posicionamento" },
+      name: { en: "strategy", pt: "estratégia" },
       altNames: {
-        en: ["strategy", "branding", "visibility"],
-        pt: ["estratégia", "marca", "visibilidade"],
+        en: ["positioning"],
+        pt: ["posicionamento"],
       },
     },
     {
       id: "02",
       name: { en: "brand", pt: "marca" },
       altNames: {
-        en: ["identity", "value", "recognition"],
-        pt: ["identidade", "valor", "reconhecimento"],
+        en: [
+          "logo",
+          "visual language",
+          "visual identity",
+          "brand guidelines",
+          "promotional material",
+          "mockups",
+        ],
+        pt: [
+          "logo",
+          "linguagem visual",
+          "identidade visual",
+          "guias de marca",
+          "material promocional",
+          "mockups",
+        ],
       },
     },
     {
       id: "03",
       name: { en: "multimedia", pt: "multimídia" },
       altNames: {
-        en: ["content", "experience", "design"],
-        pt: ["conteúdo", "experiência", "design"],
+        en: ["landing page", "interface", "presentation", "editorial line"],
+        pt: ["landing page", "interface", "apresentação", "linha editorial"],
+      },
+    },
+    {
+      id: "04",
+      name: { en: "AD (art direction)", pt: "DA (direção de arte)" },
+      altNames: {
+        en: [
+          "visual concepts",
+          "supervision and management",
+          "post-production",
+        ],
+        pt: ["conceitos visuais", "supervisão e gerenciamento", "pós produção"],
       },
     },
   ];
@@ -101,7 +127,7 @@ function SkillsSection() {
             return (
               <div
                 key={skill.id}
-                className="relative flex flex-col items-start overflow-hidden min-h-[11em]"
+                className="relative flex flex-col items-start overflow-hidden min-h-[6em]"
                 onMouseEnter={() =>
                   handleMouseEnter(
                     skill.id,
@@ -116,7 +142,7 @@ function SkillsSection() {
                 }
               >
                 <motion.h1
-                  className="text-secondary text-5xl xl:text-6xl 2xl:text-9xl font-light cursor-pointer"
+                  className="text-secondary text-5xl xl:text-6xl 2xl:text-7xl font-light cursor-pointer"
                   animate={{ opacity: isActive ? 0.7 : 1 }}
                   transition={{ duration: 0.5, ease: "easeInOut" }}
                 >
@@ -125,7 +151,7 @@ function SkillsSection() {
               </div>
             );
           })}
-          <motion.div className="font-normal text-xl text-black max-w-3xl">
+          <motion.div className="font-normal text-xl text-black max-w-3xl mt-[7rem]">
             <p>
               {english ? skillText.description.en : skillText.description.pt}
             </p>
