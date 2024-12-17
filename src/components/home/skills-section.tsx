@@ -142,7 +142,7 @@ function SkillsSection() {
                 }
               >
                 <motion.h1
-                  className="text-secondary text-5xl xl:text-6xl 2xl:text-7xl font-light cursor-pointer"
+                  className="text-[#cdcdcd] hover:text-secondary transition-colors text-5xl xl:text-6xl 2xl:text-7xl font-light cursor-pointer"
                   animate={{ opacity: isActive ? 0.7 : 1 }}
                   transition={{ duration: 0.5, ease: "easeInOut" }}
                 >
