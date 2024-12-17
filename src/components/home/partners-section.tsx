@@ -27,7 +27,7 @@ export function PartnersSection() {
   ];
 
   return (
-    <div className="mb-20 md:mb-32 h-full mx-5">
+    <div className="h-full mx-5">
       <div className="grid grid-cols-1 lg:grid-cols-2 h-full">
         <div className="flex justify-evenly flex-col mb-10 lg:mb-0">
           <div className="flex gap-10 flex-col">

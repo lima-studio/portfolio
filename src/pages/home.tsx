@@ -10,7 +10,7 @@ import { projects } from "../projects";
 
 export default function Home() {
   return (
-    <div>
+    <div style={{ maxWidth: "120rem" }}>
       <Navbar />
       <Header />
       <WhoSection />

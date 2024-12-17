@@ -28,7 +28,7 @@ export default function Footer() {
             <p className="uppercase font-medium text-sm mb-5">
               {t("footer.contact")}
             </p>
-            <p>{t("footer.description")}</p>
+            <p className="font-medium">{t("footer.description")}</p>
           </BlurFade>
           <a
             href="/contact"
