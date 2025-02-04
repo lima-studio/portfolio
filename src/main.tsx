@@ -8,7 +8,6 @@ import ContactPage from "./pages/contact";
 import Home from "./pages/home";
 import ProjectsPage from "./pages/projects";
 import WorkPage from "./pages/projects/[slug]";
-import Maintenance from "./components/maintenance";
 
 const router = createBrowserRouter([
   {
