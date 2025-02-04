@@ -38,7 +38,7 @@ createRoot(document.getElementById("root")!).render(
       alignItems: "center",
     }}
   >
-    {import.meta.env.VITE_MAINTENANCE_MODE ? <Maintenance /> : <>
+    {<>
       <RouterProvider router={router} />
       <Toaster />
     </>}
