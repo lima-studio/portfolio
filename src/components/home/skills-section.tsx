@@ -87,7 +87,7 @@ function SkillsSection() {
     intervalRef.current = setInterval(() => {
       index = (index + 1) % altNames.length; // Loop entre os textos
       setCurrentText((prev) => ({ ...prev, [id]: altNames[index] }));
-    }, 2000); // Troca a cada 5 segundos
+    }, 800); // Troca a cada 5 segundos
   };
 
   // Função para parar a troca de textos
@@ -103,17 +103,18 @@ function SkillsSection() {
   return (
     <section className="px-5 py-10 mb-20 md:mb-32" id="skills">
       <div className="grid grid-cols-1 lg:grid-cols-2">
-        <div className="ml-[5rem] lg:sticky top-20 h-fit lg:flex flex-col gap-6 mb-14 lg:mb-0">
-          <h1 className="uppercase font-medium mt-5 mb-5 lg:mb-0">
-            {t("home.skills.title")}
-          </h1>
+        <div className="ml-[5rem] flex justify-between flex-col gap-6 mb-14 lg:mb-0">
           <div>
-            <p className="lg:text-3xl mb-10 lg:mb-32 w-[43rem]">
+            <h1 className="uppercase font-medium mt-5 mb-5">
+              {t("home.skills.title")}
+            </h1>
+            <p className="lg:text-3xl mb-10 lg:mb-32 w-[43rem] ">
               {t("home.skills.description")}
             </p>
-            <div>
-              <img src="/logos/Asset 35.png" alt="Logo" className="h-52" />
-            </div>
+          </div>
+
+          <div>
+            <img src="/logos/Asset 35.png" alt="Logo" className="h-52" />
           </div>
         </div>
 
@@ -142,7 +143,7 @@ function SkillsSection() {
                 }
               >
                 <motion.h1
-                  className="text-[#cdcdcd] hover:text-secondary transition-colors text-5xl xl:text-6xl 2xl:text-7xl font-light cursor-pointer"
+                  className={`text-[#cdcdcd] hover:text-secondary transition-colors text-5xl xl:text-6xl 2xl:text-7xl cursor-pointer hover:font-light font-medium`}
                   animate={{ opacity: isActive ? 0.7 : 1 }}
                   transition={{ duration: 0.5, ease: "easeInOut" }}
                 >
@@ -159,9 +160,9 @@ function SkillsSection() {
               <div className="mt-3">
                 <a
                   href={skillText.link}
-                  className="text-secondary underline underline-offset-4 font-medium text-sm"
+                  className="text-secondary underline underline-offset-4 font-medium text-sm uppercase"
                 >
-                  REQUEST A QUOTE
+                  {t("home.partners.quote_button")}
                 </a>
               </div>
             )}

@@ -42,7 +42,7 @@ export default function WorkPage() {
         <div className="absolute bottom-0 left-0 right-0 h-full w-full bg-black bg-opacity-25"></div>
       </header>
 
-      <section className="px-5 py-16 flex flex-col gap-12 mx-[5%]">
+      <section className="px-5 py-16 flex flex-col gap-12">
         <div className="space-y-5">
           <BlurFade inView>
             <h1 className="text-5xl md:text-8xl">{project.name}</h1>
@@ -76,7 +76,7 @@ export default function WorkPage() {
         </div>
       </section>
 
-      <section className="px-5 mx-[5%] mt-52">
+      <section className="px-5 mt-52">
         <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-16">
           <BlurFade inView>
             <div className="sticky top-20 self-start pb-16 space-y-4 font-normal">
@@ -163,7 +163,7 @@ export default function WorkPage() {
         </div>
       </section>
 
-      <section className="px-5 mx-[5%] mt-52 mb-52">
+      <section className="px-5 mt-52 mb-52">
         <BlurFade inView className="mb-10">
           <h2 className="text-4xl mb-5">
             {t("projects_details.latest_project")}

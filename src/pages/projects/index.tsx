@@ -11,8 +11,8 @@ export default function ProjectsPage() {
   return (
     <div>
       <Navbar />
-      <div className="mx-[5%] mb-20 mt-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 pb-32 ">
+      <div className="px-5 mb-20 mt-10 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 pb-32  h-[500px]  items-center">
           <BlurFade inView>
             <h1 className="text-3xl font-semibold">{t("projects.title")}</h1>
           </BlurFade>

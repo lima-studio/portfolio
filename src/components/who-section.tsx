@@ -132,7 +132,7 @@ function WhoSection() {
             <a
               href={selectedElement.linkedin}
               target="_blank"
-              className="min-w-16 w-[250px] text-center py-4 bg-white text-black font-medium h-12 hover:opacity-90 hover:bg-white text-md rounded justify-center flex items-center transition-transform duration-500 ease-in-out transform hover:scale-105 hover:shadow-lg"
+              className="min-w-16 w-[250px] text-center py-4 bg-white text-black font-medium h-12 hover:opacity-90 hover:bg-white text-md rounded justify-center flex items-center transition-transform duration-500 ease-in-out transform hover:scale-105 hover:shadow-sm "
             >
               {english ? selectedElement.button.en : selectedElement.button.pt}
             </a>

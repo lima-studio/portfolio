@@ -83,6 +83,7 @@ Conecte-se com Ellaria e descubra o prazer da intimidade elevada ao mais alto n√
       "/projects/Ellaria/27.gif",
     ],
     slug: "",
+    homepage: true,
   },
   {
     name: "AR TERAPIA",
@@ -126,6 +127,7 @@ Conecte-se com Ellaria e descubra o prazer da intimidade elevada ao mais alto n√
       "/projects/Projeto - Ar Terapias/16_image.png",
       "/projects/Projeto - Ar Terapias/17_image.gif",
     ],
+    homepage: true,
   },
   {
     name: "Sensatta Marketing¬Æ",

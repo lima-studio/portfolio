@@ -120,8 +120,8 @@ export const DesktopDepoiments = ({
           })}
         </div>
 
-        <div className="h-full">
-          <div className="top-1/3">
+        <div className="h-full flex flex-col justify-between">
+          <div>
             <p className="pl-20 font-medium mb-5">
               {t("home.what_they_say_about_us")}
             </p>
@@ -138,30 +138,30 @@ export const DesktopDepoiments = ({
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="mr-20"
+                className="mr-20 font-medium"
               >
                 {english
                   ? depoiments[activeDepoiment].depoiment.en
                   : depoiments[activeDepoiment].depoiment.pt}
               </motion.p>
             </div>
+          </div>
 
-            <div className="text-white pl-20 mt-10">
-              <p className="font-medium text-xl uppercase">
-                {depoiments[activeDepoiment].owner.name}
-              </p>
-              <p className="font-medium text-lg">
-                {depoiments[activeDepoiment].name} -{" "}
-                <span className="font-normal">
-                  {english
-                    ? depoiments[activeDepoiment].owner.role.en
-                    : depoiments[activeDepoiment].owner.role.pt}
-                </span>
-              </p>
-            </div>
+          <div className="text-white pl-20 mt-10">
+            <p className="font-medium text-xl uppercase">
+              {depoiments[activeDepoiment].owner.name}
+            </p>
+            <p className="font-medium text-lg">
+              {depoiments[activeDepoiment].name} -{" "}
+              <span className="font-normal">
+                {english
+                  ? depoiments[activeDepoiment].owner.role.en
+                  : depoiments[activeDepoiment].owner.role.pt}
+              </span>
+            </p>
           </div>
         </div>
       </div>
-    </section>
+    </section >
   );
 };

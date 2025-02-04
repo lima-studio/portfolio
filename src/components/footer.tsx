@@ -9,7 +9,7 @@ export default function Footer() {
   };
   return (
     <footer
-      className="bg-gray-300 min-h-[600px] grid grid-cols-1 pt-12 rounded-t-3xl"
+      className="bg-gray-100 min-h-[600px] grid grid-cols-1 pt-12 rounded-t-3xl w-full"
       style={{
         display: "flex",
         flexDirection: "column",
