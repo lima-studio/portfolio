@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { InteractiveHoverButton } from "./interactive-hover-button";
+import { ChevronRight } from "lucide-react";
 
 function WhoSection() {
   const { i18n } = useTranslation();
@@ -104,7 +106,6 @@ function WhoSection() {
       >
         <div
           className="px-5 py-10 flex flex-col justify-center h-full gap-5"
-          style={{}}
         >
           <motion.span
             className={`text-base ${selectedElement.who_color} font-medium`}
@@ -129,13 +130,17 @@ function WhoSection() {
             {english ? selectedElement.title.en : selectedElement.title.pt}
           </motion.h1>
           <div className="h-full items-end flex">
-            <a
-              href={selectedElement.linkedin}
-              target="_blank"
-              className="min-w-16 w-[250px] text-center py-4 bg-white text-black font-medium h-12 hover:opacity-90 hover:bg-white text-md rounded justify-center flex items-center transition-transform duration-500 ease-in-out transform hover:scale-105 hover:shadow-sm "
-            >
+            <InteractiveHoverButton
+              colors={{
+                primary: "white",
+                hover: "secondary",
+              }}
+              icon={<ChevronRight
+                size={18}
+              />}
+              onClick={() => window.open(selectedElement.linkedin, "_blank")}>
               {english ? selectedElement.button.en : selectedElement.button.pt}
-            </a>
+            </InteractiveHoverButton>
           </div>
         </div>
       </motion.div>

@@ -87,7 +87,7 @@ function SkillsSection() {
     intervalRef.current = setInterval(() => {
       index = (index + 1) % altNames.length; // Loop entre os textos
       setCurrentText((prev) => ({ ...prev, [id]: altNames[index] }));
-    }, 800); // Troca a cada 5 segundos
+    }, 500);
   };
 
   // Função para parar a troca de textos

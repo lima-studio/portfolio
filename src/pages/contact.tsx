@@ -128,8 +128,8 @@ export default function ContactPage() {
   return (
     <div>
       <Navbar />
-      <div className="container px-5 mx-auto mb-32 grid grid-cols-1 space-y-12 mt-10">
-        <div className="flex flex-col space-y-2">
+      <div className="container px-5 mx-auto mb-32 grid grid-cols-1 space-y-12 ">
+        <div className="flex flex-col space-y-2 mt-40">
           <BlurFade inView>
             <h1 className="text-5xl md:text-8xl font-normal">
               {t("contact.header.mainTitle")}

@@ -30,16 +30,8 @@ const router = createBrowserRouter([
 ]);
 
 createRoot(document.getElementById("root")!).render(
-  <div
-    style={{
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-    }}
-  >
-    {<>
-      <RouterProvider router={router} />
-      <Toaster />
-    </>}
-  </div>
+  <>
+    <RouterProvider router={router} />
+    <Toaster />
+  </>
 );

@@ -2,6 +2,8 @@ import { IProjects } from "@/projects";
 import { useTranslation } from "react-i18next";
 import BlurFade from "../magicui/blur-fade";
 import ProjectCard from "../projects/project-card";
+import { InteractiveHoverButton } from "../interactive-hover-button";
+import { ChevronRight } from "lucide-react";
 
 function ProjectsSection({ projects }: { projects: IProjects[] }) {
   const projectsData = projects.filter((project) => project.homepage);
@@ -22,20 +24,19 @@ function ProjectsSection({ projects }: { projects: IProjects[] }) {
         ))}
       </div>
 
-      <div className="grid grid-cols-2 gap-5">
-        <BlurFade inView className="flex justify-end">
-          <span className="text-xl md:text-3xl ">
-            {t("home.and_stop_here")}
-          </span>
-        </BlurFade>
-        <a href="/projects">
-          <BlurFade
-            inView
-            className="text-black font-medium text-base bg-gray-300 rounded text-center flex justify-center items-center h-12"
-          >
-            {t("home.see_more")}
-          </BlurFade>
-        </a>
+      <div>
+        <InteractiveHoverButton
+          colors={{
+            primary: "gray-300",
+            hover: "white/50",
+          }}
+          width="w-full"
+          icon={<ChevronRight
+            size={18}
+          />}
+        >
+          {t("home.see_more")}
+        </InteractiveHoverButton>
       </div>
     </section>
   );

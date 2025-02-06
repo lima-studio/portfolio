@@ -13,6 +13,26 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
+  //  const [invertLogo, setInvertLogo] = useState(false);
+
+  /**
+   *  useEffect(() => {
+     const handleScroll = () => {
+       const scrollPosition = window.scrollY;
+       if (scrollPosition > 100) {
+         setInvertLogo(true);
+       } else {
+         setInvertLogo(false);
+       }
+     };
+ 
+     window.addEventListener("scroll", handleScroll);
+ 
+     return () => {
+       window.removeEventListener("scroll", handleScroll);
+     };
+   }, []);
+   */
 
   useEffect(() => {
     if (menuOpen) {
@@ -53,7 +73,7 @@ export default function Navbar() {
         <BlurFade>
           <a href="/" className="mixBlendMode">
             <img
-              src="/logos/Ativo 8.png"
+              src={"/logos/Ativo 8.png"}
               alt="Logo"
               className="w-5 h-5 md:w-10 md:h-10 object-contain"
             />
@@ -132,7 +152,6 @@ export default function Navbar() {
         </ul>
 
         <BlurFade className="flex items-center space-x-5">
-
           <div>
             <button
               className={`${language === "en-US" ? "font-bold" : ""}`}

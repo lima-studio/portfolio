@@ -12,14 +12,20 @@ export default {
     home: {
       header: {
         span: "Creativity, Strategy, and passion add the flavor!",
-        title: "Refreshing design for exciting people and brands.",
+        title: {
+          1: "Refreshing design for exciting ",
+          2: "people and brands.",
+        },
         sub_title:
-          "Transforming brands and people with refreshing, inspiring, and exciting design, creating authentic and lasting connections.",
+        {
+          1: "Transforming brands and people with refreshing, inspiring, and exciting design,",
+          2: "creating authentic and lasting connections."
+        }
       },
       see_more: "See more",
       buttons: {
         project: "Projects",
-        quote: "Quote +",
+        quote: "Quote",
       },
       who: {
         title: "Mascot and symbol of Lima Stdio.",
@@ -38,7 +44,10 @@ export default {
       partners: {
         title: "Partners",
         span_title: "And I'm not alone!",
-        rely: "Creativity, Strategy, and Passion make all the difference!",
+        rely: {
+          1: "Creativity, Strategy, and",
+          2: "Passion make all the difference!"
+        },
         description:
           "We transform your brand into a market reference by leveraging creative and strategic design solutions, focusing on innovation, sustainability, and differentiation.",
         quote_button: "Request a Quote",

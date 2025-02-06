@@ -13,13 +13,18 @@ export default {
       see_more: "Veja mais",
       header: {
         span: "Criatividade, Estratégia e paixão acrescentam o sabor!",
-        title: "Design refrescante para pessoas e marcas empolgantes.",
-        sub_title:
-          "Transformar marcas e pessoas com um design refrescante, inspirador e empolgante, criando conexões autênticas e duradouras.",
+        title: {
+          1: "Design refrescante para pessoas",
+          2: "e marcas empolgantes.",
+        },
+        sub_title: {
+          1: "Transformar marcas e pessoas com um design refrescante, inspirador e empolgante, ",
+          2: "criando conexões autênticas e duradouras.",
+        }
       },
       buttons: {
         project: "Projetos",
-        quote: "Orçamento +",
+        quote: "Orçamento",
       },
       who: {
         title: "Mascote e símbolo do Lima Studio.",
@@ -38,7 +43,10 @@ export default {
       partners: {
         title: "Abordagem",
         span_title: "E eu não estou sozinho!",
-        rely: "Criatividade, Estratégia e Paixão dão sabor!",
+        rely: {
+          1: "Criatividade, Estratégia e",
+          2: "Paixão dão sabor!"
+        },
         description:
           "Transformamos sua marca em uma referência de mercado, utilizando soluções criativas e estratégicas de design, com foco em inovação, sustentabilidadee diferenciação.",
         quote_button: "Solicitar Orçamento",
