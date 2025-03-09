@@ -97,7 +97,7 @@ function WhoSection() {
   return (
     <section id="who" className="mb-20 md:mb-32 ">
       <motion.div
-        className="mx-5 rounded-3xl h-[500px] transition-opacity duration-500"
+        className="mx-5 rounded-3xl lg:h-[500px] transition-opacity duration-500"
         style={selectedElement.backgroundStyle}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -116,7 +116,7 @@ function WhoSection() {
             {english ? "WHO" : "QUEM"}
           </motion.span>
           <motion.h1
-            className={`${selectedElement.title.color} text-5xl md:text-6xl font-medium ${selectedElement.title.max_width}`}
+            className={`${selectedElement.title.color} text-2xl lg:text-6xl font-medium ${selectedElement.title.max_width}`}
             initial={{ y: -20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
