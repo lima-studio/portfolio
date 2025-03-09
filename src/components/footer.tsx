@@ -8,31 +8,16 @@ export default function Footer() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
   return (
-    <footer
-      className="bg-gray-100 min-h-[600px] grid grid-cols-1 pt-12 rounded-t-3xl w-full"
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-between",
-      }}
-    >
+    <footer className="bg-gray-100 min-h-[600px] pt-12 rounded-t-3xl w-full flex flex-col justify-between">
       <div className="flex flex-col lg:flex-row items-start space-y-5 lg:space-y-0 lg:items-center">
-        <BlurFade
-          className="mt-28 mx-auto space-y-5 basis-10/12 flex flex-col items-center"
-          inView
-        >
-          <BlurFade
-            inView
-            className="text-4xl md:text-6xl px-0 max-w-[80%] text-center w-[60rem]"
-          >
-            <p className="uppercase font-medium text-sm mb-5">
-              {t("footer.contact")}
-            </p>
-            <p className="text-5xl md:text-6xl font-medium">{t("footer.description")}</p>
+        <BlurFade className="mt-28 mx-auto space-y-5 w-full flex flex-col items-center">
+          <BlurFade inView className="text-4xl md:text-6xl text-center w-full max-w-4xl px-5">
+            <p className="uppercase font-medium text-sm mb-5">{t("footer.contact")}</p>
+            <p className="text-3xl md:text-6xl font-medium">{t("footer.description")}</p>
           </BlurFade>
           <a
             href="/contact"
-            className="text-2xl hover:bg-transparent cursor-pointer"
+            className="md:text-2xl hover:bg-transparent cursor-pointer"
             style={{ color: "#65ae00", fontWeight: "400" }}
           >
             {t("footer.button")} +
@@ -40,11 +25,8 @@ export default function Footer() {
         </BlurFade>
       </div>
 
-      <div
-        className="flex justify-between items-end w-full uppercase text-sm font-medium bg-primary"
-        style={{ padding: "15px" }}
-      >
-        <div>
+      <div className="flex flex-col md:flex-row justify-between items-center bg-primary text-sm font-medium p-4">
+        <div className="text-center md:text-left">
           <span className="hidden md:block">
             {t("footer.copyright")} &copy; {new Date().getFullYear()}
           </span>
@@ -68,7 +50,7 @@ export default function Footer() {
           </span>
         </div>
 
-        <div>
+        <div className="mt-4 md:mt-0">
           <ul className="hidden gap-5 md:flex">
             <li>
               <a href="http://www.behance.net/limastdio" target="_blank">
