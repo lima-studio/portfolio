@@ -32,13 +32,8 @@ export function PartnersSection() {
     <div className="h-[600px] mx-5">
       <div className="grid grid-cols-1 lg:grid-cols-2 h-full">
         <div className="flex items-baseline">
-          <div
-            className="flex flex-col gap-5"
-            style={{ marginLeft: "4rem" }}
-          >
-            <h1 className="uppercase font-medium">
-              {t("home.partners.title")}
-            </h1>
+          <div className="flex flex-col gap-5 lg:ml-16 mb-5 lg:mb-0">
+            <h1 className="uppercase font-medium">{t("home.partners.title")}</h1>
             <p className="text-5xl md:text-6xl font-medium">
               {t("home.partners.rely.1")} <br />
               {t("home.partners.rely.2")}
@@ -52,12 +47,9 @@ export function PartnersSection() {
                 hover: "primary",
                 text: "white",
               }}
-              icon={<ChevronRight
-                size={18}
-              />}
+              icon={<ChevronRight size={18} />}
             >
               {t("home.partners.quote_button")}
-
             </InteractiveHoverButton>
           </div>
         </div>
@@ -70,11 +62,21 @@ export function PartnersSection() {
             spaceBetween={30}
             slidesPerView={2.5}
             className="h-full"
+            breakpoints={{
+              200: {
+                spaceBetween: 10,
+                slidesPerView: 2,
+              },
+              1300: {
+                spaceBetween: 30,
+                slidesPerView: 2.5,
+              },
+            }}
           >
             {partners.map((partner, index) => (
               <SwiperSlide
                 key={index}
-                className="rounded-xl flex justify-center  items-end  py-5 bg-yellow-100"
+                className="rounded-xl flex justify-center items-end py-5 bg-yellow-100"
                 style={{
                   backgroundImage: `url(${partner.img})`,
                   backgroundSize: "cover",

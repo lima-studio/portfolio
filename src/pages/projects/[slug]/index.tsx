@@ -27,7 +27,7 @@ export default function WorkPage() {
     <div>
       <Navbar />
       <header
-        className="min-h-screen relative"
+        className="h-[500px] lg:min-h-screen relative"
         style={{
           backgroundImage: `url("${project.primary_image_url}")`, // Adicione aspas ao redor da URL
           backgroundSize: "cover",
@@ -76,7 +76,7 @@ export default function WorkPage() {
         </div>
       </section>
 
-      <section className="px-5 mt-52">
+      <section className="px-5 lg:mt-52">
         <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-16">
           <BlurFade inView>
             <div className="sticky top-20 self-start pb-16 space-y-4 font-normal">
@@ -119,11 +119,11 @@ export default function WorkPage() {
                   alt={project.name}
                   className="w-full rounded-lg"
                 />
-                <div className="py-24 px-10" id="about">
+                <div className="lg:py-24 lg:px-10 mt-10 lg:mt-0" id="about">
                   <h2 className="text-4xl mb-5">
                     {t("projects_details.about")}
                   </h2>
-                  <p className="text-3xl opacity-50">
+                  <p className="lg:text-3xl opacity-50">
                     {english ? project.about.en : project.about.pt}
                   </p>
                 </div>
@@ -163,7 +163,7 @@ export default function WorkPage() {
         </div>
       </section>
 
-      <section className="px-5 mt-52 mb-52">
+      <section className="px-5 mt-10 lg:mt-52 lg:mb-52 mb-10">
         <BlurFade inView className="mb-10">
           <h2 className="text-4xl mb-5">
             {t("projects_details.latest_project")}
@@ -181,7 +181,7 @@ export default function WorkPage() {
                 <img
                   src={project.primary_image_url}
                   alt={project.name}
-                  className="rounded-lg w-full h-[400px] object-cover"
+                  className="rounded-lg w-full lg:h-[400px] object-cover"
                 />
 
                 <div className="absolute top-0 left-0 right-0  w-full h-full bg-black bg-opacity-50 opacity-0 transition-opacity duration-300 group-hover:opacity-100 rounded-lg" />

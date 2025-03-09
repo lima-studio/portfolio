@@ -14,11 +14,11 @@ export default function ProjectsPage() {
     <div>
       <Navbar />
       <div className="px-5 mb-20  ">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 pb-32  h-[500px]  items-start ">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 pb-10  lg:pb-32 lg:h-[500px]  items-start ">
           <BlurFade inView>
-            <h1 className="text-3xl font-semibold mt-40 ">{t("projects.title")}</h1>
+            <h1 className="text-3xl font-semibold lg:mt-40 ">{t("projects.title")}</h1>
           </BlurFade>
-          <BlurFade inView className="space-y-10 mt-40">
+          <BlurFade inView className="space-y-10 lg:mt-40">
             <div>
               <p className="text-lg md:text-3xl">{t("projects.description")}</p>
             </div>
@@ -32,7 +32,7 @@ export default function ProjectsPage() {
                 icon={<Plus
                   size={18}
                 />}
-                onClick={() => window.open("/contact", "_blank")}>
+                onClick={() => window.open("/contact", "_self")}>
                 {t("projects.button")}
               </InteractiveHoverButton>
             </div>
@@ -52,7 +52,7 @@ export default function ProjectsPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {projects.map((project, index) => (
-              <BlurFade key={index} inView className="h-[450px]">
+              <BlurFade key={index} inView className="lg:h-[450px]">
                 <ProjectCard key={index} project={project} />
               </BlurFade>
             ))}
