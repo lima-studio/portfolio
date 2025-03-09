@@ -17,7 +17,7 @@ function ProjectsSection({ projects }: { projects: IProjects[] }) {
             key={index}
             delay={index * 0.2}
             inView
-            className="h-[50rem]"
+            className="lg:h-[50rem]"
           >
             <ProjectCard project={project} />
           </BlurFade>
@@ -30,6 +30,7 @@ function ProjectsSection({ projects }: { projects: IProjects[] }) {
             primary: "gray-300",
             hover: "white/50",
           }}
+          onClick={() => window.open("/projects", "_self")}
           width="w-full"
           icon={<ChevronRight
             size={18}

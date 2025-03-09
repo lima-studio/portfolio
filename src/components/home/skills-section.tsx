@@ -101,14 +101,14 @@ function SkillsSection() {
   };
 
   return (
-    <section className="px-5 py-10 mb-20 md:mb-32" id="skills">
+    <section className="px-5 py-10 mb-20 lg:mb-32" id="skills">
       <div className="grid grid-cols-1 lg:grid-cols-2">
-        <div className="ml-[5rem] flex justify-between flex-col gap-6 mb-14 lg:mb-0">
+        <div className="lg:ml-[5rem] flex justify-between flex-col gap-6 mb-14 lg:mb-0">
           <div>
             <h1 className="uppercase font-medium mt-5 mb-5">
               {t("home.skills.title")}
             </h1>
-            <p className="lg:text-3xl mb-10 lg:mb-32 w-[43rem] ">
+            <p className="lg:text-3xl mb-10 lg:mb-32 lg:w-[43rem] ">
               {t("home.skills.description")}
             </p>
           </div>
