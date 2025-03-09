@@ -47,6 +47,7 @@ export function PartnersSection() {
                 hover: "primary",
                 text: "white",
               }}
+              onClick={() => window.open("/contact", "_self")}
               icon={<ChevronRight size={18} />}
             >
               {t("home.partners.quote_button")}
