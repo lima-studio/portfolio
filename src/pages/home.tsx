@@ -21,7 +21,7 @@ export default function Home() {
       <div className="h-[50em] flex justify-center items-center">
         <div>
           <img
-            className="w-[900px] h-[500px] "
+            className="lg:w-[900px] lg:h-[500px] "
             src="/logos/logo_ida_volta.gif"
             alt="logo"
           />
